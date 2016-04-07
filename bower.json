@@ -1,0 +1,23 @@
+{
+  "name": "yoobee-hardware-booking-system",
+  "description": "a booking system for yoobee students allowing online hardware booking",
+  "main": "index.js",
+  "authors": [
+    "beshad ghorbani"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/beshad/yoobee_booking_app",
+  "moduleType": [],
+//  "ignore": [
+//    "**/.*",
+//    "node_modules",
+//    "bower_components",
+//    "test",
+//    "tests"
+//  ],
+  "dependencies": {
+    "angular-material": "^1.0.7",
+    "mdi": "^1.5.54",
+    "jquery": "^2.2.3"
+  }
+}
