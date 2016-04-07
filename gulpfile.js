@@ -10,7 +10,7 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
-var wiredep = require('wiredep')
+var wiredep = require('wiredep').stream;
 
 
 /*convert all sass/scss files to css*/
@@ -77,4 +77,14 @@ gulp.task('default' , ['browserSync', 'sass'] , function(){
     gulp.watch("app/*.html").on('change', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);
     // Other watchers
+});
+
+/*Wires Bower dependencies to your source code.*/
+gulp.task('wiredep', function () {
+    gulp.src('application/views/home.php')
+        .pipe(wiredep({
+            optional: 'configuration',
+            goes: 'here'
+        }))
+        .pipe(gulp.dest('./dest'));
 });
