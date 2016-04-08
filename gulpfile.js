@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+//var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
@@ -15,22 +15,22 @@ var wiredep = require('wiredep').stream;
 
 /*convert all sass/scss files to css*/
 gulp.task('sass', function(){
-    return gulp.src('app/scss/**/*.+(sass|scss)')
+    return gulp.src('app/scss/**/*.+(scss|sass)')
         .pipe(sass()) // Converts Sass to CSS with gulp-sass
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         })) //Prefix CSS
         .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.stream());
+        //.pipe(browserSync.stream());
 });
 
 /*browsersync to refresh the browser everytime html,css and js saved*/
-gulp.task('browserSync', function() {
-    browserSync.init({
-        server: "./app"
-    });
-});
+//gulp.task('browserSync', function() {
+//    browserSync.init({
+//        server: "./app"
+//    });
+//});
 
 /*minify png, jpg, gif, svg*/
 gulp.task('images', function(){
@@ -72,10 +72,10 @@ gulp.task('build', function (callback) {
 
 /*gulp serve runs the sass and browsersync + more from above*/
 /*named the tasj default so it can be run by simply calling GULP*/
-gulp.task('default' , ['browserSync', 'sass'] , function(){
+gulp.task('default' , ['sass'] , function(){
     gulp.watch('app/scss/**/*.+(sass|scss)', ['sass']);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+    //gulp.watch("app/*.html").on('change', browserSync.reload);
+    //gulp.watch('app/js/**/*.js', browserSync.reload);
     // Other watchers
 });
 
