@@ -12,6 +12,15 @@ var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var wiredep = require('wiredep').stream;
 
+/*Wires Bower dependencies to your source code.*/
+gulp.task('wiredep', function () {
+    gulp.src('application/views/home.php')
+        .pipe(wiredep({
+            optional: 'configuration',
+            goes: 'here'
+        }))
+        .pipe(gulp.dest('./dest'));
+});
 
 /*convert all sass/scss files to css*/
 gulp.task('sass', function(){
@@ -42,11 +51,6 @@ gulp.task('images', function(){
         .pipe(gulp.dest('dist/images'))
 });
 
-/*cleaning/deleting the files that are not needed*/
-gulp.task('clean:dist', function() {
-    return del.sync('dist');
-})
-
 /*just copy all the font into dest*/
 gulp.task('fonts', function() {
     return gulp.src('app/fonts/**/*')
@@ -64,6 +68,11 @@ gulp.task('useref', function(){
         .pipe(gulp.dest('dist'))
 });
 
+/*cleaning/deleting the files that are not needed*/
+gulp.task('clean:dist', function() {
+    return del.sync('dist');
+})
+
 /*ensures that clean:dist runs first, followed by all the other tasks*/
 gulp.task('build', function (callback) {
     runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'], callback)
@@ -77,14 +86,4 @@ gulp.task('default' , ['sass'] , function(){
     //gulp.watch("app/*.html").on('change', browserSync.reload);
     //gulp.watch('app/js/**/*.js', browserSync.reload);
     // Other watchers
-});
-
-/*Wires Bower dependencies to your source code.*/
-gulp.task('wiredep', function () {
-    gulp.src('application/views/home.php')
-        .pipe(wiredep({
-            optional: 'configuration',
-            goes: 'here'
-        }))
-        .pipe(gulp.dest('./dest'));
 });
