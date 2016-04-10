@@ -7,6 +7,7 @@
         .controller("ngAppCtrl", function($scope, $http, $mdSidenav){
 
             $scope.title="Enter your details to register:";
+            $scope.singin="Existing user? Signin here:";
 
             $scope.openSidebar = function() {
                 $mdSidenav('left').open();
