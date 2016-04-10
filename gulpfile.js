@@ -19,7 +19,7 @@ gulp.task('wiredep', function () {
             optional: 'configuration',
             goes: 'here'
         }))
-        .pipe(gulp.dest('./dest'));
+        .pipe(gulp.dest('./dist'));
 });
 
 /*convert all sass/scss files to css*/
