@@ -8,9 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Yoobee Hardware Booking System</title>
 	<!--build:css css/styles.min.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="<?=base_url()?>bower_components/angular-material/angular-material.css" />
-	<link rel="stylesheet" href="<?=base_url()?>bower_components/mdi/css/materialdesignicons.css" />
-    <link rel="stylesheet" href="<?=base_url()?>app/css/styles.css">
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+	<link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.css" />
+    <link rel="stylesheet" href="app/css/styles.css">
 	<!-- endbower -->
 	<!-- endbuild -->
 </head>
@@ -38,7 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <md-content class="md-padding container" layout="row" layout-wrap>
         <md-card>
             <md-card-title flex="60" flex-offset="20">
-                <p><img src="<?=base_url()?>app/images/logo.png" alt="Yoobee Logo"></p>
+                <p><img src="app/images/logo.png" alt="Yoobee Logo"></p>
             </md-card-title>
             <md-card-content>
                 <h4>{{ title | uppercase}}</h4>
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <md-input-container class="md-block">
 
                                 <?=form_label('Select username','username')?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_person_outline_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_person_outline_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'text',
@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container>
                                 <?=form_label("Password","password")?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'password',
@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container>
                                 <?=form_label("Confirm Password","password_conform");?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'password',
@@ -92,7 +92,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container class="md-block">
                                 <?=form_label("Fullname","fullname")?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_person_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_person_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'text',
@@ -106,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container class="md-block">
                                 <?=form_label("Address","addres");?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_location_city_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_location_city_black_24px.svg" class="name"></md-icon>
                                 <?php
                                 $data_form=array(
                                     'type'=> 'text',
@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container>
                                 <?=form_label("Phone Number","phone")?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_phone_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_phone_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'text',
@@ -134,7 +134,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <md-input-container>
                                 <?=form_label("Email","email")?>
-                                <md-icon md-svg-src="<?=base_url()?>app/icons/ic_email_black_24px.svg" class="name"></md-icon>
+                                <md-icon md-svg-src="app/icons/ic_email_black_24px.svg" class="name"></md-icon>
                                 <?php
                                     $data_form=array(
                                         'type'=> 'email',
@@ -149,7 +149,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--                           <md-content>-->
                                <section layout="row" layout-align="center center">
                                    <md-button class="md-raised">Cancel</md-button>
-                                   <md-button class="md-raised md-warn" ng-click="saveStudent(student)">Register</md-button>
+                                   <?php echo form_submit(
+                                       array(
+                                       'id' => "submit",
+                                       'value' => 'Register',
+                                       'class' => 'md-button md-raised md-warn')
+                                    );
+                                   ?>
                                </section>
 <!--                           </md-content>-->
                         <?php echo form_close();?>
@@ -160,15 +166,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </md-content>
     <!--build:js js/main.min.js -->
     <!-- bower:js -->
-    <script src="<?=base_url()?>bower_components/angular/angular.js"></script>
-    <script src="<?=base_url()?>bower_components/angular-animate/angular-animate.js"></script>
-    <script src="<?=base_url()?>bower_components/angular-aria/angular-aria.js"></script>
-    <script src="<?=base_url()?>bower_components/angular-messages/angular-messages.js"></script>
-    <script src="<?=base_url()?>bower_components/angular-material/angular-material.js"></script>
-    <script src="<?=base_url()?>bower_components/jquery/dist/jquery.js"></script>
-    <script src="<?=base_url()?>app/js/main.js"></script>
-    <script src="<?=base_url()?>app/components/ngApp.ctrl.js"></script>
-    <script src="<?=base_url()?>app/components/ngApp.factory.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="app/js/main.js"></script>
+    <script src="app/components/ngApp.ctrl.js"></script>
+    <script src="app/components/ngApp.factory.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 </body>

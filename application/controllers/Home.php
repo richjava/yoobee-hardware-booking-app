@@ -24,6 +24,6 @@ class Home extends CI_Controller {
 	}
 
 	public function register(){
-		echo "hello";
+        echo base_url();
 	}
 }
