@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
@@ -13,8 +11,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <md-card-content>
             <md-content>
                 <div layout="column" layout-padding ng-cloak>
-                    <?php echo form_open(base_url().'home');?>
+                    <?php echo form_open(base_url().'auth');?>
                     <md-input-container class="md-block">
+                        <?php if($error==1){?>
+                            <p>Username or password did not match</p>
+                        <? } ?>
 
                         <?=form_label('Select username','username')?>
                         <md-icon md-svg-src="app/icons/ic_person_outline_black_24px.svg" class="name"></md-icon>
@@ -43,7 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         ?>
                     </md-input-container>
 
-                    <!--                           <md-content>-->
                     <section layout="row" layout-align="center center">
                         <md-button class="md-raised">Cancel</md-button>
                         <?php echo form_submit(
@@ -54,13 +54,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         );
                         ?>
                     </section>
-                    <!--                           </md-content>-->
+
                     <?php echo form_close();?>
                 </div>
             </md-content>
 
             <md-card-content>
-                <p>Not a member? Register here</p>
+                <p>Not a member, register <?=anchor('auth/register','here')?></p>
             </md-card-content>
 
         </md-card-content>

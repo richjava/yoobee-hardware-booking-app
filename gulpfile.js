@@ -14,7 +14,7 @@ var wiredep = require('wiredep').stream;
 
 /*Wires Bower dependencies to your source code.*/
 gulp.task('wiredep', function () {
-    gulp.src('application/views/home.php')
+    gulp.src('application/views/header.php')
         .pipe(wiredep({
             optional: 'configuration',
             goes: 'here'

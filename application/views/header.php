@@ -8,13 +8,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Yoobee Hardware Booking System</title>
     <!--build:css css/styles.min.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="<?=base_url()?>bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="<?=base_url()?>bower_components/mdi/css/materialdesignicons.css" />
-    <link rel="stylesheet" href="<?=base_url()?>app/css/styles.css">
+    <?=link_tag("bower_components/angular-material/angular-material.css")?>
+    <?=link_tag("bower_components/mdi/css/materialdesignicons.css")?>
+    <?=link_tag("bower_components/mdi/css/materialdesignicons.min.css")?>
+    <?=link_tag("bower_components/ang-accordion/css/ang-accordion.css")?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>
 <body ng-app="myApp" ng-controller="ngAppCtrl" ng-cloak>
+
         <md-toolbar>
             <div class="md-toolbar-tools">
                 <md-button ng-click="openSidebar();">
@@ -23,7 +25,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <p><strong>Yoobee Hardware Booking Application<ation</strong></p>
             </div>
         </md-toolbar>
+
+        <?php if($this->session->userdata('username')) {?>
+            <p>You are logged in</p>
+            <?=anchor('auth/logout','Logout')?>
+        <? } ?>
+
         <!--side navigation bar / menu-->
+
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
             <md-toolbar class="md-toolbar-tools">
                 <h1 flex>Settings</h1>
