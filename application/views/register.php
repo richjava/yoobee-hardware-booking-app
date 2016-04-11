@@ -1,6 +1,4 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
@@ -9,11 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </md-card-title>
         <md-card-content>
             <h4>{{ title | uppercase}}</h4>
+            <?php if($errors) {?>
+                <h3 style="color:red;"><b><?=$errors?></b></h3>
+            <?php } ?>
         </md-card-content>
         <md-card-content>
             <md-content>
                 <div layout="column" layout-padding ng-cloak>
-                    <?php echo form_open(base_url().'auth');?>
+                    <?php echo form_open(base_url().'auth/register');?>
                     <md-input-container class="md-block">
 
                         <?=form_label('Select username','username')?>
@@ -49,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php
                         $data_form=array(
                             'type'=> 'password',
-                            'name' => 'password_password',
+                            'name' => 'password_confirm',
                             'id' => 'password_confirm'
                         );
                         echo form_input($data_form);
@@ -103,7 +104,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <md-icon md-svg-src="<?=base_url()?>app/icons/ic_email_black_24px.svg" class="name"></md-icon>
                         <?php
                         $data_form=array(
-                            'type'=> 'email',
+                            'type'=> 'text',
                             'name' => 'email',
                             'id' => 'email',
                             'ng-model' => 'student.email'
