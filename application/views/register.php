@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-<md-content class="md-padding container" layout="row" layout-wrap>
+<md-content class="md-padding " layout="row" layout-wrap>
     <md-card>
         <md-card-title flex="60" flex-offset="20">
             <p><img src="<?=base_url()?>app/images/logo.png" alt="Yoobee Logo"></p>

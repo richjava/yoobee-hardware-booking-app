@@ -4,42 +4,45 @@
     <md-card>
 
         <md-card-title flex="60" flex-offset="20">
-            <h4>Welcome <?=$this->session->userdata('username')?>, </h4>
+            <h4>Welcome <?= $this->session->userdata('username') ?>, </h4>
         </md-card-title>
 
-        <md-card-content>
-            <v-accordion class="vAccordion--default" multiple>
+        <md-card-content style="width: 400px">
+            <v-accordion id="my-accordion" class="vAccordion--default" multiple control="accordion">
 
-                <!-- add expanded attribute to open the section -->
-                <v-pane>
+                <v-pane id="{{ category.id }}" ng-repeat="category in categories" expanded="pane.isExpanded">
+
                     <v-pane-header>
-                        Pane header #1
+                        {{ category.header }}
                     </v-pane-header>
 
                     <v-pane-content>
-                        Pane content #1
+                        {{ category.content }}
+                        <v-accordion ng-if="category.devices">
+                            <v-pane ng-repeat="device in category.devices" ng-disabled="device.isDisabled">
+                                <v-pane-header>
+                                    <md-checkbox class="md-warn"></md-checkbox>
+                                    {{ device.header }}
+                                </v-pane-header>
+                                <v-pane-content>
+                                    {{ device.content }}
+                                </v-pane-content>
+                            </v-pane>
+                        </v-accordion>
                     </v-pane-content>
 
-                    <v-pane-content>
-                        Pane content #2
-                    </v-pane-content>
-
-                    <v-pane-content>
-                        Pane content #3
-                    </v-pane-content>
-                </v-pane>
-
-                <v-pane>
-                    <v-pane-header>
-                        Pane header #2
-                    </v-pane-header>
-
-                    <v-pane-content>
-                        Pane content #2
-                    </v-pane-content>
                 </v-pane>
 
             </v-accordion>
+        </md-card-content>
+        <md-card-content>
+            <div layout="row" layout-align="end end">
+                    <div>
+                        <md-button class="md-icon-button md-primary">
+                            <md-icon md-svg-src="<?=base_url()?>app/icons/ic_arrow_forward_black_48px.svg" ng-click="function()"></md-icon>
+                        </md-button>
+                    </div>
+            </div>
         </md-card-content>
 
     </md-card>

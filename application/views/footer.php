@@ -1,3 +1,4 @@
+    </div>
 <!--build:js js/main.min.js -->
 <!-- bower:js -->
     <script src="<?=base_url()?>bower_components/angular/angular.js"></script>

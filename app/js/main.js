@@ -9,6 +9,10 @@
                 .primaryPalette('pink')
                 .accentPalette('orange');
         })
+        .config(function (accordionConfig) { /*accordion opening closing animation time*/
+            accordionConfig.expandAnimationDuration = 0.5;
+        });
+
 })();/*IIFE function*/
 
 

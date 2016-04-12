@@ -3,7 +3,7 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
         <md-card-title flex="60" flex-offset="20">
-            <p><img src="app/images/logo.png" alt="Yoobee Logo"></p>
+            <p><img src="<?=base_url()?>app/images/logo.png" alt="Yoobee Logo"></p>
         </md-card-title>
         <md-card-content>
             <h4>{{ singin}}</h4>

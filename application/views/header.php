@@ -11,6 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?=link_tag("bower_components/angular-material/angular-material.css")?>
     <?=link_tag("bower_components/mdi/css/materialdesignicons.css")?>
     <?=link_tag("bower_components/v-accordion/dist/v-accordion.css")?>
+    <?=link_tag("app/css/styles.css")?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>
@@ -25,11 +26,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </md-toolbar>
 
-        <?php if($this->session->userdata('username')) {?>
-            <p>You are logged in</p>
-            <?=anchor('auth/logout','Logout')?>
-        <? } ?>
-
         <!--side navigation bar / menu-->
 
         <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
@@ -40,5 +36,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </md-button>
             </md-toolbar>
             <md-content layout-padding>
+                <?php if($this->session->userdata('username')) {?>
+                    <?=anchor('auth/logout','Logout')?>
+                <? } ?>
             </md-content>
         </md-sidenav>
+<div class="container">
