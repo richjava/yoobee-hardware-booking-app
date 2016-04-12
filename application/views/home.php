@@ -11,7 +11,7 @@
             <v-accordion class="vAccordion--default" multiple>
 
                 <!-- add expanded attribute to open the section -->
-                <v-pane expanded>
+                <v-pane>
                     <v-pane-header>
                         Pane header #1
                     </v-pane-header>
@@ -19,9 +19,17 @@
                     <v-pane-content>
                         Pane content #1
                     </v-pane-content>
+
+                    <v-pane-content>
+                        Pane content #2
+                    </v-pane-content>
+
+                    <v-pane-content>
+                        Pane content #3
+                    </v-pane-content>
                 </v-pane>
 
-                <v-pane disabled>
+                <v-pane>
                     <v-pane-header>
                         Pane header #2
                     </v-pane-header>

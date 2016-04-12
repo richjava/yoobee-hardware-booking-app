@@ -10,8 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- bower:css -->
     <?=link_tag("bower_components/angular-material/angular-material.css")?>
     <?=link_tag("bower_components/mdi/css/materialdesignicons.css")?>
-    <?=link_tag("bower_components/mdi/css/materialdesignicons.min.css")?>
-    <?=link_tag("bower_components/ang-accordion/css/ang-accordion.css")?>
+    <?=link_tag("bower_components/v-accordion/dist/v-accordion.css")?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>

@@ -3,7 +3,7 @@
 
     "use strict";
 
-    angular.module("myApp",["ngMaterial","angAccordion"])
+    angular.module("myApp",["ngMaterial","vAccordion"])
         .config(function($mdThemingProvider){/*setting angular material theme color*/
             $mdThemingProvider.theme('default')
                 .primaryPalette('pink')
