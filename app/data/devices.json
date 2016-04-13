@@ -1,43 +1,43 @@
 [
   {
-    "id": "devices category one",
+    "id": "cat1",
     "header": "this will be header for category 1",
     "content": "ellentesque facilisis. Nulla imperdiet sit amet magna."
   },
   {
-    "id": "devices category two",
+    "id": "cat2",
     "header": " this will be header for category 2",
     "content": "Lorem ipsum dolo Lorem ipsum dolo.",
     "devices": [
       {
-        "id": "device 4",
+        "id": "dev1",
         "header": "this is the header for device 1  cat2",
         "content": "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non."
       },
       {
-        "id": "device 8",
+        "id": "dev2",
         "header": "this is the header for device 2 cat2",
         "content": "Curabitur et ligula. Ut molestie a, ultricies porta urna. Quisque lorem tortor fringilla sed, vestibulum id."
       }
     ]
   },
   {
-    "id": "devices category three",
+    "id": "cat3",
     "header": " this will be header for category 3",
     "content": "Lorem ipsum dolo Lorem ipsum dolo.",
     "devices": [
       {
-        "id": "device 1",
+        "id": "dev3",
         "header": "this is the header for device 1  cat3",
         "content": "Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non."
       },
       {
-        "id": "device 2",
+        "id": "dev4",
         "header": "this is the header for device 2 cat3",
         "content": "Curabitur et ligula. Ut molestie a, ultricies porta urna. Quisque lorem tortor fringilla sed, vestibulum id."
       },
       {
-        "id": "device 3",
+        "id": "dev5",
         "header": "this is the header for device 3 cat3",
         "content": "Curabitur et ligula. Ut molestie a, ultricies porta urna. Quisque lorem tortor fringilla sed, vestibulum id."
       }

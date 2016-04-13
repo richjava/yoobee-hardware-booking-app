@@ -1,23 +1,53 @@
 /*IIFE function*/
-//(function(){
+(function () {
 
     "use strict";
 
-    angular.module("myApp")//referencing to the ngApp in main.js
-        .controller("ngAppCtrl", function($scope, $http, $mdSidenav){
+    angular.module("myApp")
 
-            $scope.title="Enter your details to register:";
+        /*controller for whole the application*/
 
-            $scope.openSidebar = function() {
+        .controller("ngAppCtrl", function ($scope, $mdSidenav) {
+
+            $scope.title = "Enter your details to register:";
+
+            $scope.openSidebar = function () {
                 $mdSidenav('left').open();
             }
-            $scope.closeSidebar = function() {
+            $scope.closeSidebar = function () {
                 $mdSidenav('left').close();
             }
 
-            $http.get('app/data/devices.json').then(function(categories){
+        })
+        /*controller for devices page*/
+
+        .controller('ngDeviceSelectionCtrl', function ($scope, $http) {
+
+            $http.get('app/data/devices.json').then(function (categories) {
                 $scope.categories = categories.data;
             })
 
-});/*angular.module(ngApp)*/
-//})();/*IIFE function*/
+            $scope.selected = [];
+            $scope.toggle = function (item, list) {
+                var idx = list.indexOf(item);
+                if (idx > -1) {
+                    list.splice(idx, 1);
+                }
+                else {
+                    list.push(item);
+                }
+            };
+
+            $scope.registerDevices = function (list) {
+                console.log(list);
+                $http.post("", list)
+                    .success(function (data, status, headers, config) {
+                    })
+                    .error(function (data, status, header, config) {
+                    });
+            }
+
+        });
+    /*angular.module("myApp")*/
+})();
+/*IIFE function*/
