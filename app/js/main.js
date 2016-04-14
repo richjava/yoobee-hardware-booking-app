@@ -14,14 +14,14 @@
             $stateProvider
                 .state('devices', {
                     url: '/devices',
-                    templateUrl: '../app/devices.html'
+                    templateUrl: '../app/devices.html',
+                    controller: 'ngDeviceSelectionCtrl'
                 })/*.state('devices'*/
                 .state('calendar', {
                     url: '/calendar',
-                    templateUrl: '../app/calendar.html'
-                });
-            /* .state('calendar'*/
-
+                    templateUrl: '../app/calendar.html',
+                    controller: "ngDatePickerCtrl"
+                })
         });
 
 })();/*IIFE function*/

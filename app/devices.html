@@ -1,4 +1,4 @@
-<md-content ng-controller="ngDeviceSelectionCtrl" class="md-padding container" layout="row" layout-wrap>
+<md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
         <md-card-content style="width: 500px">
             <v-accordion class="vAccordion--default" multiple control="accordion">
@@ -25,6 +25,7 @@
         </md-card-content>
         <md-card-content>
             <div layout="row" layout-align="end end">
+                <p>{{ selected | json }}</p>
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
                              ng-click="registerDevices(selected);"></md-icon>
