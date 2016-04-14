@@ -19,6 +19,11 @@
     "angular-material": "^1.0.7",
     "mdi": "^1.5.54",
     "jquery": "^2.2.3",
-    "ang-accordion": "*"
+    "ang-accordion": "*",
+    "angular-ui-calendar": "^1.0.1",
+    "moment": "^2.12.0"
+  },
+  "resolutions": {
+    "angular": "1.3.15"
   }
 }
