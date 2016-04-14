@@ -23,7 +23,7 @@
 
         .controller('ngDeviceSelectionCtrl', function ($scope, $http) {
 
-            $http.get('app/data/devices.json').then(function (categories) {
+            $http.get('../app/data/devices.json').then(function (categories) {
                 $scope.categories = categories.data;
             })
 
@@ -38,16 +38,15 @@
                 }
             };
 
-            $scope.registerDevices = function (list) {
-                console.log(list);
-                $http.post("", list)
-                    .success(function (data, status, headers, config) {
-                    })
-                    .error(function (data, status, header, config) {
-                    });
-            }
+            //$scope.registerDevices = function (list) {
+            //    $http.post("", list)
+            //        .success(function (data, status, headers, config) {
+            //        })
+            //        .error(function (data, status, header, config) {
+            //        });
+            //}
 
-        });
+        })
     /*angular.module("myApp")*/
 })();
 /*IIFE function*/

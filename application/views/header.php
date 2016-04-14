@@ -11,6 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?=link_tag("bower_components/angular-material/angular-material.css")?>
     <?=link_tag("bower_components/mdi/css/materialdesignicons.css")?>
     <?=link_tag("bower_components/v-accordion/dist/v-accordion.css")?>
+    <?= link_tag("bower_components/ang-accordion/css/ang-accordion.css") ?>
+    <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
     <?=link_tag("app/css/styles.css")?>
     <!-- endbower -->
     <!-- endbuild -->
@@ -35,6 +37,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <md-icon md-svg-src="<?=base_url()?>app/icons/ic_close_white_48px.svg"></md-icon>
                 </md-button>
             </md-toolbar>
+
+            <md-card-title flex="60" flex-offset="20">
+                <h4>Welcome <?= $this->session->userdata('username') ?>, </h4>
+            </md-card-title>
+
             <md-content layout-padding>
                 <?php if($this->session->userdata('username')) {?>
                     <?=anchor('auth/logout','Logout')?>

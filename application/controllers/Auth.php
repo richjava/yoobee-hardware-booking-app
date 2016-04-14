@@ -15,7 +15,7 @@ class Auth extends CI_Controller
                 $data['error'] = 1;
             } else {
                 $this->session->set_userdata('username', $student['username']);
-                redirect(base_url() . 'home');
+                redirect(base_url() . 'home/#/devices');
             }
         }
         $this->load->view('header');
