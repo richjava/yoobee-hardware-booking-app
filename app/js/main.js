@@ -3,6 +3,15 @@
 
     "use strict";
 
+    /*to disable aria warnings in the console*/
+    var oldWarn = console.warn;
+    console.warn = function (arg1) {
+        if (arg1.startsWith('ARIA:')) return;
+        oldWarn.apply(console, arguments);
+    };
+    console.warn('ARIA warnings disabled.');
+    /*to disable aria warnings in the console*/
+
     angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ui.calendar"])
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')

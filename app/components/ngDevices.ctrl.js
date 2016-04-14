@@ -21,15 +21,21 @@
             };
 
             $scope.registerDevices = function (list) {
-                console.log(list);
-                $http.post("", list)
-                    .success(function (data, status, headers, config) {
-                    })
-                    .error(function (data, status, header, config) {
-                    });
-            }
 
-        })
+                var req = {
+                    method: 'POST',
+                    url: 'api',
+                    headers: {
+                        'Content-Type': undefined
+                    },
+                    data: {list: 'list'}
+                }
+
+                $http(req).then(function () {
+                });
+            };
+
+        });
 })();
 
 

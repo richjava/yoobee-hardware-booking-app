@@ -12,9 +12,9 @@
                     height: "400",
                     editable: true,
                     header: {
-                        left: 'month basicWeek',
+                        left: 'prev',
                         center: 'title',
-                        right: 'prev,next'
+                        right: 'next'
                     },
                     dayClick: $scope.alertEventOnClick,
                     eventDrop: $scope.alertOnDrop,
