@@ -1,4 +1,7 @@
-<?php class Device extends CI_Model
+<?php
+
+
+class Device extends CI_Model
 {
 
     public function insert_device($data)

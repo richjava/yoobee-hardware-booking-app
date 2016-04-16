@@ -24,8 +24,8 @@
             </v-accordion>
         </md-card-content>
         <md-card-content>
+            {{ selected | json }}
             <div layout="row" layout-align="end end">
-                <p>{{ selected | json }}</p>
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
                              ng-click="registerDevices(selected);"></md-icon>

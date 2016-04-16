@@ -23,12 +23,12 @@
             $stateProvider
                 .state('devices', {
                     url: '/devices',
-                    templateUrl: '../app/devices.html',
+                    templateUrl: '../app/devices/devices.html',
                     controller: 'ngDeviceSelectionCtrl'
                 })/*.state('devices'*/
                 .state('calendar', {
                     url: '/calendar',
-                    templateUrl: '../app/calendar.html',
+                    templateUrl: '../app/calendar/calendar.html',
                     controller: "ngDatePickerCtrl"
                 })
         });

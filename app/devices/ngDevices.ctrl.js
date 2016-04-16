@@ -21,21 +21,21 @@
             };
 
             $scope.registerDevices = function (list) {
-
-                var req = {
+                console.log(list);
+                var listObj = {};
+                angular.extend(listObj, list);
+                console.log(listObj);
+                $http({
                     method: 'POST',
-                    url: 'api',
-                    headers: {
-                        'Content-Type': undefined
-                    },
-                    data: {list: 'list'}
-                }
+                    url: 'http://localhost/yoobee-hardware-booking-app/api/createBooking',
+                    data: listObj
+                }).success(function (data) {
+                    /*do something here*/
+                })
 
-                $http(req).then(function () {
-                });
-            };
-
+            }
         });
+
 })();
 
 
