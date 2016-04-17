@@ -3,7 +3,7 @@
     "user strict";
 
     angular.module("myApp")
-        .controller("ngDatePickerCtrl", function ($scope, $uibModal, $log, $compile, uiCalendarConfig) {
+        .controller("ngDatePickerCtrl", function ($scope) {
 
             var date = new Date();
             var d = date.getDate();
@@ -15,13 +15,13 @@
                 start: new Date(y, m, 1)
             }, {
                 title: 'camera',
-                start: new Date(y, m, d - 5),
-                end: new Date(y, m, d - 2)
+                start: new Date(y, m, 5),
+                end: new Date(y, m, 7)
             }, {
                 id: 999,
                 title: 'tripod',
                 start: new Date(y, m, d - 3, 16, 0),
-                allDay: false
+                allDay: true
             }, {
                 id: 999,
                 title: 'flash',

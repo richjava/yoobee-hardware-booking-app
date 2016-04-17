@@ -4,18 +4,18 @@
             <v-accordion class="vAccordion--default" multiple control="accordion">
                 <v-pane id="{{ category.id }}" ng-repeat="category in categories" expanded="pane.isExpanded">
                     <v-pane-header>
-                        {{ category.description }}
+                        {{ category.category_name }}
                     </v-pane-header>
-
                     <v-pane-content>
-                        <v-accordion ng-if="category.devices">
-                            <v-pane ng-repeat="device in category.devices" ng-disabled="device.isDisabled">
-                                <v-pane-header>
-                                    <md-checkbox class="md-warn" ng-click="toggle(device.id,selected)"></md-checkbox>
-                                    {{ device.header }}
+                        <v-accordion>
+                            <v-pane ng-repeat="device in devices">
+                                <v-pane-header ng-show="device.category_id == category.category_id">
+                                    <md-checkbox class="md-warn"
+                                                 ng-click="toggle(device.device_id,selected)"></md-checkbox>
+                                    {{ device.device_name }}
                                 </v-pane-header>
                                 <v-pane-content>
-                                    {{ device.content }}
+                                    {{ device.description}}
                                 </v-pane-content>
                             </v-pane>
                         </v-accordion>
@@ -25,6 +25,7 @@
         </md-card-content>
         <md-card-content>
             <div layout="row" layout-align="end end">
+                {{selected | json}}
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
                              ng-click="beginBooking(selected);"></md-icon>

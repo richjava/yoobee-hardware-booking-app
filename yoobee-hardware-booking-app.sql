@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.10
+-- version 4.2.7
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Apr 17, 2016 at 11:26 AM
--- Server version: 5.5.42
+-- Generation Time: Apr 17, 2016 at 11:56 PM
+-- Server version: 5.5.41-log
 -- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT = @@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS = @@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION = @@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `devicebooking_db`
@@ -20,48 +26,16 @@ SET time_zone = "+00:00";
 -- Table structure for table `bookings_tb`
 --
 
-CREATE TABLE `bookings_tb` (
-  `booking_id` int(11) NOT NULL,
-  `student_id` INT(11)  DEFAULT NULL,
-  `device_id`  INT(11)  DEFAULT NULL,
-  `start_date` DATETIME DEFAULT NULL,
-  `end_date`   DATETIME DEFAULT NULL
+CREATE TABLE IF NOT EXISTS `bookings_tb` (
+  `booking_id`          int(11) NOT NULL,
+  `student_id`          INT(11)  DEFAULT NULL,
+  `selected_devices_id` INT(11)  DEFAULT NULL,
+  `start_date`          DATETIME DEFAULT NULL,
+  `end_date`            DATETIME DEFAULT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 27
-  DEFAULT CHARSET = latin1;
-
---
--- Dumping data for table `bookings_tb`
---
-
-INSERT INTO `bookings_tb` (`booking_id`, `student_id`, `device_id`, `start_date`, `end_date`) VALUES
-  (1, NULL, NULL, NULL, NULL),
-  (2, NULL, 0, NULL, NULL),
-  (3, 3, 5, NULL, NULL),
-  (4, NULL, 5, NULL, NULL),
-  (5, NULL, NULL, NULL, NULL),
-  (6, NULL, NULL, NULL, NULL),
-  (7, NULL, NULL, NULL, NULL),
-  (8, NULL, NULL, NULL, NULL),
-  (9, NULL, NULL, NULL, NULL),
-  (10, NULL, NULL, NULL, NULL),
-  (11, NULL, NULL, NULL, NULL),
-  (12, NULL, NULL, NULL, NULL),
-  (13, NULL, NULL, NULL, NULL),
-  (14, NULL, NULL, NULL, NULL),
-  (15, NULL, NULL, NULL, NULL),
-  (16, NULL, NULL, NULL, NULL),
-  (17, NULL, NULL, NULL, NULL),
-  (18, NULL, NULL, NULL, NULL),
-  (19, NULL, NULL, NULL, NULL),
-  (20, NULL, NULL, NULL, NULL),
-  (21, NULL, NULL, NULL, NULL),
-  (22, NULL, NULL, NULL, NULL),
-  (23, NULL, NULL, NULL, NULL),
-  (24, NULL, NULL, NULL, NULL),
-  (25, NULL, NULL, NULL, NULL),
-  (26, NULL, NULL, NULL, NULL);
+  DEFAULT CHARSET = latin1
+  AUTO_INCREMENT = 1;
 
 -- --------------------------------------------------------
 
@@ -69,13 +43,13 @@ INSERT INTO `bookings_tb` (`booking_id`, `student_id`, `device_id`, `start_date`
 -- Table structure for table `categories_tb`
 --
 
-CREATE TABLE `categories_tb` (
+CREATE TABLE IF NOT EXISTS `categories_tb` (
   `category_id` int(11) NOT NULL,
   `category_name` varchar(255) NOT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 6
-  DEFAULT CHARSET = latin1;
+  DEFAULT CHARSET = latin1
+  AUTO_INCREMENT = 6;
 
 --
 -- Dumping data for table `categories_tb`
@@ -94,7 +68,7 @@ INSERT INTO `categories_tb` (`category_id`, `category_name`) VALUES
 -- Table structure for table `devices_tb`
 --
 
-CREATE TABLE `devices_tb` (
+CREATE TABLE IF NOT EXISTS `devices_tb` (
   `device_id`   INT(11) NOT NULL,
   `device_name` VARCHAR(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -108,34 +82,34 @@ CREATE TABLE `devices_tb` (
 INSERT INTO `devices_tb` (`device_id`, `device_name`, `description`, `category_id`) VALUES
   (1, 'Sony A7R II',
    'Type: Mirrorless | Sensor size: full frame, 42.4Mp | Lens: Sony E mount (full frame) | Monitor: 3-inch tilting, 1,229k dots | Viewfinder: EVF | Continuous shooting: 5fps | Movies: 4K | User level: Expert',
-   NULL),
+   1),
   (2, 'Olympus OM-D E-M10 II',
    'Type: Mirrorless | Sensor size: Micro Four Thirds, 16.1MP | Lens: Micro Four Thirds | Monitor: 3-inch tilting, 1,037k dots | Viewfinder: EVF | Continuous shooting: 8.5fps | Movies: 1080 | User level: Enthusiast',
-   NULL),
+   1),
   (3, 'TomTom Bandit',
    'Type: action cam | Weight: 190g | Waterproofing: Splashproof, with lens swap | 4K video: 15fps | 1080: up to 60fps | 720: up to 120fps | Stills resolution: 16Mp | Battery life: 3hrs',
-   NULL),
+   2),
   (4, 'Sony RX100 III',
    'Type: high-end compact | Sensor size: 1-inch, CMOS | Megapixels: 20.1 | Lens: 24-70mm-equivalent, f1.8-2.8 | Screen: 3-inch tilting, 1,228,800 dots | Viewfinder: EVF | Continuous shooting: 5fps | Video: 1080p | User level: Enthusiast/expert',
-   NULL),
+   2),
   (5, 'Panasonic TZ70/ZS50',
    'Type: Compact travel camera: Sensor: 1/2.3-inch, 12.1Mp | Lens: 24-720mm, f/3.3-6.4 | Monitor: 3-inch, 1,040K dots | Viewfinder: Electronic | Continuous shooting: 10fps | Movies: 1080 | User level:Beginner/enthusiast',
-   NULL),
+   3),
   (6, 'Leica Q',
    'Type: high-end compact | Sensor size: Full frame | Megapixels: 24MP | Lens: 28mm, f/1.7 | Screen: 3-inch touch-screen, 1,040K dots | Viewfinder: EVF | Continuous shooting: 10fps | Video: 1080p | User level: Expert',
-   NULL),
+   3),
   (7, 'Nikon D7200',
    'Type: DSLR | Sensor: APS-C, 24.2Mp | Lenses: Nikon DX, FX | Monitor: 3.2-inch, 1,229K dots | Viewfinder: Optical | Continuous shooting: 6fps | Movies: 1080p | User level: Enthusiast',
-   NULL),
+   4),
   (8, 'Canon EOS 760D',
    'Type: DSLR | Sensor: APS-C, 24.2Mp | Lenses: Canon EF/EF-S | Monitor: 3-inch articulating, 1,040K dots | Viewfinder: Optical | Continuous shooting: 5fps | Movies: 1080p | User level: Beginner/enthusiast',
-   NULL),
+   4),
   (9, 'Panasonic LX100',
    'Type: High-end compact | Sensor: Micro Four Thirds, 12.8MP | Lens: 24-75mm, f/1.7-2.8 | Monitor: 3-inch, 921K dots | Viewfinder: Electronic | Continuous shooting: 11fps | Movies: 4K | User level:Expert',
-   NULL),
+   5),
   (10, 'Panasonic FZ1000',
    'Type: Bridge camera | Sensor: 1-inch, 20.1Mp | Lens: 25-400mm, f/2.8-4.0 | Monitor: 3-inch articulating, 921K dots | Viewfinder: Electronic | Continuous shooting: 12fps | Movies: 4K | User level: Enthusiast',
-   NULL);
+   5);
 
 -- --------------------------------------------------------
 
@@ -143,10 +117,13 @@ INSERT INTO `devices_tb` (`device_id`, `device_name`, `description`, `category_i
 -- Table structure for table `programmes_tb`
 --
 
-CREATE TABLE `programmes_tb` (
+CREATE TABLE IF NOT EXISTS `programmes_tb` (
   `programme_id` int(11) NOT NULL,
   `programme_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1
+  AUTO_INCREMENT = 1;
 
 -- --------------------------------------------------------
 
@@ -154,37 +131,28 @@ CREATE TABLE `programmes_tb` (
 -- Table structure for table `selected_devices_tb`
 --
 
-CREATE TABLE `selected_devices_tb` (
+CREATE TABLE IF NOT EXISTS `selected_devices_tb` (
   `selected_devices_id` INT(11)      NOT NULL,
   `booking_id`          VARCHAR(255) NOT NULL,
   `device_id`           VARCHAR(255) NOT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 18
-  DEFAULT CHARSET = latin1;
+  DEFAULT CHARSET = latin1
+  AUTO_INCREMENT = 9;
 
 --
 -- Dumping data for table `selected_devices_tb`
 --
 
 INSERT INTO `selected_devices_tb` (`selected_devices_id`, `booking_id`, `device_id`) VALUES
-  (1, '261', 'dev2'),
-  (2, '261', 'dev1'),
-  (3, '261', 'dev1'),
-  (4, '261', 'dev2'),
-  (5, '27', 'dev3'),
-  (6, '27', 'dev5'),
-  (7, '27', 'dev4'),
-  (8, '27', 'dev3'),
-  (9, '27', 'dev4'),
-  (10, '27', 'dev5'),
-  (11, '27', 'dev2'),
-  (12, '27', 'dev1'),
-  (13, '27', 'dev3'),
-  (14, '27', 'dev5'),
-  (15, '27', 'dev4'),
-  (16, '27', 'dev4'),
-  (17, '27', 'dev5');
+  (1, '1', '10'),
+  (2, '1', '9'),
+  (3, '1', '3'),
+  (4, '1', '1'),
+  (5, '0', '4'),
+  (6, '0', '6'),
+  (7, '0', '5'),
+  (8, '0', '3');
 
 -- --------------------------------------------------------
 
@@ -192,10 +160,10 @@ INSERT INTO `selected_devices_tb` (`selected_devices_id`, `booking_id`, `device_
 -- Table structure for table `students_tb`
 --
 
-CREATE TABLE `students_tb` (
-  `student_id`   int(11)      NOT NULL,
-  `username`     varchar(255) DEFAULT NULL,
-  `password`     varchar(255) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS `students_tb` (
+  `student_id`   INT(11)      NOT NULL,
+  `username`     VARCHAR(255) DEFAULT NULL,
+  `password`     VARCHAR(255) DEFAULT NULL,
   `fullname`     VARCHAR(255) NOT NULL,
   `address`      VARCHAR(255) NOT NULL,
   `phone`        VARCHAR(255) NOT NULL,
@@ -203,8 +171,8 @@ CREATE TABLE `students_tb` (
   `programme_id` INT(11)      DEFAULT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 7
-  DEFAULT CHARSET = latin1;
+  DEFAULT CHARSET = latin1
+  AUTO_INCREMENT = 7;
 
 --
 -- Dumping data for table `students_tb`
@@ -267,7 +235,7 @@ ADD PRIMARY KEY (`student_id`);
 -- AUTO_INCREMENT for table `bookings_tb`
 --
 ALTER TABLE `bookings_tb`
-MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 27;
+MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `categories_tb`
 --
@@ -282,9 +250,12 @@ MODIFY `programme_id` INT(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `selected_devices_tb`
 --
 ALTER TABLE `selected_devices_tb`
-MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 18;
+MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 9;
 --
 -- AUTO_INCREMENT for table `students_tb`
 --
 ALTER TABLE `students_tb`
 MODIFY `student_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 7;
+/*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION = @OLD_COLLATION_CONNECTION */;

@@ -25,30 +25,19 @@ class Api extends REST_Controller
 
     function categories_get()
     {
-        $this->db->select()->from('categories_tb');
-        $query = $this->db->get();
-        /*returns the query result as a pure array*/
-//        foreach ($query->result_array() as $row)
-//        {
-//            echo $row['category_id'];
-//            echo $row['category_name'];
-//        }
-        /*returns the query result as an array of objects*/
-        foreach ($query->result() as $row) {
-            echo $row->category_name;
-        }
+        $data = $this->device->getCategory();
+        echo json_encode($data);
     }
 
     function devices_get()
     {
-        $this->db->select();
-        $this->db->from('devices_tb');
-        $query = $this->db->get();
-        /*returns the query result as an array of objects*/
-        foreach ($query->result() as $row) {
-            echo $row->device_name;
-            echo $row->description;
-        }
+        $data = $this->device->getDevice();
+        echo json_encode($data);
+    }
+
+    function getDates()
+    {
+
     }
 
 } //class Api extends REST_Controller
