@@ -4,10 +4,10 @@
             <v-accordion class="vAccordion--default" multiple control="accordion">
                 <v-pane id="{{ category.id }}" ng-repeat="category in categories" expanded="pane.isExpanded">
                     <v-pane-header>
-                        {{ category.header }}
+                        {{ category.description }}
                     </v-pane-header>
+
                     <v-pane-content>
-                        {{ category.content }}
                         <v-accordion ng-if="category.devices">
                             <v-pane ng-repeat="device in category.devices" ng-disabled="device.isDisabled">
                                 <v-pane-header>
@@ -24,11 +24,10 @@
             </v-accordion>
         </md-card-content>
         <md-card-content>
-            {{ selected | json }}
             <div layout="row" layout-align="end end">
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
-                             ng-click="registerDevices(selected);"></md-icon>
+                             ng-click="beginBooking(selected);"></md-icon>
                 </md-button>
             </div>
         </md-card-content>

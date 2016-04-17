@@ -19,23 +19,30 @@
                     list.push(item);
                 }
             };
-
-            $scope.registerDevices = function (list) {
-                console.log(list);
-                var listObj = {};
-                angular.extend(listObj, list);
-                console.log(listObj);
+            $scope.beginBooking = function (list) {
                 $http({
-                    method: 'POST',
-                    url: 'http://localhost/yoobee-hardware-booking-app/api/createBooking',
-                    data: listObj
-                }).success(function (data) {
-                    /*do something here*/
+                    /*getting the last booking id fom the booking table*/
+                    method: 'GET',
+                    url: 'http://localhost/yoobee-hardware-booking-app/api/booking_id'
+                }).then(function success(bookingID) {
+                    for (var i = 0; i < list.length; i++) {
+                        data = {'booking_id': parseInt(bookingID.data) + 1, 'device_id': list[i]};
+                        $http({
+                            method: 'POST',
+                            url: 'http://localhost/yoobee-hardware-booking-app/api/bookings',
+                            data: data
+                        }).success(function (data) {
+                            /*do something here*/
+                        })
+                    }
+                    /*for (var i=0;i<list.length;i++*/
                 })
-
+                /*}).then(function success(bookingID)*/
             }
+            /*$scope.beginBooking = function (list)*/
         });
-
+    /*.controller('ngDeviceSelectionCtrl', function ($scope, $http) */
 })();
+/*(function () {*/
 
 

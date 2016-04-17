@@ -2,7 +2,10 @@
     <md-card>
         <md-card-content style="width: 600px;height: 500px;">
 
-            <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+            <div select="renderCalender('myCalendar1');">
+                <div class="calendar" ng-model="eventSources" calendar="myCalendar1"
+                     ui-calendar="uiConfig.calendar"></div>
+            </div>
 
         </md-card-content>
         <md-card-content>
@@ -14,7 +17,6 @@
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg" ng-click=""></md-icon>
                 </md-button>
             </span>
-
         </md-card-content>
     </md-card>
 </md-content>
