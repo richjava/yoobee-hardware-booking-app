@@ -14,6 +14,7 @@
     <script src="<?= base_url() ?>bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
     <script src="<?= base_url() ?>bower_components/fullcalendar/dist/gcal.js"></script>
     <script src="<?= base_url() ?>bower_components/angular-ui-router-uib-modal/angular-ui-router-uib-modal.js"></script>
+    <script src="<?= base_url() ?>bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="<?=base_url()?>app/js/main.js"></script>
     <script src="<?= base_url() ?>app/js/ngApp.ctrl.js"></script>
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>

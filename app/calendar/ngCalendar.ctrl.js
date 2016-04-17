@@ -3,7 +3,7 @@
     "user strict";
 
     angular.module("myApp")
-        .controller("ngDatePickerCtrl", function ($scope) {
+        .controller("ngDatePickerCtrl", function ($scope, $uibModal, $log, $compile, uiCalendarConfig) {
 
             var date = new Date();
             var d = date.getDate();
@@ -11,32 +11,31 @@
             var y = date.getFullYear();
 
             $scope.events = [{
-                title: 'All Day Event',
+                title: 'flash',
                 start: new Date(y, m, 1)
             }, {
-                title: 'Long Event',
+                title: 'camera',
                 start: new Date(y, m, d - 5),
                 end: new Date(y, m, d - 2)
             }, {
                 id: 999,
-                title: 'Repeating Event',
+                title: 'tripod',
                 start: new Date(y, m, d - 3, 16, 0),
                 allDay: false
             }, {
                 id: 999,
-                title: 'Repeating Event',
+                title: 'flash',
                 start: new Date(y, m, d + 4, 16, 0),
                 allDay: false
             }, {
-                title: 'Birthday Party',
+                title: 'memory card',
                 start: new Date(y, m, d + 1, 19, 0),
                 end: new Date(y, m, d + 1, 22, 30),
                 allDay: false
             }, {
-                title: 'Click for Google',
+                title: 'camera',
                 start: new Date(y, m, 28),
-                end: new Date(y, m, 29),
-                url: 'http://google.com/'
+                end: new Date(y, m, 30),
             }];
 
             $scope.eventSources = [$scope.events];
@@ -46,23 +45,21 @@
                     defaultView: 'month',
                     height: "auto",
                     editable: true,
-                    eventTextColor: '#fff',
-                    eventBorderColor: '#9987B5',
-                    eventBackgroundColor: '#9987B5',
+                    eventTextColor: 'blue',
+                    eventBorderColor: 'black',
+                    eventBackgroundColor: 'yellow',
                     header: {
                         left: 'title',
                         center: '',
                         right: 'today prev,next'
                     },
                     eventClick: $scope.alertOnEventClick,
-                    eventDrop: $scope.alertOnDrop,
-                    eventResize: $scope.alertOnResize,
+                    dayClick: $scope.alertOnDayClick,
                     eventRender: $scope.eventRender
                 }
             };
-
         })
-
 })();
+/*(function () {*/
 
 
