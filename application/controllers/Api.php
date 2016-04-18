@@ -23,22 +23,34 @@ class Api extends REST_Controller
         echo $query->num_rows();
     }
 
+    /*START  -------------  CATEGORY TABLE*/
     function categories_get()
     {
         $data = $this->device->getCategory();
         echo json_encode($data);
     }
 
+
+    /*END --------------- CATEGORY TABLE*/
+
+    /*START -------------- DEVICES TABLE*/
     function devices_get()
     {
         $data = $this->device->getDevice();
         echo json_encode($data);
     }
 
-    function getDates()
-    {
+    /*END ----------------- DEVICES TABLE */
 
+    /*START ------------------  CALENDAR TABLE */
+    function getAllBooking_get()
+    {
+        $this->load->model('calendar');
+        $data = $this->calendar->devicesToCalendar();
+        echo json_encode($data);
     }
+
+    /*END -------------- CALENDAR TABLE*/
 
 } //class Api extends REST_Controller
 

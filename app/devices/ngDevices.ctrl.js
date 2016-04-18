@@ -28,9 +28,9 @@
                     /*getting the last booking id fom the booking table*/
                     method: 'GET',
                     url: 'http://localhost/yoobee-hardware-booking-app/api/booking_id'
-                }).then(function success(bookingID) {
+                }).then(function success(currentBookingID) {
                     for (var i = 0; i < list.length; i++) {
-                        data = {'booking_id': bookingID.data, 'device_id': list[i]};
+                        data = {'booking_id': currentBookingID.data, 'device_id': list[i]};
                         $http({
                             method: 'POST',
                             url: 'http://localhost/yoobee-hardware-booking-app/api/bookings',

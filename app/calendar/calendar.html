@@ -3,7 +3,7 @@
         <md-card-content>
 
             <div select="renderCalender('myCalendar1');">
-                <div class="calendar" ng-model="eventSources" calendar="myCalendar1"
+                <div id="calendar" ng-model="eventSources" calendar="myCalendar1"
                      ui-calendar="uiConfig.calendar"></div>
             </div>
 
@@ -11,10 +11,10 @@
         <md-card-content>
             <span layout="row" layout-align="space-between none">
                 <md-button class="md-icon-button md-primary" ui-sref="devices">
-                    <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg" ng-click=""></md-icon>
+                    <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg"></md-icon>
                 </md-button>
                 <md-button class="md-icon-button md-primary">
-                    <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg" ng-click=""></md-icon>
+                    <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"></md-icon>
                 </md-button>
             </span>
         </md-card-content>

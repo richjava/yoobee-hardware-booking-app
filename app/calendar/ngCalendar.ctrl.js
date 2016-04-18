@@ -2,41 +2,10 @@
 
     "user strict";
 
-    angular.module("myApp")
-        .controller("ngDatePickerCtrl", function ($scope) {
 
-            var date = new Date();
-            var d = date.getDate();
-            var m = date.getMonth();
-            var y = date.getFullYear();
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http) {
 
-            $scope.events = [{
-                title: 'flash',
-                start: new Date(y, m, 1)
-            }, {
-                title: 'camera',
-                start: new Date(y, m, 5),
-                end: new Date(y, m, 7)
-            }, {
-                id: 999,
-                title: 'tripod',
-                start: new Date(y, m, d - 3, 16, 0),
-                allDay: true
-            }, {
-                id: 999,
-                title: 'flash',
-                start: new Date(y, m, d + 4, 16, 0),
-                allDay: false
-            }, {
-                title: 'memory card',
-                start: new Date(y, m, d + 1, 19, 0),
-                end: new Date(y, m, d + 1, 22, 30),
-                allDay: false
-            }, {
-                title: 'camera',
-                start: new Date(y, m, 28),
-                end: new Date(y, m, 30),
-            }];
+        $scope.events = [];
 
             $scope.eventSources = [$scope.events];
 
@@ -44,21 +13,54 @@
                 calendar: {
                     defaultView: 'month',
                     height: "auto",
-                    editable: true,
-                    eventTextColor: 'blue',
+                    editable: false,
+                    eventTextColor: 'black',
                     eventBorderColor: 'black',
-                    eventBackgroundColor: 'yellow',
+                    eventBackgroundColor: 'pink',
                     header: {
                         left: 'title',
                         center: '',
                         right: 'today prev,next'
                     },
-                    eventClick: $scope.alertOnEventClick,
-                    dayClick: $scope.alertOnDayClick,
-                    eventRender: $scope.eventRender
+                    dayClick: function (date) {
+                        $scope.events.push({
+                            color: 'green',
+                            textColor: 'yellow',
+                            title: 'Device(s) booked for this date',
+                            start: date,
+                            end: date,
+                            allDay: true
+                        });
+                    }/*dayClick: function(date)*/
                 }
             };
+        /* $scope.uiConfig*/
+
+
+        $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
+            $scope.data = response.data;
+            for (var i = 0; i < response.data.length; i++) {
+
+                var title = response.data[i].device_name;
+                var start = response.data[i].start_date;
+                var end = response.data[i].end_date;
+
+                $scope.events.push({
+                    title: title,
+                    start: start,
+                    end: end,
+                    allDay: true
+                });
+
+            }
+            /* for(var i=0 ; i< response.data.length ; i++)*/
+
         })
+        /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
+
+    })
+    /*.controller("ngDatePickerCtrl", function ($scope,$http)*/
+
 })();
 /*(function () {*/
 
