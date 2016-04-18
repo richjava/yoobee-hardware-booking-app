@@ -2,8 +2,7 @@
 
     "user strict";
 
-
-    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http) {
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http, $uibModal, $log, $compile) {
 
         $scope.events = [];
 
@@ -13,14 +12,16 @@
                 calendar: {
                     defaultView: 'month',
                     height: "auto",
+                    timezone: "local",
                     editable: false,
+                    eventLimit: 3,
                     eventTextColor: 'black',
-                    eventBorderColor: 'black',
+                    eventBorderColor: 'yellow',
                     eventBackgroundColor: 'pink',
                     header: {
                         left: 'title',
                         center: '',
-                        right: 'today prev,next'
+                        right: 'prev,next'
                     },
                     dayClick: function (date) {
                         $scope.events.push({
@@ -31,11 +32,11 @@
                             end: date,
                             allDay: true
                         });
+                        console.log(date.format());
                     }/*dayClick: function(date)*/
                 }
             };
         /* $scope.uiConfig*/
-
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
             $scope.data = response.data;
