@@ -12,7 +12,7 @@
     console.warn('ARIA warnings disabled.');
     /*to disable aria warnings in the console*/
 
-    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ui.calendar", "ui.router.modal", "ui.bootstrap"])
+    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router"])
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')
                 .primaryPalette('pink')

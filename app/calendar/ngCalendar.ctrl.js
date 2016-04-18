@@ -2,62 +2,60 @@
 
     "user strict";
 
-    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http, $uibModal, $log, $compile) {
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http) {
 
-        $scope.events = [];
 
-            $scope.eventSources = [$scope.events];
+        $(document).ready(function () {
 
-            $scope.uiConfig = {
-                calendar: {
-                    defaultView: 'month',
-                    height: "auto",
-                    timezone: "local",
+            events = [];
+
+            // page is now ready, initialize the calendar...
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
+
+                for (var i = 0; i < response.data.length; i++) {
+
+                    var title = response.data[i].device_name;
+                    var start = response.data[i].start_date;
+                    var end = response.data[i].end_date;
+
+                    events.push({
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: true
+                    });
+
+
+                }
+                /* for(var i=0 ; i< response.data.length ; i++)*/
+
+                console.log(events);
+
+                $('#calendar').fullCalendar({
+
+                    events: events,
                     editable: false,
-                    eventLimit: 3,
-                    eventTextColor: 'black',
-                    eventBorderColor: 'yellow',
-                    eventBackgroundColor: 'pink',
+                    eventLimit: true,
+                    selectable: true,
+                    contentHeight: 'auto',
                     header: {
                         left: 'title',
                         center: '',
                         right: 'prev,next'
                     },
-                    dayClick: function (date) {
-                        $scope.events.push({
-                            color: 'green',
-                            textColor: 'yellow',
-                            title: 'Device(s) booked for this date',
-                            start: date,
-                            end: date,
-                            allDay: true
-                        });
-                        console.log(date.format());
-                    }/*dayClick: function(date)*/
-                }
-            };
-        /* $scope.uiConfig*/
+                    eventColor: 'pink',
+                    eventBackgroundColor: '#378006',
+                    eventBorderColor: '#378006',
+                    color: 'yellow',
+                    textColor: 'black'
+                })
+                /* $('#calendar').fullCalendar*/
 
-        $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
-            $scope.data = response.data;
-            for (var i = 0; i < response.data.length; i++) {
+            })
+            /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
 
-                var title = response.data[i].device_name;
-                var start = response.data[i].start_date;
-                var end = response.data[i].end_date;
-
-                $scope.events.push({
-                    title: title,
-                    start: start,
-                    end: end,
-                    allDay: true
-                });
-
-            }
-            /* for(var i=0 ; i< response.data.length ; i++)*/
-
-        })
-        /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
+        });
+        /*$(document).ready(function()*/
 
     })
     /*.controller("ngDatePickerCtrl", function ($scope,$http)*/
