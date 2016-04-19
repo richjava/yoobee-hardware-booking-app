@@ -32,6 +32,20 @@
                 }
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
+                selectedDays = [];
+
+                selectedDates = function (days, list) {
+                    list.push(days);
+                    console.log(selectedDays);
+                };
+
+                removeDates = function (days, list) {
+                    list.splice(days, 1);
+                    console.log(selectedDays);
+                }
+
+
+
                 $('#calendar').fullCalendar({
                     events: devices,
                     header: {
@@ -53,12 +67,14 @@
                             textColor: 'white'
                         }, true);
 
-                        console.log(end.format());
+                        selectedDates(end.format(), selectedDays);
+
                     },
                     eventRender: function (event, element) {
                         element.prepend('<span class="close" style="float:right;cursor: pointer;">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
+                            removeDates(event.end.format());
                         });
                         element.qtip({
                             content: event.description
