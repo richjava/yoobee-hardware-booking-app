@@ -10,6 +10,7 @@
     <?=link_tag("bower_components/mdi/css/materialdesignicons.css")?>
     <?=link_tag("bower_components/v-accordion/dist/v-accordion.css")?>
     <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
+    <?= link_tag("bower_components/qtip2/basic/jquery.qtip.css") ?>
     <?=link_tag("app/css/styles.css")?>
     <!-- endbower -->
     <!-- endbuild -->

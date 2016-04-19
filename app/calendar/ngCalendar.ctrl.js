@@ -7,9 +7,8 @@
 
         $(document).ready(function () {
 
-            events = [];
+            devices = [];
 
-            // page is now ready, initialize the calendar...
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
 
                 for (var i = 0; i < response.data.length; i++) {
@@ -18,36 +17,54 @@
                     var start = response.data[i].start_date;
                     var end = response.data[i].end_date;
 
-                    events.push({
+                    formattedStart = moment(start).format('dddd DD');
+                    formattedend = moment(end).format('dddd DD');
+                    formattedmonth = moment(start).format('MMMM');
+
+                    devices.push({
                         title: title,
                         start: start,
                         end: end,
-                        allDay: true
+                        allDay: true,
+                        description: 'Your selected device(s) not available from ' + formattedStart + ' until morning of' + formattedend + ' of ' + formattedmonth + '!'
                     });
-
 
                 }
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
-                console.log(events);
-
                 $('#calendar').fullCalendar({
-
-                    events: events,
-                    editable: false,
-                    eventLimit: true,
-                    selectable: true,
-                    contentHeight: 'auto',
+                    events: devices,
                     header: {
                         left: 'title',
                         center: '',
                         right: 'prev,next'
                     },
-                    eventColor: 'pink',
-                    eventBackgroundColor: '#378006',
-                    eventBorderColor: '#378006',
-                    color: 'yellow',
-                    textColor: 'black'
+                    editable: false,
+                    eventLimit: 3,
+                    selectable: true,
+                    contentHeight: 'auto',
+                    select: function (start, end) {
+                        formattedBookedDate = moment(start).format('ddd DD MMM');
+                        $('#calendar').fullCalendar('renderEvent', {
+                            title: 'Booked for ' + formattedBookedDate,
+                            start: start,
+                            end: end,
+                            color: 'orange',
+                            textColor: 'white'
+                        }, true);
+                        console.log(end.format());
+                    },
+                    eventRender: function (event, element) {
+                        element.prepend('<span class="close" style="float:right;cursor: pointer;">&#10005;</span>');
+                        element.find(".close").click(function () {
+                            $('#calendar').fullCalendar('removeEvents', event._id);
+                        });
+                        element.qtip({
+                            content: event.description
+                        });
+                    },
+                    eventBackgroundColor: 'green',
+                    eventBorderColor: 'black',
                 })
                 /* $('#calendar').fullCalendar*/
 

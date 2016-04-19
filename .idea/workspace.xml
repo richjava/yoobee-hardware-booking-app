@@ -2,35 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/angular-ui-router-uib-modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/build.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/files.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts-service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.detail.item.edit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.detail.item.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/app/contacts/contacts.list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/assets/contacts.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/common/utils/utils-service.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/css/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/sample/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-ui-router-uib-modal/src/angular-ui-router-uib-modal.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/ev-emitter/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/ev-emitter/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/ev-emitter/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/ev-emitter/ev-emitter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/ev-emitter/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/gulpfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/imagesloaded.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/imagesloaded.pkgd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/imagesloaded/imagesloaded.pkgd.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/imagesloaded.pkg.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/calendar.html" afterPath="$PROJECT_DIR$/app/calendar/calendar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" afterPath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/footer.php" afterPath="$PROJECT_DIR$/application/views/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" afterPath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header.php" afterPath="$PROJECT_DIR$/application/views/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/.bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" afterPath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/bower.json" afterPath="$PROJECT_DIR$/bower_components/angular/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/angular/package.json" afterPath="$PROJECT_DIR$/bower_components/angular/package.json" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,52 +69,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-35.285713">
-              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calendar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/calendar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.642858">
-              <caret line="26" column="58" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ngCalendar.ctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4620061">
-              <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/calendar/calendar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.535714">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding />
+            <state vertical-scroll-proportion="1.1410118">
+              <caret line="57" column="107" selection-start-line="57" selection-start-column="107" selection-end-line="57" selection-end-column="107" />
+              <folding>
+                <marker date="1461060254000" expanded="true" signature="2350:2378" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/data/students.json" />
-        <option value="$PROJECT_DIR$/app/components/ngApp.factory.js" />
         <option value="$PROJECT_DIR$/../../bin/mamp/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/application/controllers/auth.php" />
@@ -163,7 +133,6 @@
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
         <option value="$PROJECT_DIR$/application/models/Model_categories.php" />
-        <option value="$PROJECT_DIR$/application/views/header.php" />
         <option value="$PROJECT_DIR$/app/data/package.json" />
         <option value="$PROJECT_DIR$/app/components/modal.html" />
         <option value="$PROJECT_DIR$/app/data/devices.json" />
@@ -174,9 +143,12 @@
         <option value="$PROJECT_DIR$/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
         <option value="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
-        <option value="$PROJECT_DIR$/application/views/footer.php" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
         <option value="$PROJECT_DIR$/app/calendar/calendar.html" />
+        <option value="$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css" />
+        <option value="$PROJECT_DIR$/application/views/header.php" />
+        <option value="$PROJECT_DIR$/application/views/footer.php" />
+        <option value="$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.css" />
         <option value="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
       </list>
     </option>
@@ -205,10 +177,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="13" />
-    <option name="y" value="7" />
-    <option name="width" value="932" />
-    <option name="height" value="1012" />
+    <option name="x" value="35" />
+    <option name="y" value="42" />
+    <option name="width" value="1199" />
+    <option name="height" value="1305" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -235,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,149 +240,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullcalendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fullcalendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="devices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="calendar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -423,18 +255,18 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/components" />
-      <recent name="C:\MAMP\htdocs\yoobee-hardware-booking-app\app\icons" />
-      <recent name="$PROJECT_DIR$/app/icons" />
-      <recent name="$PROJECT_DIR$/bower_components/mdi/icons" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/js" />
       <recent name="$PROJECT_DIR$/app/devices" />
       <recent name="$PROJECT_DIR$/app/calendar" />
       <recent name="C:\MAMP\htdocs\yoobee-hardware-booking-app\application\config" />
       <recent name="C:\MAMP\htdocs\yoobee-hardware-booking-app\application\libraries" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/icons" />
+      <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="C:\MAMP\htdocs\yoobee-hardware-booking-app\app\icons" />
+      <recent name="$PROJECT_DIR$/bower_components/mdi/icons" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.home.php">
@@ -668,18 +500,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="13" y="7" width="932" height="1012" extended-state="0" />
+    <frame x="35" y="42" width="1199" height="1305" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47968885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22071713" sideWeight="0.42857143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08980583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21485715" sideWeight="0.5714286" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21481481" sideWeight="0.5714286" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -749,41 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37810946">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45673078">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/styles.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35239568">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5873261">
-          <caret line="20" column="60" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17804551">
@@ -830,13 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7955801">
           <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1049724">
-          <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1022,41 +812,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-35.285713">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17619048">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.304762">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1066,60 +824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.0425534">
           <caret line="237" column="9" selection-start-line="237" selection-start-column="9" selection-end-line="237" selection-end-column="9" />
-          <folding>
-            <marker date="1460586329235" expanded="true" signature="97808:97944" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="97824:97930" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="97841:97913" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133581:134028" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133609:133738" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133626:133723" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133780:134014" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133797:133999" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="133845:133960" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="148563:148665" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="148744:149261" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="148906:149057" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="167461:167595" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="167477:167581" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="168758:169007" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="168879:168974" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="184754:185582" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="184910:185310" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="289300:289784" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="289332:289515" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="289346:289498" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="289400:289483" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="290129:290255" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="290146:290241" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="290585:290718" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="290602:290704" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302023:302663" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302055:302239" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302069:302222" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302123:302207" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302271:302647" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302285:302630" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="302340:302615" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="303139:303246" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="303156:303232" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="303645:303790" placeholder="..." />
-            <marker date="1460586329235" expanded="true" signature="303661:303777" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/ngApp.ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1443769">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09047619">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1132,27 +836,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/calendar.php">
+    <entry file="file://$PROJECT_DIR$/app/js/ngApp.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.642858">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.36598492">
+          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36598492">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/calendar/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.535714">
+        <state vertical-scroll-proportion="0.37777779">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38987043">
+          <caret line="611" column="19" selection-start-line="611" selection-start-column="19" selection-end-line="612" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/qtip2/jquery.qtip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.275862">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="61" />
+          <folding>
+            <marker date="1461055797000" expanded="true" signature="744:768" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.172414">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.92465">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.931034">
+          <caret line="34" column="105" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/qtip2/basic/jquery.qtip.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73333335">
+          <caret line="34" column="120" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5777778">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75555557">
+          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4620061">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="1.1410118">
+          <caret line="57" column="107" selection-start-line="57" selection-start-column="107" selection-end-line="57" selection-end-column="107" />
+          <folding>
+            <marker date="1461060254000" expanded="true" signature="2350:2378" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -12,6 +12,7 @@
     <script src="<?= base_url() ?>bower_components/moment/min/moment.min.js"></script>
     <script src="<?= base_url() ?>bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
     <script src="<?= base_url() ?>bower_components/fullcalendar/dist/gcal.js"></script>
+    <script src="<?= base_url() ?>bower_components/qtip2/basic/jquery.qtip.js"></script>
     <script src="<?=base_url()?>app/js/main.js"></script>
     <script src="<?= base_url() ?>app/js/ngApp.ctrl.js"></script>
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>
@@ -19,4 +20,4 @@
     <!--<!-- endbower -->
 <!-- endbuild -->
 </body>
-</html>
+    </html
