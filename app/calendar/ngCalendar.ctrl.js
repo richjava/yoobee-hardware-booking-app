@@ -52,6 +52,7 @@
                             color: 'orange',
                             textColor: 'white'
                         }, true);
+
                         console.log(end.format());
                     },
                     eventRender: function (event, element) {
