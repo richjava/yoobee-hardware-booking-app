@@ -18,7 +18,8 @@
                         <? } ?>
 
                         <?=form_label('Select username','username')?>
-                        <md-icon md-svg-src="app/icons/ic_person_outline_black_24px.svg" class="name"></md-icon>
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_person_black_SOLID_24px.svg"
+                                 class="name"></md-icon>
                         <?php
                         $data_form=array(
                             'type'=> 'text',
@@ -32,7 +33,8 @@
 
                     <md-input-container>
                         <?=form_label("Password","password")?>
-                        <md-icon md-svg-src="app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_vpn_key_black_24px.svg"
+                                 class="name"></md-icon>
                         <?php
                         $data_form=array(
                             'type'=> 'password',
@@ -45,7 +47,7 @@
                     </md-input-container>
 
                     <section layout="row" layout-align="center center">
-                        <md-button class="md-raised">Cancel</md-button>
+                        <md-button class="md-raised" ng-click="clearForm()">Cancel</md-button>
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",

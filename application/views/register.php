@@ -32,7 +32,7 @@
 
                     <md-input-container>
                         <?=form_label("Password","password")?>
-                        <md-icon md-svg-src="<?=base_url()?>app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_vpn_key_black_24px.svg"></md-icon>
                         <?php
                         $data_form=array(
                             'type'=> 'password',
@@ -45,7 +45,7 @@
                     </md-input-container>
 
                     <md-input-container>
-                        <?=form_label("Confirm Password","password_conform");?>
+                        <?= form_label("Confirm Password", "password_confirm"); ?>
                         <md-icon md-svg-src="<?=base_url()?>app/icons/ic_vpn_key_black_24px.svg" class="name"></md-icon>
                         <?php
                         $data_form=array(
@@ -115,7 +115,7 @@
 
                     <!--                           <md-content>-->
                     <section layout="row" layout-align="center center">
-                        <md-button class="md-raised">Cancel</md-button>
+                        <md-button class="md-raised" ng-click="clearForm()">Clear</md-button>
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",

@@ -4,9 +4,6 @@
 
     angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http) {
 
-
-        $(document).ready(function () {
-
             var devices = [];
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
@@ -57,17 +54,21 @@
                     contentHeight: 'auto',
 
                     select: function (start) {
-                        formattedBookedDate = moment(start).format('ddd DD MMM');
-                        $('#calendar').fullCalendar('renderEvent', {
-                            id: start.format(),
-                            title: 'Booked on ' + formattedBookedDate,
-                            start: start,
-                            color: 'orange',
-                            textColor: 'white',
-                            borderColor: 'yellow',
-                        }, true);
-                        addDeviceToBookingArray(start.format(), selected);
-                        console.log(selected);
+                        var data = $('#calendar').fullCalendar('clientEvents');
+                        console.log(data[0].start._i);
+
+                        if (true) {
+                            formattedBookedDate = moment(start).format('ddd DD MMM');
+                            $('#calendar').fullCalendar('renderEvent', {
+                                id: start.format(),
+                                title: 'Booked on ' + formattedBookedDate,
+                                start: start,
+                                color: 'orange',
+                                textColor: 'white',
+                                borderColor: 'yellow',
+                            }, true);
+                            addDeviceToBookingArray(start.format(), selected);
+                        }
                     },
 
                     eventRender: function (event, element) {
@@ -88,8 +89,10 @@
             })
             /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
 
-        });
-        /*$(document).ready(function()*/
+        $scope.registerBookingDates = function () {
+            console.log(selected);
+        }
+        /* $scope.registerBookingDates = function()*/
 
     })
     /*.controller("ngDatePickerCtrl", function ($scope,$http)*/
