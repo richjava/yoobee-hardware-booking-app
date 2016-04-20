@@ -17,6 +17,7 @@
     <script src="<?= base_url() ?>app/js/ngApp.ctrl.js"></script>
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>
     <script src="<?= base_url() ?>app/devices/ngDevices.ctrl.js"></script>
+    <script src="<?= base_url() ?>app/confirmation/ngconfirmation.ctrl.js"></script>
     <!--<!-- endbower -->
 <!-- endbuild -->
 </body>

@@ -30,8 +30,19 @@
                     url: '/calendar',
                     templateUrl: '../app/calendar/calendar.html',
                     controller: "ngDatePickerCtrl"
+                })/*state(calenadr)*/
+                .state('confirmation', {
+                    url: '/confirmation',
+                    templateUrl: '../app/confirmation/confirmation.html',
+                    controller: "ngConfirmationCtrl"
+                })/*.state('confirmation',{*/
+                .state('success', {
+                    url: '/success',
+                    templateUrl: '../app/components/success.html'
                 })
+            /*.state('confirmation',{*/
         });
+
 
 })();/*IIFE function*/
 

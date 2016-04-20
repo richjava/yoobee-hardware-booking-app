@@ -129,6 +129,9 @@
                 </div>
             </md-content>
         </md-card-content>
+        <md-card-content>
+            <p>Already a member, Signin <?= anchor('auth', 'here') ?></p>
+        </md-card-content>
     </md-card>
 </md-content>
 

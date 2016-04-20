@@ -51,11 +51,12 @@
                         right: 'prev,next'
                     },
                     editable: false,
+                    eventOverlap: false,
                     eventLimit: 3,
                     selectable: true,
                     contentHeight: 'auto',
-                    select: function (start) {
 
+                    select: function (start) {
                         formattedBookedDate = moment(start).format('ddd DD MMM');
                         $('#calendar').fullCalendar('renderEvent', {
                             id: start.format(),
@@ -63,12 +64,8 @@
                             start: start,
                             color: 'orange',
                             textColor: 'white',
-                            borderColor: 'brown'
+                            borderColor: 'yellow',
                         }, true);
-
-                        //var data = $('#calendar').fullCalendar('clientEvents');
-                        //console.log(data);
-
                         addDeviceToBookingArray(start.format(), selected);
                         console.log(selected);
                     },
@@ -84,7 +81,7 @@
                             content: event.description
                         });
                     },
-                    eventBackgroundColor: 'pink',
+                    eventBackgroundColor: 'green',
                     eventBorderColor: 'yellow',
                 });
                 /* $('#calendar').fullCalendar*/
