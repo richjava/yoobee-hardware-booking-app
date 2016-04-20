@@ -7,7 +7,7 @@
 
         $(document).ready(function () {
 
-            devices = [];
+            var devices = [];
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
                 for (var i = 0; i < response.data.length; i++) {
@@ -23,6 +23,7 @@
                     devices.push({
                         title: title,
                         start: start,
+                        end: end,
                         allDay: true,
                         description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth
                     });
@@ -30,17 +31,15 @@
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
 
-                selected = [];
+                $scope.selected = [];
 
+                var addDeviceToBookingArray = function (device, list) {
+                    list.push(device);
+                };
 
-                var toggle = function (item, list) {
-                    var idx = list.indexOf(item);
-                    if (idx > -1) {
-                        list.splice(idx, 1);
-                    }
-                    else {
-                        list.push(item);
-                    }
+                var removeDeviceFromBookingArray = function (device, list) {
+                    var index = list.indexOf(device);
+                    list.splice(index, 1);
                 };
 
 
@@ -56,33 +55,36 @@
                     selectable: true,
                     contentHeight: 'auto',
                     select: function (start) {
+
                         formattedBookedDate = moment(start).format('ddd DD MMM');
                         $('#calendar').fullCalendar('renderEvent', {
+                            id: start.format(),
                             title: 'Booked on ' + formattedBookedDate,
                             start: start,
                             color: 'orange',
                             textColor: 'white',
                             borderColor: 'black'
                         }, true);
-                        var data = $('#calendar').fullCalendar('clientEvents');
-                        console.log(data);
 
+                        //var data = $('#calendar').fullCalendar('clientEvents');
+                        //console.log(data);
 
-                        toggle(start.format(), selected);
-                        //console.log(selected);
+                        addDeviceToBookingArray(start.format(), $scope.selected);
+                        console.log($scope.selected);
                     },
 
                     eventRender: function (event, element) {
                         element.prepend('<span class="close" style="float:right;cursor: pointer;color:black;">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
-                            console.log(event._id);
+                            removeDeviceFromBookingArray(event._id, $scope.selected);
+                            console.log($scope.selected);
                         });
                         element.qtip({
                             content: event.description
                         });
                     },
-                    eventBackgroundColor: 'green',
+                    eventBackgroundColor: 'black',
                     eventBorderColor: 'black',
                 });
                 /* $('#calendar').fullCalendar*/
