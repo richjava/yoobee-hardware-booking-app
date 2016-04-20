@@ -10,7 +10,6 @@
             devices = [];
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
-
                 for (var i = 0; i < response.data.length; i++) {
 
                     var title = response.data[i].device_name;
@@ -24,26 +23,25 @@
                     devices.push({
                         title: title,
                         start: start,
-                        end: end,
                         allDay: true,
-                        description: 'Your selected device(s) not available from ' + formattedStart + ' until morning of' + formattedend + ' of ' + formattedmonth + '!'
+                        description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth
                     });
-
                 }
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
-                selectedDays = [];
 
-                selectedDates = function (days, list) {
-                    list.push(days);
-                    console.log(selectedDays);
+                selected = [];
+
+
+                var toggle = function (item, list) {
+                    var idx = list.indexOf(item);
+                    if (idx > -1) {
+                        list.splice(idx, 1);
+                    }
+                    else {
+                        list.push(item);
+                    }
                 };
-
-                removeDates = function (days, list) {
-                    list.splice(days, 1);
-                    console.log(selectedDays);
-                }
-
 
 
                 $('#calendar').fullCalendar({
@@ -57,24 +55,28 @@
                     eventLimit: 3,
                     selectable: true,
                     contentHeight: 'auto',
-                    select: function (start, end) {
+                    select: function (start) {
                         formattedBookedDate = moment(start).format('ddd DD MMM');
                         $('#calendar').fullCalendar('renderEvent', {
-                            title: 'Booked for ' + formattedBookedDate,
+                            title: 'Booked on ' + formattedBookedDate,
                             start: start,
-                            end: end,
                             color: 'orange',
-                            textColor: 'white'
+                            textColor: 'white',
+                            borderColor: 'black'
                         }, true);
+                        var data = $('#calendar').fullCalendar('clientEvents');
+                        console.log(data);
 
-                        selectedDates(end.format(), selectedDays);
 
+                        toggle(start.format(), selected);
+                        //console.log(selected);
                     },
+
                     eventRender: function (event, element) {
-                        element.prepend('<span class="close" style="float:right;cursor: pointer;">&#10005;</span>');
+                        element.prepend('<span class="close" style="float:right;cursor: pointer;color:black;">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
-                            removeDates(event.end.format());
+                            console.log(event._id);
                         });
                         element.qtip({
                             content: event.description
@@ -82,9 +84,8 @@
                     },
                     eventBackgroundColor: 'green',
                     eventBorderColor: 'black',
-                })
+                });
                 /* $('#calendar').fullCalendar*/
-
             })
             /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
 
