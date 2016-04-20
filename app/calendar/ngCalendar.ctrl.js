@@ -31,7 +31,7 @@
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
 
-                $scope.selected = [];
+                selected = [];
 
                 var addDeviceToBookingArray = function (device, list) {
                     list.push(device);
@@ -63,29 +63,29 @@
                             start: start,
                             color: 'orange',
                             textColor: 'white',
-                            borderColor: 'black'
+                            borderColor: 'brown'
                         }, true);
 
                         //var data = $('#calendar').fullCalendar('clientEvents');
                         //console.log(data);
 
-                        addDeviceToBookingArray(start.format(), $scope.selected);
-                        console.log($scope.selected);
+                        addDeviceToBookingArray(start.format(), selected);
+                        console.log(selected);
                     },
 
                     eventRender: function (event, element) {
                         element.prepend('<span class="close" style="float:right;cursor: pointer;color:black;">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
-                            removeDeviceFromBookingArray(event._id, $scope.selected);
-                            console.log($scope.selected);
+                            removeDeviceFromBookingArray(event._id, selected);
+                            console.log(selected);
                         });
                         element.qtip({
                             content: event.description
                         });
                     },
-                    eventBackgroundColor: 'black',
-                    eventBorderColor: 'black',
+                    eventBackgroundColor: 'pink',
+                    eventBorderColor: 'yellow',
                 });
                 /* $('#calendar').fullCalendar*/
             })

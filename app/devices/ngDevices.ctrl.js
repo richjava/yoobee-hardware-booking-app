@@ -23,6 +23,7 @@
                     list.push(item);
                 }
             };
+
             $scope.beginBooking = function (list) {
                 $http({
                     /*getting the last booking id fom the booking table*/
