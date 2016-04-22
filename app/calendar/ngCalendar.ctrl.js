@@ -31,7 +31,6 @@
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
 
-
                 var addDeviceToBookingArray = function (device, list) {
                     list.push(device);
                 };
@@ -56,7 +55,7 @@
                     contentHeight: 'auto',
 
                     select: function (start) {
-
+                        if (true) {
                             $('#calendar').fullCalendar('renderEvent', {
                                 id: start,
                                 title: 'Booked ',
@@ -66,7 +65,8 @@
                                 borderColor: 'yellow',
                                 className: 'booked'
                             }, true);
-                        addDeviceToBookingArray(start, selected);
+                            addDeviceToBookingArray(start, selected);
+                        }
                     },
 
                     eventRender: function (event, element) {
@@ -85,29 +85,30 @@
                 /* $('#calendar').fullCalendar*/
             })
 
-        $scope.registerBookingDates = function () {
-            lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
-                var maxDate = new Date(Math.max.apply(null, selected));
-                var minDate = new Date(Math.min.apply(null, selected));
+            $scope.registerBookingDates = function () {
+                lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
+                    var maxDate = new Date(Math.max.apply(null, selected));
+                    var minDate = new Date(Math.min.apply(null, selected));
 
-                /*to increase the end dat by one day so it show correctly on the calendar*/
-                maxDate = moment(maxDate).add('days', 1).toDate();
+                    /*to increase the end dat by one day so it show correctly on the calendar*/
+                    maxDate = moment(maxDate).add('days', 1).toDate();
 
-                data = {'booking_id': parseInt(currentBookingID.data) + 1, 'start_date': minDate, 'end_date': maxDate};
-                $http({
-                    method: 'POST',
-                    url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDatesToDB',
-                    data: data
-                }).success(function (data) {
+                    data = {
+                        'booking_id': parseInt(currentBookingID.data) + 1,
+                        'start_date': minDate,
+                        'end_date': maxDate
+                    };
+                    $http({
+                        method: 'POST',
+                        url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDatesToDB',
+                        data: data
+                    });
+                });
 
-                })
+            }
+            /* $scope.registerBookingDates = function()*/
 
-            });
-
-        }
-        /* $scope.registerBookingDates = function()*/
-
-    })
+        })
     /*.controller("ngDatePickerCtrl", function ($scope,$http)*/
 
 })();

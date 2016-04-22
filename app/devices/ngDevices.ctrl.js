@@ -31,7 +31,7 @@
                         data = {'booking_id': parseInt(currentBookingID.data) + 1, 'device_id': list[i]};
                         $http({
                             method: 'POST',
-                            url: 'http://localhost/yoobee-hardware-booking-app/api/addBookedDevicesToDB',
+                            url: 'http://localhost/yoobee-hardware-booking-app/api/bookDevices',
                             data: data
                         });
                     }

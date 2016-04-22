@@ -10,7 +10,7 @@ class Api extends REST_Controller
         parent:: __construct();
     }
 
-    public function addBookedDevicesToDB_post()
+    public function bookdevices_post()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->device->insertBookedDevices($data);
@@ -55,6 +55,18 @@ class Api extends REST_Controller
     }
 
     /*END -------------- CALENDAR TABLE*/
+
+    /*START --------------------- CONFIRMATION PAGE*/
+
+    public function fetchCompletedBooking_get()
+    {
+        $booking_id = $this->input->get('id', TRUE);
+        $this->db->select()->from('bookings_tb')->where('booking_id', $booking_id);
+        $query = $this->db->get();
+        echo json_encode($query->result_array());
+    }
+
+    /*END --------------------- CONFIRMATION PAGE*/
 
 } //class Api extends REST_Controller
 
