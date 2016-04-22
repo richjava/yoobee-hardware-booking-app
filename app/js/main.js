@@ -13,6 +13,7 @@
     /*to disable aria warnings in the console*/
 
     angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router"])
+
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')
                 .primaryPalette('pink')
@@ -41,7 +42,7 @@
                     templateUrl: '../app/components/success.html'
                 })
             /*.state('confirmation',{*/
-        });
+        })
 
 
 })();/*IIFE function*/

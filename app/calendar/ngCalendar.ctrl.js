@@ -2,16 +2,19 @@
 
     "user strict";
 
-    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http) {
+    angular.module("myApp")
 
-            var devices = [];
+        .controller("ngDatePickerCtrl", function ($scope, $http, lastBookingsIDFactory) {
 
-            $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking').then(function (response) {
+            var devices = [], selected = [];
+            var title, start, end = 0;
+
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookedDevices').then(function (response) {
                 for (var i = 0; i < response.data.length; i++) {
 
-                    var title = response.data[i].device_name;
-                    var start = response.data[i].start_date;
-                    var end = response.data[i].end_date;
+                    title = response.data[i].device_name;
+                    start = response.data[i].start_date;
+                    end = response.data[i].end_date;
 
                     formattedStart = moment(start).format('dddd DD');
                     formattedend = moment(end).format('dddd DD');
@@ -28,7 +31,6 @@
                 /* for(var i=0 ; i< response.data.length ; i++)*/
 
 
-                selected = [];
 
                 var addDeviceToBookingArray = function (device, list) {
                     list.push(device);
@@ -54,21 +56,17 @@
                     contentHeight: 'auto',
 
                     select: function (start) {
-                        var data = $('#calendar').fullCalendar('clientEvents');
-                        console.log(data[0].start._i);
 
-                        if (true) {
-                            formattedBookedDate = moment(start).format('ddd DD MMM');
                             $('#calendar').fullCalendar('renderEvent', {
-                                id: start.format(),
-                                title: 'Booked on ' + formattedBookedDate,
+                                id: start,
+                                title: 'Booked ',
                                 start: start,
                                 color: 'orange',
                                 textColor: 'white',
                                 borderColor: 'yellow',
+                                className: 'booked'
                             }, true);
-                            addDeviceToBookingArray(start.format(), selected);
-                        }
+                        addDeviceToBookingArray(start, selected);
                     },
 
                     eventRender: function (event, element) {
@@ -76,7 +74,6 @@
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
                             removeDeviceFromBookingArray(event._id, selected);
-                            console.log(selected);
                         });
                         element.qtip({
                             content: event.description
@@ -87,10 +84,26 @@
                 });
                 /* $('#calendar').fullCalendar*/
             })
-            /* $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBooking*/
 
         $scope.registerBookingDates = function () {
-            console.log(selected);
+            lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
+                var maxDate = new Date(Math.max.apply(null, selected));
+                var minDate = new Date(Math.min.apply(null, selected));
+
+                /*to increase the end dat by one day so it show correctly on the calendar*/
+                maxDate = moment(maxDate).add('days', 1).toDate();
+
+                data = {'booking_id': parseInt(currentBookingID.data) + 1, 'start_date': minDate, 'end_date': maxDate};
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDatesToDB',
+                    data: data
+                }).success(function (data) {
+
+                })
+
+            });
+
         }
         /* $scope.registerBookingDates = function()*/
 

@@ -29,6 +29,18 @@
             }
 
         })
+
+        /*a factory service to return the booking id*/
+        .factory("lastBookingsIDFactory", function ($http) {
+
+            function getLastBookingID() {
+                return $http.get('http://localhost/yoobee-hardware-booking-app/api/getLastBookingID');
+            }
+
+            return {
+                getLastBookingID: getLastBookingID
+            }
+        })
     /*angular.module("myApp")*/
 })();
 /*IIFE function*/

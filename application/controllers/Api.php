@@ -10,17 +10,17 @@ class Api extends REST_Controller
         parent:: __construct();
     }
 
-    public function bookings_post()
+    public function addBookedDevicesToDB_post()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
-        $this->device->insert_selected_devices($data);
+        $this->device->insertBookedDevices($data);
     }
 
-    function booking_id_get()
+    function getLastBookingID_get()
     {
-        $this->db->select('booking_id')->from('Bookings_tb');
-        $query = $this->db->get();
-        echo $query->num_rows();
+        $this->db->select_max('booking_id');
+        $result = $this->db->get('bookings_tb')->row_array();
+        echo json_decode($result['booking_id']);
     }
 
     /*START  -------------  CATEGORY TABLE*/
@@ -29,7 +29,6 @@ class Api extends REST_Controller
         $data = $this->device->getCategory();
         echo json_encode($data);
     }
-
 
     /*END --------------- CATEGORY TABLE*/
 
@@ -43,11 +42,16 @@ class Api extends REST_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
-    function getAllBooking_get()
+    function getAllBookedDevices_get()
     {
-        $this->load->model('calendar');
-        $data = $this->calendar->devicesToCalendar();
+        $data = $this->calendar->getUnavailableDevices();
         echo json_encode($data);
+    }
+
+    public function addNewBookedDatesToDB_post()
+    {
+        $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
+        $this->calendar->addBookingDates($data);
     }
 
     /*END -------------- CALENDAR TABLE*/
