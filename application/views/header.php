@@ -13,12 +13,12 @@
     <?= link_tag("bower_components/qtip2/basic/jquery.qtip.css") ?>
     <?=link_tag("app/css/styles.css")?>
 
-    <?= link_tag("assets/grocery_crud/themes/datatables/css/demo_table_jui.css") ?>
-    <?= link_tag("assets/grocery_crud/css/ui/simple/jquery-ui-1.10.1.custom.min.css") ?>
-    <?= link_tag("assets/grocery_crud/themes/datatables/css/datatables.css") ?>
-    <?= link_tag("assets/grocery_crud/themes/datatables/css/jquery.dataTables.css") ?>
-    <?= link_tag("assets/grocery_crud/themes/datatables/extras/TableTools/media/css/TableTools.css") ?>
-    <?= link_tag("assets/grocery_crud/css/jquery_plugins/fancybox/jquery.fancybox.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/themes/datatables/css/demo_table_jui.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/css/ui/simple/jquery-ui-1.10.1.custom.min.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/themes/datatables/css/datatables.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/themes/datatables/css/jquery.dataTables.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/themes/datatables/extras/TableTools/media/css/TableTools.css") ?>
+    <!--    --><? //= link_tag("assets/grocery_crud/css/jquery_plugins/fancybox/jquery.fancybox.css") ?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>
