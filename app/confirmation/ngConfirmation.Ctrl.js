@@ -5,17 +5,16 @@
     angular.module("myApp")
         .controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {
 
-            lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
-
+            lastBookingsIDFactory.getLastBookingID().then(function success(data) {
                 $http({
                     method: 'GET',
                     url: 'http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking',
-                    id: currentBookingID
-                }).then(function (data) {
+                    id: data.data
+                }).then(function (response) {
 
-                    console.log(data);
+                    console.log(response);
 
-                })
+                });
                 /*then(function(data)*/
 
             });

@@ -12,10 +12,21 @@
     <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
     <?= link_tag("bower_components/qtip2/basic/jquery.qtip.css") ?>
     <?=link_tag("app/css/styles.css")?>
+
+    <?= link_tag("assets/grocery_crud/themes/datatables/css/demo_table_jui.css") ?>
+    <?= link_tag("assets/grocery_crud/css/ui/simple/jquery-ui-1.10.1.custom.min.css") ?>
+    <?= link_tag("assets/grocery_crud/themes/datatables/css/datatables.css") ?>
+    <?= link_tag("assets/grocery_crud/themes/datatables/css/jquery.dataTables.css") ?>
+    <?= link_tag("assets/grocery_crud/themes/datatables/extras/TableTools/media/css/TableTools.css") ?>
+    <?= link_tag("assets/grocery_crud/css/jquery_plugins/fancybox/jquery.fancybox.css") ?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>
 <body ng-app="myApp" ng-controller="ngAppCtrl" ng-cloak>
+<script src="<?= base_url() ?>bower_components/angular/angular.js"></script>
+<script src="<?= base_url() ?>bower_components/angular-material/angular-material.js"></script>
+<script src="<?= base_url() ?>bower_components/jquery/dist/jquery.js"></script>
+<script src="<?= base_url() ?>assets/grocery_crud/js/jquery_plugins/ui/jquery-ui-1.10.3.custom.min.js"></script>
 
         <md-toolbar>
             <div class="md-toolbar-tools">
@@ -39,6 +50,12 @@
             <md-content layout-padding>
                 <h4>Welcome, <?= $this->session->userdata('username') ?></h4>
             </md-content>
+
+            <md-content layout-padding>
+                <h4><?= anchor('dashboard/students', 'Students') ?></h4>
+                <h4><?= anchor('dashboard/devices', 'Devices') ?></h4>
+            </md-content>
+
 
             <md-content layout-padding>
                 <?php if($this->session->userdata('username')) {?>

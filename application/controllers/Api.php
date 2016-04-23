@@ -48,7 +48,7 @@ class Api extends REST_Controller
         echo json_encode($data);
     }
 
-    public function addNewBookedDatesToDB_post()
+    public function addNewBookedDates_post()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->calendar->addBookingDates($data);
@@ -63,7 +63,7 @@ class Api extends REST_Controller
         $booking_id = $this->input->get('id', TRUE);
         $this->db->select()->from('bookings_tb')->where('booking_id', $booking_id);
         $query = $this->db->get();
-        echo json_encode($query->result_array());
+        echo json_encode($query->result());
     }
 
     /*END --------------------- CONFIRMATION PAGE*/

@@ -100,7 +100,7 @@
                     };
                     $http({
                         method: 'POST',
-                        url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDatesToDB',
+                        url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDates',
                         data: data
                     });
                 });
