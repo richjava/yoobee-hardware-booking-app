@@ -6,16 +6,19 @@
         .controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {
 
             lastBookingsIDFactory.getLastBookingID().then(function success(data) {
-                $http({
-                    method: 'GET',
-                    url: 'http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking',
-                    id: data.data
-                }).then(function (response) {
-
-                    console.log(response);
-
-                });
+                //$http({
+                //    method: 'GET',
+                //    url: 'http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking',
+                //    id: data.data
+                //}).then(function (response) {
+                //
+                //    console.log(response);
+                //
+                //});
                 /*then(function(data)*/
+                $.ajax('http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking', data.data, function (response) {
+                    console.log(response);
+                });
 
             });
             /*lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID)*/

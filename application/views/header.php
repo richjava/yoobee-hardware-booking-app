@@ -66,6 +66,8 @@
                     class="md-secondary"><?= anchor('home/#/devices', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
             </md-list-item>
 
+            <md-divider></md-divider>
+
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
                     <h3>Students</h3>
