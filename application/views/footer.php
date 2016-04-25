@@ -1,7 +1,6 @@
     </div>
 <!--build:js js/main.min.js -->
 <!-- bower:js -->
-
     <script src="<?=base_url()?>bower_components/angular-animate/angular-animate.js"></script>
     <script src="<?=base_url()?>bower_components/angular-aria/angular-aria.js"></script>
     <script src="<?=base_url()?>bower_components/angular-messages/angular-messages.js"></script>
@@ -16,6 +15,7 @@
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>
     <script src="<?= base_url() ?>app/devices/ngDevices.ctrl.js"></script>
     <script src="<?= base_url() ?>app/confirmation/ngconfirmation.ctrl.js"></script>
+
 
     <!--    <script src="--><? //= base_url() ?><!--assets/grocery_crud/js/jquery_plugins/jquery.noty.js"></script>-->
     <!--    <script src="--><? //= base_url() ?><!--assets/grocery_crud/js/jquery_plugins/config/jquery.noty.config.js"></script>-->
@@ -35,6 +35,7 @@
     <!--    <script src="--><? //= base_url() ?><!--assets/grocery_crud/js/jquery_plugins/tmpl.min.js"></script>-->
     <!--    <script src="--><? //= base_url() ?><!--assets/grocery_crud/js/jquery_plugins/ui.multiselect.min.js"></script>-->
     <!--    <script src="--><? //= base_url() ?><!--assets/grocery_crud/js/jquery_plugins/jquery.ui.datetime.js"></script>-->
+
 
     <!--<!-- endbower -->
     <!-- endbuild -->
