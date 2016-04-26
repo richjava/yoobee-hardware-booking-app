@@ -1,22 +1,22 @@
 <?php
 header("Access-Control-Allow-Origin : *");
 
-require APPPATH . '/libraries/REST_Controller.php';
+//require APPPATH . '/libraries/REST_Controller.php';
 
-class Api extends REST_Controller
+class Api extends CI_Controller
 {
     function __construct()
     {
         parent:: __construct();
     }
 
-    public function bookdevices_post()
+    public function bookdevices()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->device->insertBookedDevices($data);
     }
 
-    function getLastBookingID_get()
+    function getLastBookingID()
     {
         $this->db->select_max('booking_id');
         $result = $this->db->get('bookings_tb')->row_array();
@@ -24,7 +24,7 @@ class Api extends REST_Controller
     }
 
     /*START  -------------  CATEGORY TABLE*/
-    function categories_get()
+    function categories()
     {
         $data = $this->device->getCategory();
         echo json_encode($data);
@@ -33,7 +33,7 @@ class Api extends REST_Controller
     /*END --------------- CATEGORY TABLE*/
 
     /*START -------------- DEVICES TABLE*/
-    function devices_get()
+    function devices()
     {
         $data = $this->device->getDevice();
         echo json_encode($data);
@@ -42,13 +42,13 @@ class Api extends REST_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
-    function getAllBookedDevices_get()
+    function getAllBookedDevices()
     {
         $data = $this->calendar->getUnavailableDevices();
         echo json_encode($data);
     }
 
-    public function addNewBookedDates_post()
+    public function addNewBookedDates()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->calendar->addBookingDates($data);
@@ -58,7 +58,7 @@ class Api extends REST_Controller
 
     /*START --------------------- CONFIRMATION PAGE*/
 
-    public function fetchCompletedBooking_get($id)
+    public function fetchCompletedBooking($id)
     {
         $this->db->select()->from('bookings_tb')->where('booking_id', $id);
         $query = $this->db->get();
@@ -66,6 +66,23 @@ class Api extends REST_Controller
     }
 
     /*END --------------------- CONFIRMATION PAGE*/
+
+    /*START --------------------- EMAIL*/
+    function sendEmail($id)
+    {
+        $this->db->select('email')->from('students_tb')->where('student_id', $id);
+        $query = $this->db->get();
+        $data = $query->result_array();
+        $config['mailtype'] = 'html';
+        $this->email->initialize($config);
+        $this->email->from('sales@ebazaar.nz', 'Beshad Ghorbani');
+        $this->email->to($data[0]['email']);
+        $this->email->subject('Booking Confirmation');
+        $this->email->message('<strong>This is Yoobee Hardware Booking confirmation email</strong>');
+        $this->email->send();
+        $this->email->clear();
+    }
+    /*END --------------------- EMAIL*/
 
 } //class Api extends REST_Controller
 

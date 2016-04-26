@@ -12,6 +12,7 @@ foreach ($css_files as $file): ?>
     <md-card>
         <md-card-content style="width: auto">
             <ul class="nav nav-tabs">
+                <li><a href="<?= base_url() . 'dashboard/bookings' ?>">Bookings</a></li>
                 <li><a href="<?= base_url() . 'dashboard/Students' ?>">Students</a></li>
                 <li><a href="<?= base_url() . 'dashboard/devices' ?>">Devices</a></li>
                 <li><a href="<?= base_url() . 'dashboard/Categories' ?>">Categories</a></li>
