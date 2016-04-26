@@ -9,6 +9,22 @@ class Dashboard extends CI_Controller
         parent::__construct();
     }
 
+
+    public function index()
+    {
+        if ($this->session->userdata('username')) { /*check if student is loggd in or not, redirect to login page if not*/
+            $this->load->view('header', (object)array('js_files' => array(), 'css_files' => array()));
+            $crud = new grocery_CRUD();
+            $crud->set_table('categories_tb');
+            $crud->set_subject('Devices Category');
+            $output = $crud->render();
+            $this->load->view('dashboard', $output);
+            $this->load->view('footer');
+        } else {
+            redirect(base_url() . 'auth');
+        }
+    }
+
     public function categories()
     {
         if ($this->session->userdata('username')) { /*check if student is loggd in or not, redirect to login page if not*/

@@ -58,10 +58,9 @@ class Api extends REST_Controller
 
     /*START --------------------- CONFIRMATION PAGE*/
 
-    public function fetchCompletedBooking_get()
+    public function fetchCompletedBooking_get($id)
     {
-        $booking_id = $this->input->get('id', TRUE);
-        $this->db->select()->from('bookings_tb')->where('booking_id', $booking_id);
+        $this->db->select()->from('bookings_tb')->where('booking_id', $id);
         $query = $this->db->get();
         echo json_encode($query->result());
     }

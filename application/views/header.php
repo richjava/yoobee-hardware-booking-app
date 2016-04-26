@@ -10,7 +10,8 @@
     <?= link_tag("bower_components/mdi/css/materialdesignicons.css") ?>
     <?= link_tag("bower_components/v-accordion/dist/v-accordion.css") ?>
     <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
-    <?= link_tag("bower_components/qtip2/basic/jquery.qtip.css") ?>
+    <?= link_tag("bower_components/bootstrap/dist/css/bootstrap.css") ?>
+    <?= link_tag("bower_components/jquery-ui/themes/smoothness/jquery-ui.css") ?>
     <?= link_tag("app/css/styles.css") ?>
 
     <!--        --><? //link_tag("assets/grocery_crud/themes/datatables/css/demo_table_jui.css")?>
@@ -26,7 +27,6 @@
 <script src="<?= base_url() ?>bower_components/angular/angular.js"></script>
 <script src="<?= base_url() ?>bower_components/angular-material/angular-material.js"></script>
 <script src="<?= base_url() ?>bower_components/jquery/dist/jquery.js"></script>
-
 
 <md-toolbar>
     <div class="md-toolbar-tools">
