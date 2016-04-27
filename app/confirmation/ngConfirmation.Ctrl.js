@@ -3,33 +3,25 @@
     "user strict";
 
     angular.module("myApp")
-        //.controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {
-        .controller('ngConfirmationCtrl', function ($scope, $http) {
+        .controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {
 
-            var data = 6;
-            $scope.sendEmail = function () {
+
+            lastBookingsIDFactory.getLastBookingID().then(function success(data) {
+
                 $http({
                     method: 'GET',
-                    url: 'http://localhost/yoobee-hardware-booking-app/api/sendEmail/' + data,
-                    data: 6
-                })
-            }
+                    url: 'http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking/' + data.data
+                }).then(function (response) {
 
+                    $scope.sendEmail = function () {
+                        $http.get('http://localhost/yoobee-hardware-booking-app/api/sendEmail/' + 6)
+                    }
 
-            //lastBookingsIDFactory.getLastBookingID().then(function success(data) {
-            //    $http({
-            //        method: 'GET',
-            //        url: 'http://localhost/yoobee-hardware-booking-app/api/fetchCompletedBooking/' + data.data,
-            //        data: data.data
-            //    }).then(function (response) {
-            //
-            //
-            //    });
-            //    /*then(function(data)*/
-            //
-            //});
+                });
+                /*then(function(data)*/
+
+            });
             /*lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID)*/
-
         });
     /*.controller('ngDeviceSelectionCtrl', function ($scope, $http) */
 })();

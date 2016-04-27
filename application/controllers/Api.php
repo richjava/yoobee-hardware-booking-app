@@ -70,9 +70,7 @@ class Api extends CI_Controller
     /*START --------------------- EMAIL*/
     function sendEmail($id)
     {
-        $this->db->select('email')->from('students_tb')->where('student_id', $id);
-        $query = $this->db->get();
-        $data = $query->result_array();
+        $data = $this->student->email($id);
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         $this->email->from('sales@ebazaar.nz', 'Beshad Ghorbani');

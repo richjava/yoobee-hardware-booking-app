@@ -15,4 +15,11 @@
         $query=$this->db->get();
         return $query->first_row('array');
     }
+
+    function email($id)
+    {
+        $this->db->select('email')->from('students_tb')->where('student_id', $id);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }

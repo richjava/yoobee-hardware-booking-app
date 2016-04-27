@@ -35,7 +35,7 @@
 
 <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
     <md-toolbar class="md-toolbar-tools">
-        <h1 flex>Settings</h1>
+        <h1 flex>Menu</h1>
         <md-button ng-click="closeSidebar();">
             <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_close_white_48px.svg"></md-icon>
         </md-button>
@@ -48,66 +48,28 @@
     <md-content layout-padding>
         <md-list>
 
-            <md-list-item class="md-3-line">
+            <md-list-item class="md-1-line">
                 <div class="md-list-item-text">
-                    <h3>Booking</h3>
-
-                    <p>View, select & hire</p>
+                    <md-button ng-href="<?= base_url() . 'home/#/devices' ?>">
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_event_black_48px.svg"></md-icon>
+                        Make a booking
+                    </md-button>
                 </div>
-                <md-button
-                    class="md-secondary"><?= anchor('home/#/devices', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
             </md-list-item>
 
             <md-divider></md-divider>
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <h3>Students</h3>
-
-                    <p>Create, Edit & Delete</p>
+                    <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>">
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_dashboard_black_48px.svg"></md-icon>
+                        Dashboard
+                    </md-button>
                 </div>
-                <md-button
-                    class="md-secondary"><?= anchor('dashboard/students', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
+
             </md-list-item>
 
             <md-divider></md-divider>
-
-            <md-list-item class="md-3-line">
-                <div class="md-list-item-text">
-                    <h3>Devices</h3>
-
-                    <p>Create, Edit & Delete</p>
-                </div>
-                <md-button
-                    class="md-secondary"><?= anchor('dashboard/devices', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
-            </md-list-item>
-
-            <md-divider></md-divider>
-
-            <md-list-item class="md-3-line">
-                <div class="md-list-item-text">
-                    <h3>Categories</h3>
-
-                    <p>Create, Edit & Delete</p>
-                </div>
-                <md-button
-                    class="md-secondary"><?= anchor('dashboard/categories', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
-            </md-list-item>
-
-            <md-divider></md-divider>
-
-            <md-list-item class="md-3-line">
-                <div class="md-list-item-text">
-                    <h3>Programmes</h3>
-
-                    <p>Create, Edit & Delete</p>
-                </div>
-                <md-button
-                    class="md-secondary"><?= anchor('dashboard/programmes', 'VIEW', array('style' => 'text-decoration:none')) ?></md-button>
-            </md-list-item>
-
-            <md-divider></md-divider>
-
 
             <md-list-item>
                 <?php if ($this->session->userdata('username')) { ?>
