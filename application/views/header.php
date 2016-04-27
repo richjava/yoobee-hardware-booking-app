@@ -11,6 +11,7 @@
     <?= link_tag("bower_components/v-accordion/dist/v-accordion.css") ?>
     <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
     <?= link_tag("bower_components/bootstrap/dist/css/bootstrap.css") ?>
+    <?= link_tag("bower_components/qtip2/jquery.qtip.css") ?>
     <?= link_tag("app/css/styles.css") ?>
     <!-- endbower -->
     <!-- endbuild -->
