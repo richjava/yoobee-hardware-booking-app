@@ -53,6 +53,7 @@ class Dashboard extends CI_Controller
             $crud->set_subject(' Device');
             $crud->set_field_upload('image_url', 'assets/uploads/files');
             $crud->display_as('image_url', 'Image');
+            $crud->columns('image_url', 'device_name', 'description', 'category');
             $output = $crud->render();
             $this->load->view('dashboard/devices', $output);
             $this->load->view('footer');
