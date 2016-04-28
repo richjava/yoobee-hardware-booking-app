@@ -58,7 +58,7 @@ class Api extends CI_Controller
 
     /*START --------------------- CONFIRMATION PAGE*/
 
-    public function fetchCompletedBooking($id)
+    public function getBookingDetails($id)
     {
         $this->db->select()->from('bookings_tb')->where('booking_id', $id);
         $query = $this->db->get();
@@ -67,8 +67,33 @@ class Api extends CI_Controller
 
     /*END --------------------- CONFIRMATION PAGE*/
 
+    /*START --------------------- current student booking details*/
+
+    public function getStudentDetails()
+    {
+        $this->db->select('')->from('students_tb')->where('username', $this->session->userdata('username'));
+        $query = $this->db->get();
+        echo json_encode($query->result());
+    }
+
+    /*END --------------------- current student booking details*/
+
+    /*START --------------------- get booked devices from DB*/
+
+    public function getBookedDevicesDetails($id)
+    {
+        $this->db->select('device_name');
+        $this->db->from('selected_devices_tb')->where('booking_id', $id);
+        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
+        $query = $this->db->get();
+        echo json_encode($query->result_array());
+    }
+
+    /*END --------------------- get booked devices from DB*/
+
+
     /*START --------------------- EMAIL*/
-    function sendEmail($id)
+    function sendEmail($id, $booking_id)
     {
         $data = $this->student->email($id);
         $config['mailtype'] = 'html';
@@ -79,8 +104,19 @@ class Api extends CI_Controller
         $this->email->message('<strong>This is Yoobee Hardware Booking confirmation email</strong>');
         $this->email->send();
         $this->email->clear();
+
+        $data = array(
+//            'student_id' => $this->session->userdata('student_id')
+            'student_id' => $id,
+            'status' => 'AWAITING COLLECTION'
+        );
+        $this->db->where('booking_id', $booking_id);
+        $this->db->update('bookings_tb', $data);
+
+
     }
     /*END --------------------- EMAIL*/
+
 
 } //class Api extends REST_Controller
 

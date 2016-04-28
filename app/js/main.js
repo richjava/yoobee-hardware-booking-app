@@ -9,7 +9,6 @@
         if (arg1.startsWith('ARIA:')) return;
         oldWarn.apply(console, arguments);
     };
-    console.warn('ARIA warnings disabled.');
     /*to disable aria warnings in the console*/
 
 

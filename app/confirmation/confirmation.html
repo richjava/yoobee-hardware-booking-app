@@ -1,8 +1,49 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
-    <md-card>
-        <md-card-content style="width: 500px">
-            <h1>I am the confirmation page</h1>
-        </md-card-content>
+    <md-card style="width:600px">
+        <div flex>
+            <md-toolbar layout="row" class="md-hue-3">
+                <div class="md-toolbar-tools">
+                    <span>Booking Details</span>
+                </div>
+            </md-toolbar>
+
+            <md-card-content ng-show="loading">
+                <md-card-header-text layout="row" layout-align="center center">
+                    Please wait until we are processing your order
+                </md-card-header-text>
+                <md-card-content layout="row" layout-align="center center">
+                    <md-progress-circular md-mode="indeterminate" md-diameter="100"></md-progress-circular>
+                </md-card-content>
+            </md-card-content>
+
+            <md-list flex ng-show="page">
+                <md-subheader class="md-no-sticky">Please check your booking details below:</md-subheader>
+                <md-list-item ng-click="null">
+                    <div class="md-list-item-text" layout="column">
+                        <h3> Your order number is : {{ bookingID}}</h3>
+                        <h4>Booked Devices:</h4>
+
+                        <p ng-repeat="deviceName in devicesName"> {{ deviceName.device_name }} </p>
+                        <h4>Booking Dates:</h4>
+
+                        <p> from: {{ startDate }} until {{ endDate }}</p>
+                        <h4>Student Details:</h4>
+
+                        <p> Username: {{ username }}</p>
+
+                        <p>Full Name: {{ fullname }}</p>
+
+                        <p>Address: {{ address }}</p>
+
+                        <p>Contact phone number: {{ phone }}</p>
+
+                        <p>Student email: {{ email }}</p>
+
+                        <p>Programme ID: {{ programmeID }}</p>
+
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
         <md-card-content>
             <span layout="row" layout-align="space-between none">
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">

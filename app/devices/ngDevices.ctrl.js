@@ -26,7 +26,6 @@
             $scope.beginBooking = function (list) {
 
                 lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
-
                     for (var i = 0; i < list.length; i++) {
                         data = {'booking_id': parseInt(currentBookingID.data) + 1, 'device_id': list[i]};
                         $http({
