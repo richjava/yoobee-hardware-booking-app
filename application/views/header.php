@@ -49,11 +49,33 @@
     <md-content layout-padding>
         <md-list>
 
-            <md-list-item class="md-1-line">
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
+                    <md-button ng-href="<?= base_url() . 'home/#/catalouge' ?>">
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_view_module_black_48px.svg"></md-icon>
+                        Catalouge
+                    </md-button>
+                </div>
+            </md-list-item>
+
+            <md-divider></md-divider>
+
+            <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
                     <md-button ng-href="<?= base_url() . 'home/#/devices' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_event_black_48px.svg"></md-icon>
-                        Make a booking
+                        create a new booking
+                    </md-button>
+                </div>
+            </md-list-item>
+
+            <md-divider></md-divider>
+
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
+                    <md-button ng-href="<?= base_url() . 'home/#/bookings' ?>">
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_date_range_black_48px.svg"></md-icon>
+                        History of Bookings
                     </md-button>
                 </div>
             </md-list-item>
@@ -65,6 +87,18 @@
                     <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_dashboard_black_48px.svg"></md-icon>
                         Dashboard
+                    </md-button>
+                </div>
+
+            </md-list-item>
+
+            <md-divider></md-divider>
+
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
+                    <md-button ng-href="<?= base_url() . 'home/#/settings' ?>">
+                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_settings_black_48px.svg"></md-icon>
+                        Your Settings
                     </md-button>
                 </div>
 

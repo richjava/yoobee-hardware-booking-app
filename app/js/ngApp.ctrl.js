@@ -5,7 +5,7 @@
 
     angular.module("myApp")
 
-        /*controller for whole the application*/
+        /*controller for the application*/
 
         .controller("ngAppCtrl", function ($scope, $mdSidenav) {
 

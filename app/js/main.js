@@ -40,10 +40,18 @@
                 .state('success', {
                     url: '/success',
                     templateUrl: '../app/components/success.html'
+                })/*.state('success',{*/
+                .state('catalouge', {
+                    url: '/catalouge',
+                    templateUrl: '../app/catalouge/catalouge.html',
+                    controller: "ngCatalougeCtrl"
                 })
-            /*.state('confirmation',{*/
+                .state('settings', {
+                    url: '/settings',
+                    templateUrl: '../app/settings/settings.html',
+                    controller: "ngSettingCtrl"
+                })
         })
-
 
 })();/*IIFE function*/
 
