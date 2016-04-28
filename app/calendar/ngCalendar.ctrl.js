@@ -86,7 +86,7 @@
             })
 
             $scope.registerBookingDates = function () {
-                lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
+                lastBookingsIDFactory.getBookingID().then(function success(lastBookingID) {
                     var maxDate = new Date(Math.max.apply(null, selected));
                     var minDate = new Date(Math.min.apply(null, selected));
 
@@ -94,16 +94,13 @@
                     maxDate = moment(maxDate).add('days', 1).toDate();
 
                     data = {
-                        'booking_id': parseInt(currentBookingID.data) + 1,
+                        'booking_id': parseInt(lastBookingID.data) + 1,
                         'start_date': minDate,
                         'end_date': maxDate
                     };
-                    $http({
-                        method: 'POST',
-                        url: 'http://localhost/yoobee-hardware-booking-app/api/addNewBookedDates',
-                        data: data
-                    });
+                    $http.post('http://localhost/yoobee-hardware-booking-app/api/addNewBookedDates', data);
                 });
+                /*lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID)*/
 
             }
             /* $scope.registerBookingDates = function()*/

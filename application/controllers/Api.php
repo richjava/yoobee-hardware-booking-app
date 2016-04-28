@@ -16,7 +16,7 @@ class Api extends CI_Controller
         $this->device->insertBookedDevices($data);
     }
 
-    function getLastBookingID()
+    function getBookingID()
     {
         $this->db->select_max('booking_id');
         $result = $this->db->get('bookings_tb')->row_array();
@@ -106,7 +106,6 @@ class Api extends CI_Controller
         $this->email->clear();
 
         $data = array(
-//            'student_id' => $this->session->userdata('student_id')
             'student_id' => $id,
             'status' => 'AWAITING COLLECTION'
         );

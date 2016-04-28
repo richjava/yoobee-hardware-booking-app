@@ -33,12 +33,12 @@
         /*a factory service to return the booking id*/
         .factory("lastBookingsIDFactory", function ($http) {
 
-            function getLastBookingID() {
-                return $http.get('http://localhost/yoobee-hardware-booking-app/api/getLastBookingID');
+            function getBookingID() {
+                return $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingID');
             }
 
             return {
-                getLastBookingID: getLastBookingID
+                getBookingID: getBookingID
             }
         })
     /*angular.module("myApp")*/

@@ -24,15 +24,10 @@
             };
 
             $scope.beginBooking = function (list) {
-
-                lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID) {
+                lastBookingsIDFactory.getBookingID().then(function success(lastBookingID) {
                     for (var i = 0; i < list.length; i++) {
-                        data = {'booking_id': parseInt(currentBookingID.data) + 1, 'device_id': list[i]};
-                        $http({
-                            method: 'POST',
-                            url: 'http://localhost/yoobee-hardware-booking-app/api/bookDevices',
-                            data: data
-                        });
+                        data = {'booking_id': parseInt(lastBookingID.data) + 1, 'device_id': list[i]};
+                        $http.post('http://localhost/yoobee-hardware-booking-app/api/bookDevices', data);
                     }
                     /*for (var i=0;i<list.length;i++*/
                 })

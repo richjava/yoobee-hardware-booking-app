@@ -16,8 +16,6 @@ class Dashboard extends CI_Controller
             $crud = new grocery_CRUD();
             $crud->set_table('bookings_tb');
             $crud->set_relation('student_id', 'students_tb', 'fullname');
-            $crud->set_relation('booking_id', 'selected_devices_tb', 'device_id');
-            $crud->set_relation('device_id', 'devices_tb', 'fullname');
             $crud->set_subject(' Booking');
             $crud->columns('booking_id', 'student_id', 'start_date', 'end_date', 'status');
             $output = $crud->render();
