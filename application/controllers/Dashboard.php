@@ -18,6 +18,7 @@ class Dashboard extends CI_Controller
             $crud->set_relation('student_id', 'students_tb', 'fullname');
             $crud->set_subject(' Booking');
             $crud->columns('booking_id', 'student_id', 'start_date', 'end_date', 'status');
+            $crud->display_as('student_id', 'Fullname');
             $output = $crud->render();
             $this->load->view('dashboard/categories', $output);
             $this->load->view('footer');

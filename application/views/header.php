@@ -106,11 +106,14 @@
 
             <md-divider></md-divider>
 
-            <md-list-item>
+            <md-list-item class="md-3-line">
+                <div class="md-list-item-text">
                 <?php if ($this->session->userdata('username')) { ?>
                     <md-button
-                        class="md-secondary"><?= anchor('auth/logout', 'Logout', array('style' => 'text-decoration:none')) ?></md-button>
+                        class="md-secondary"><?= anchor('auth/logout', 'Logout', array('style' => 'text-decoration:none')) ?>
+                    </md-button>
                 <? } ?>
+                </div>
             </md-list-item>
         </md-list>
     </md-content>

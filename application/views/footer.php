@@ -15,6 +15,7 @@
     <script src="<?=base_url()?>app/js/main.js"></script>
     <script src="<?= base_url() ?>app/js/ngApp.ctrl.js"></script>
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>
+    <script src="<?= base_url() ?>app/confirmation/ngConfirmation.ctrl.js"></script>
     <script src="<?= base_url() ?>app/devices/ngDevices.ctrl.js"></script>
     <script src="<?= base_url() ?>app/settings/ngSetting.ctrl.js">/
         script >

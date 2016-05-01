@@ -10,6 +10,9 @@
             var title, start, end = 0;
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookedDevices').then(function (response) {
+
+                var data = response.data;
+
                 for (var i = 0; i < response.data.length; i++) {
 
                     title = response.data[i].device_name;
