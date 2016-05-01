@@ -1,6 +1,6 @@
 (function () {
 
-    "user strict";
+    "use strict";
 
     angular.module("myApp")
 
@@ -11,7 +11,6 @@
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookedDevices').then(function (response) {
 
-                var data = response.data;
 
                 for (var i = 0; i < response.data.length; i++) {
 
@@ -19,9 +18,9 @@
                     start = response.data[i].start_date;
                     end = response.data[i].end_date;
 
-                    formattedStart = moment(start).format('dddd DD');
-                    formattedend = moment(end).format('dddd DD');
-                    formattedmonth = moment(start).format('MMMM');
+                    var formattedStart = moment(start).format('dddd DD');
+                    var formattedend = moment(end).format('dddd DD');
+                    var formattedmonth = moment(start).format('MMMM');
 
                     devices.push({
                         title: title,
@@ -43,7 +42,6 @@
                     list.splice(index, 1);
                 };
 
-
                 $('#calendar').fullCalendar({
                     events: devices,
                     header: {
@@ -56,12 +54,13 @@
                     eventLimit: 3,
                     selectable: true,
                     contentHeight: 'auto',
+                    weekends: false,
 
-                    select: function (start) {
+                    dayClick: function (start, element) {
                         if (true) {
                             $('#calendar').fullCalendar('renderEvent', {
                                 id: start,
-                                title: 'Booked ',
+                                //title: 'Booked ',
                                 start: start,
                                 color: 'orange',
                                 textColor: 'white',
@@ -73,7 +72,7 @@
                     },
 
                     eventRender: function (event, element) {
-                        element.prepend('<span class="close" style="float:right;cursor: pointer;color:black;">&#10005;</span>');
+                        element.prepend('<span class="close" style="pointer;color:black">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
                             removeDeviceFromBookingArray(event._id, selected);

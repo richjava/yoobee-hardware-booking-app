@@ -1,6 +1,6 @@
 (function () {
 
-    "user strict";
+    "use strict";
 
     angular.module("myApp")
         .controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {

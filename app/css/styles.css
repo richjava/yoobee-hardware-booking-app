@@ -14,3 +14,14 @@ body {
   background-color: white;
 }
 
+.fc-event.booked {
+  line-height: 3.5em;
+  text-align: center;
+  border-radius: 50px;
+  width: 40px;
+  margin: 0 auto;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
