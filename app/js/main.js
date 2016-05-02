@@ -16,8 +16,8 @@
 
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')
-                .primaryPalette('pink')
-                .accentPalette('orange');
+                .primaryPalette('blue-grey')
+                .accentPalette('light-blue');
 
             accordionConfig.expandAnimationDuration = 0.5;
 

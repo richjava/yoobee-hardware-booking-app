@@ -51,7 +51,8 @@ class Api extends CI_Controller
     public function addNewBookedDates()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
-        $this->calendar->addBookingDates($data);
+//        $this->calendar->addBookingDates($data);
+        $this->db->insert('bookings_tb', $data);
     }
 
     /*END -------------- CALENDAR TABLE*/

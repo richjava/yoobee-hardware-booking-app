@@ -22,20 +22,18 @@
 <script src="<?= base_url() ?>bower_components/jquery/dist/jquery.js"></script>
 
 <md-toolbar>
-    <div class="md-toolbar-tools">
+    <div class="md-toolbar-tools toolbar">
         <md-button ng-click="openSidebar();">
             <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_menu_white_48px.svg"></md-icon>
         </md-button>
-        <p><strong>Yoobee Hardware Booking Application
-                <ation
-            </strong></p>
+        <p class="title"> YOOBEE HARDEWARE BOOKING APP</p>
     </div>
 </md-toolbar>
 
 <!--side navigation bar / menu-->
 
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-    <md-toolbar class="md-toolbar-tools">
+<md-sidenav class="md-sidenav-left md-whiteframe-z2 sidenav" md-component-id="left">
+    <md-toolbar class="md-toolbar-tools toolbar">
         <h1 flex>Menu</h1>
         <md-button ng-click="closeSidebar();">
             <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_close_white_48px.svg"></md-icon>

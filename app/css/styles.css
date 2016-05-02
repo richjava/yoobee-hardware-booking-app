@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "Fira Sans Light";
+  src: url("../fonts/FiraSans-Light.otf"); }
+
 body {
-  background-color: mediumpurple; }
+  background-color: #EDF2F4; }
 
 .container {
   display: -webkit-flex;
@@ -11,17 +15,29 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: white;
-}
+  background-color: #EDF2F4; }
 
-.fc-event.booked {
-  line-height: 3.5em;
-  text-align: center;
-  border-radius: 50px;
-  width: 40px;
-  margin: 0 auto;
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  padding: 5px;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
-}
+  width: 800px; }
+
+.loginForm {
+  width: 300px; }
+
+.registrationForm {
+  width: 500px; }
+
+.title {
+  padding-top: 10px; }
+
+.toolbar {
+  background-color: #595959;
+  font-family: "Fira Sans Light"; }

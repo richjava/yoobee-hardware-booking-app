@@ -38,37 +38,37 @@ class Auth extends CI_Controller
                 array(
                     'field' => 'username',
                     'label' => 'Username',
-                    'rules' => 'trim|required|min_length[3]|is_unique[students_tb.username]'
+                    'rules' => 'trim|required|xss_clean|min_length[3]|is_unique[students_tb.username]'
                 ),
                 array(
                     'field' => 'password',
                     'label' => 'Password',
-                    'rules' => 'trim|required|min_length[5]'
+                    'rules' => 'trim|required|xss_clean|min_length[5]'
                 ),
                 array(
                     'field' => 'password_confirm',
                     'label' => 'Password Confirm',
-                    'rules' => 'trim|required|min_length[5]|matches[password]'
+                    'rules' => 'trim|required|xss_clean|min_length[5]|matches[password]'
                 ),
                 array(
                     'field' => 'fullname',
                     'label' => 'Fullname',
-                    'rules' => 'trim|required|min_length[3]|alpha'
+                    'rules' => 'trim|required|xss_clean|min_length[3]|alpha'
                 ),
                 array(
                     'field' => 'address',
                     'label' => 'Address',
-                    'rules' => 'trim|required'
+                    'rules' => 'trim|xss_clean|required'
                 ),
                 array(
                     'field' => 'phone',
                     'label' => 'Phone number',
-                    'rules' => 'trim|required'
+                    'rules' => 'trim|xss_clean|required'
                 ),
                 array(
                     'field' => 'email',
                     'label' => 'Email',
-                    'rules' => 'trim|required|is_unique[students_tb.email]|valid_email'
+                    'rules' => 'trim|required|xss_clean|is_unique[students_tb.email]|valid_email'
                 )
             );
 

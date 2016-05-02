@@ -1,20 +1,21 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-<md-content class="md-padding " layout="row" layout-wrap>
-    <md-card>
-        <md-card-title flex="60" flex-offset="20">
+<md-content class="md-padding container" layout="row" layout-wrap>
+    <md-card class="wrapper">
+        <md-card-title>
             <p><img src="<?=base_url()?>app/images/logo.png" alt="Yoobee Logo"></p>
         </md-card-title>
         <md-card-content>
-            <h4>{{ title | uppercase}}</h4>
             <?php if($errors) {?>
                 <h3 style="color:red;"><b><?=$errors?></b></h3>
+            <?php } else { ?>
+                <h4>{{ titleRegistration | uppercase}}</h4>
             <?php } ?>
         </md-card-content>
         <md-card-content>
-            <md-content>
+            <md-content class="registrationForm">
                 <div layout="column" layout-padding ng-cloak>
-                    <?php echo form_open(base_url().'auth/register');?>
+                    <?php echo form_open(base_url() . 'auth/register', array('name' => 'registrationForm', 'novalidate' => '')); ?>
                     <md-input-container class="md-block">
 
                         <?=form_label('Select username','username')?>
@@ -24,10 +25,16 @@
                             'type'=> 'text',
                             'name' => 'username',
                             'id' => 'username',
-                            'ng-model' =>"student.username"
+                            'ng-model' => "student.username",
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.username.$touched">
+                            <span ng-show="registrationForm.username.$error.required">Choose a unique username</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container>
@@ -38,10 +45,16 @@
                             'type'=> 'password',
                             'name' => 'password',
                             'id' => 'password',
-                            'ng-model' =>"student.password"
+                            'ng-model' => "student.password",
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.password.$touched">
+                            <span ng-show="registrationForm.password.$error.required">Select a password</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container>
@@ -51,10 +64,17 @@
                         $data_form=array(
                             'type'=> 'password',
                             'name' => 'password_confirm',
-                            'id' => 'password_confirm'
+                            'id' => 'password_confirm',
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.password_confirm.$touched">
+                            <span
+                                ng-show="registrationForm.password_confirm.$error.required">Your password must match</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container class="md-block">
@@ -65,10 +85,16 @@
                             'type'=> 'text',
                             'name' => 'fullname',
                             'id' => 'fullname',
-                            'ng-model' => 'student.fullname'
+                            'ng-model' => 'student.fullname',
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.fullname.$touched">
+                            <span ng-show="registrationForm.fullname.$error.required">Tell us your fullname</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container class="md-block">
@@ -79,10 +105,16 @@
                             'type'=> 'text',
                             'name' => 'address',
                             'id' => 'address',
-                            'ng-model' => 'student.address'
+                            'ng-model' => 'student.address',
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.address.$touched">
+                            <span ng-show="registrationForm.address.$error.required">Tell us your address</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container>
@@ -93,10 +125,16 @@
                             'type'=> 'text',
                             'name' => 'phone',
                             'id' => 'phone',
-                            'ng-model' => 'student.phone'
+                            'ng-model' => 'student.phone',
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.phone.$touched">
+                            <span ng-show="registrationForm.phone.$error.required">Tell us your telephone number</span>
+                        </div>
                     </md-input-container>
 
                     <md-input-container>
@@ -107,15 +145,21 @@
                             'type'=> 'text',
                             'name' => 'email',
                             'id' => 'email',
-                            'ng-model' => 'student.email'
+                            'ng-model' => 'student.email',
+                            'required' => ""
                         );
                         echo form_input($data_form);
                         ?>
+                        <br/>
+
+                        <div ng-show="registrationForm.$submitted || registrationForm.email.$touched">
+                            <span ng-show="registrationForm.email.$error.required">Tell us your email address</span>
+                        </div>
                     </md-input-container>
 
                     <!--                           <md-content>-->
                     <section layout="row" layout-align="center center">
-                        <md-button class="md-raised" ng-click="clearForm()">Clear</md-button>
+                        <md-button class="md-raised" ng-click="reset()">RESET</md-button>
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",
@@ -130,7 +174,7 @@
             </md-content>
         </md-card-content>
         <md-card-content>
-            <p>Already a member, Signin <?= anchor('auth', 'here') ?></p>
+            <p>Already a member, Login <?= anchor('auth', 'here') ?></p>
         </md-card-content>
     </md-card>
 </md-content>

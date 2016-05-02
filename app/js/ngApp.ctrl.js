@@ -9,7 +9,8 @@
 
         .controller("ngAppCtrl", function ($scope, $mdSidenav) {
 
-            $scope.title = "Enter your details to register:";
+            $scope.titleLogin = "Log in to Yoobee booking app";
+            $scope.titleRegistration = "Register to use Yoobee booking app";
 
             $scope.openSidebar = function () {
                 $mdSidenav('left').open();
@@ -18,7 +19,7 @@
                 $mdSidenav('left').close();
             }
 
-            $scope.clearForm = function () {
+            $scope.reset = function () {
                 $scope.student.username = "";
                 $scope.student.password = "";
                 $scope.student.password_confirm = "";
