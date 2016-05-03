@@ -1,6 +1,7 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
-        <md-card-content style="width: 500px">
+        <md-card-header><h2>Devices</h2></md-card-header>
+        <md-card-content class="devices">
             <v-accordion class="vAccordion--default" multiple control="accordion">
                 <v-pane id="{{ category.id }}" ng-repeat="category in categories" expanded="pane.isExpanded">
                     <v-pane-header>
@@ -15,7 +16,17 @@
                                     {{ device.device_name }}
                                 </v-pane-header>
                                 <v-pane-content>
-                                    {{ device.description}}
+                                    <md-list>
+                                        <md-list-item>
+                                            <div>
+                                                <img ng-src="../assets/uploads/devices/{{ device.image_url}}"
+                                                     class="md-avatar" style="height: 60px; width:60px"/>
+                                            </div>
+                                            <div class="md-list-item-text" layout="column">
+                                                <p> {{ device.description}} </p>
+                                            </div>
+                                        </md-list-item>
+                                    </md-list>
                                 </v-pane-content>
                             </v-pane>
                         </v-accordion>

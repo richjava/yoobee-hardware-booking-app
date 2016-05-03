@@ -24,6 +24,7 @@
             };
 
             $scope.beginBooking = function (list) {
+                var data;
                 lastBookingsIDFactory.getBookingID().then(function success(lastBookingID) {
                     for (var i = 0; i < list.length; i++) {
                         data = {'booking_id': parseInt(lastBookingID.data) + 1, 'device_id': list[i]};

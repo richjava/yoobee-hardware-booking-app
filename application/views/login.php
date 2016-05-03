@@ -9,7 +9,7 @@
             <?php if ($error == 1) { ?>
                 <p style="color:red">Username or password did not match</p>
             <? } else { ?>
-                <h3>{{ titleLogin }}</h3>
+                <h3 class="title">{{ titleLogin }}</h3>
             <?php } ?>
         </md-card-content>
         <md-card-content>
@@ -63,7 +63,7 @@
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",
-                                'value' => 'Signin',
+                                'value' => 'Login',
                                 'class' => 'md-button md-raised md-warn')
                         );
                         ?>

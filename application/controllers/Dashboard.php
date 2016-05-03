@@ -20,7 +20,7 @@ class Dashboard extends CI_Controller
             $crud->columns('booking_id', 'student_id', 'start_date', 'end_date', 'status');
             $crud->display_as('student_id', 'Fullname');
             $output = $crud->render();
-            $this->load->view('dashboard/categories', $output);
+            $this->load->view('dashboard/bookings', $output);
             $this->load->view('footer');
         } else {
             redirect(base_url() . 'auth');
@@ -51,7 +51,7 @@ class Dashboard extends CI_Controller
             $crud->set_relation('category_id', 'categories_tb', 'category_name');
             $crud->display_as('category_id', 'Category');
             $crud->set_subject(' Device');
-            $crud->set_field_upload('image_url', 'assets/uploads/files');
+            $crud->set_field_upload('image_url', 'assets/uploads/DEVICES');
             $crud->display_as('image_url', 'Image');
             $crud->columns('image_url', 'device_name', 'description', 'category');
             $output = $crud->render();

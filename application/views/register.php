@@ -9,7 +9,7 @@
             <?php if($errors) {?>
                 <h3 style="color:red;"><b><?=$errors?></b></h3>
             <?php } else { ?>
-                <h4>{{ titleRegistration | uppercase}}</h4>
+                <p class="title">{{ titleRegistration | uppercase}}</p>
             <?php } ?>
         </md-card-content>
         <md-card-content>

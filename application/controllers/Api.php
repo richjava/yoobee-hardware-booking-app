@@ -83,7 +83,7 @@ class Api extends CI_Controller
 
     public function getBookedDevicesDetails($id)
     {
-        $this->db->select('device_name');
+        $this->db->select('device_name,image_url');
         $this->db->from('selected_devices_tb')->where('booking_id', $id);
         $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
         $query = $this->db->get();

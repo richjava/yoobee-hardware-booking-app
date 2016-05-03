@@ -15,7 +15,9 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #EDF2F4; }
+  background-color: #EDF2F4;
+  padding-top: 80px;
+}
 
 .wrapper {
   display: -webkit-flex;
@@ -35,9 +37,45 @@ body {
 .registrationForm {
   width: 500px; }
 
+@media screen and (max-width: 480px) {
+  .registrationForm {
+    width: 300px;
+  }
+}
+
 .title {
   padding-top: 10px; }
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 0.8em;
+  }
+}
 
 .toolbar {
   background-color: #595959;
   font-family: "Fira Sans Light"; }
+
+.devices {
+  width: 600px;
+}
+
+@media screen and (max-width: 640px) {
+  .devices {
+    width: auto;
+  }
+}
+
+.confirmation {
+  width: 600px;
+}
+
+@media screen and (max-width: 640px) {
+  .confirmation {
+    width: auto;
+  }
+}
+
+ul li a {
+  color: #4C5C68;
+}

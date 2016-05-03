@@ -1,15 +1,15 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
-    <md-card style="width:600px">
+    <md-card class="confirmation">
         <div flex>
             <md-toolbar layout="row" class="md-hue-3">
                 <div class="md-toolbar-tools">
-                    <span>Booking Details</span>
+                    <span flex>Confirmation Details For Booking #{{ bookingID }}</span>
                 </div>
             </md-toolbar>
 
             <md-card-content ng-show="loading">
                 <md-card-header-text layout="row" layout-align="center center">
-                    Please wait until we are processing your order
+                    Please wait until your booking is processed
                 </md-card-header-text>
                 <md-card-content layout="row" layout-align="center center">
                     <md-progress-circular md-mode="indeterminate" md-diameter="100"></md-progress-circular>
@@ -17,40 +17,66 @@
             </md-card-content>
 
             <md-list flex ng-show="page">
-                <md-subheader class="md-no-sticky">Please check your booking details below:</md-subheader>
-                <md-list-item ng-click="null">
+                <md-list-item>
                     <div class="md-list-item-text" layout="column">
-                        <h3> Your order number is : {{ bookingID}}</h3>
-                        <h4>Booked Devices:</h4>
 
-                        <p ng-repeat="deviceName in devicesName"> {{ deviceName.device_name }} </p>
-                        <h4>Booking Dates:</h4>
+                        <md-card-header><h4>Booked Devices:</h4></md-card-header>
 
-                        <p> from: {{ startDate }} until {{ endDate }}</p>
-                        <h4>Student Details:</h4>
+                        <md-list>
+                            <md-list-item ng-repeat="deviceName in devicesName">
+                                <div>
+                                    <img ng-src="../assets/uploads/devices/{{ deviceName.image_url}}" class="md-avatar"
+                                         style="height: 60px; width:60px"/>
+                                </div>
+                                <div class="md-list-item-text" layout="column">
+                                    <p> {{ deviceName.device_name}} </p>
+                                </div>
+                            </md-list-item>
 
-                        <p> Username: {{ username }}</p>
+                            <md-divider></md-divider>
 
-                        <p>Full Name: {{ fullname }}</p>
+                            <md-card-header><h4>Bookiing Dates:</h4></md-card-header>
 
-                        <p>Address: {{ address }}</p>
+                            <md-list-item class="md-3-line">
+                                <div class="md-list-item-text">
+                                    <p> The above devices are booked for you from: {{ startDate }} until {{ endDate
+                                        }}.</p>
+                                </div>
+                            </md-list-item>
 
-                        <p>Contact phone number: {{ phone }}</p>
+                            <md-divider></md-divider>
 
-                        <p>Student email: {{ email }}</p>
+                            <md-card-header><h4>Student Details:</h4></md-card-header>
 
-                        <p>Programme ID: {{ programmeID }}</p>
+                            <md-list-item class="md-3-line">
+                                <div class="md-list-item-text">
+                                    <p> Username: {{ username }}</p>
+
+                                    <p>Full Name: {{ fullname }}</p>
+
+                                    <p>Address: {{ address }}</p>
+
+                                    <p>Contact phone number: {{ phone }}</p>
+
+                                    <p>Student email: {{ email }}</p>
+
+                                    <p>Programme ID: {{ programmeID }}</p>
+                                </div>
+                            </md-list-item>
+
+                        </md-list>
+
 
                     </div>
                 </md-list-item>
                 <md-divider></md-divider>
-        <md-card-content>
+                <md-card-content>
             <span layout="row" layout-align="space-between none">
                 <md-button class="md-icon-button md-primary" ui-sref="calendar">
                     <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg"></md-icon>
                 </md-button>
                  <md-button class="md-primary" ui-sref="success" ng-click="sendEmail();"> Confirm & Finish</md-button>
             </span>
-        </md-card-content>
+                </md-card-content>
     </md-card>
 </md-content>

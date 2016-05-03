@@ -8,8 +8,9 @@
             lastBookingsIDFactory.getBookingID().then(function success(lastbookingID) {
                 var currentBookingID = parseInt(lastbookingID.data) + 1;
                 $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevicesDetails/' + currentBookingID).then(function success(deviceName) {
-                    $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingDetails/' + currentBookingID).then(function (response) {
-                        $http.get('http://localhost/yoobee-hardware-booking-app/api/getStudentDetails').then(function (student) {
+                    $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingDetails/' + currentBookingID).then(function success(response) {
+                        $http.get('http://localhost/yoobee-hardware-booking-app/api/getStudentDetails').then(function success(student) {
+                            console.log(deviceName.data);
                             $scope.studentID = student.data[0].student_id;
                             $scope.username = student.data[0].username;
                             $scope.fullname = student.data[0].fullname;
@@ -18,9 +19,9 @@
                             $scope.email = student.data[0].email;
                             $scope.programmeID = student.data[0].programme_id;
                             $scope.bookingID = currentBookingID;
-                            $scope.startDate = response.data[0].start_date;
-                            $scope.endDate = response.data[0].end_date;
                             $scope.devicesName = deviceName.data;
+                            //$scope.startDate = response.data[0].start_date;
+                            //$scope.endDate = response.data[0].end_date;
                             $scope.loading = false;
                             $scope.page = true;
                         });

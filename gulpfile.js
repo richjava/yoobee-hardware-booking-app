@@ -11,6 +11,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var wiredep = require('wiredep').stream;
+var jshint = require('gulp-jshint');
 
 /*Wires Bower dependencies to your source code.*/
 gulp.task('wiredep', function () {
@@ -77,6 +78,11 @@ gulp.task('clean:dist', function() {
 gulp.task('build', function (callback) {
     runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'], callback)
 })
+
+gulp.task('lint', function () {
+    return gulp.src('app/js/*.js')
+        .pipe(jshint());
+});
 
 
 /*gulp serve runs the sass and browsersync + more from above*/

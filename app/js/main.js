@@ -41,11 +41,6 @@
                     url: '/success',
                     templateUrl: '../app/components/success.html'
                 })/*.state('success',{*/
-                .state('catalouge', {
-                    url: '/catalouge',
-                    templateUrl: '../app/catalouge/catalouge.html',
-                    controller: "ngCatalougeCtrl"
-                })
                 .state('settings', {
                     url: '/settings',
                     templateUrl: '../app/settings/settings.html',

@@ -493,12 +493,12 @@ temporary rendered events).
     position: relative; /* for resize handle and other inner positioning */
     display: block; /* make the <a> tag block */
     font-size: 0.85em;
-    line-height: 1.2em;
+    line-height: 2em;
     border: 1px solid #3a87ad; /* default BORDER color */
     background-color: #3a87ad; /* default BACKGROUND color */
     font-weight: bold; /* undo jqui's ui-widget-header bold */
     text-align: center;
-    border-radius: 0px;
+    border-radius: 5px;
 }
 
 /* overpower some of bootstrap's and jqui's styles on <a> tags */

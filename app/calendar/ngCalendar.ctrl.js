@@ -2,15 +2,12 @@
 
     "use strict";
 
-    angular.module("myApp")
-
-        .controller("ngDatePickerCtrl", function ($scope, $http, lastBookingsIDFactory) {
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($scope, $http, lastBookingsIDFactory) {
 
             var devices = [], selected = [];
             var title, start, end = 0;
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookedDevices').then(function (response) {
-
 
                 for (var i = 0; i < response.data.length; i++) {
 
@@ -56,23 +53,21 @@
                     contentHeight: 'auto',
                     weekends: false,
 
-                    dayClick: function (start, element) {
+                    dayClick: function (start) {
                         if (true) {
                             $('#calendar').fullCalendar('renderEvent', {
                                 id: start,
-                                //title: 'Booked ',
+                                title: 'Device(s) Booked For This Day',
                                 start: start,
-                                color: 'orange',
-                                textColor: 'white',
-                                borderColor: 'yellow',
-                                className: 'booked'
+                                color: '#70C1B3',
+                                textColor: 'white'
                             }, true);
                             addDeviceToBookingArray(start, selected);
                         }
                     },
 
                     eventRender: function (event, element) {
-                        element.prepend('<span class="close" style="pointer;color:black">&#10005;</span>');
+                        element.prepend('<span class="close" style="cursor: pointer; color:white;margin-right: 5px">&#10005;</span>');
                         element.find(".close").click(function () {
                             $('#calendar').fullCalendar('removeEvents', event._id);
                             removeDeviceFromBookingArray(event._id, selected);
@@ -81,8 +76,8 @@
                             content: event.description
                         });
                     },
-                    eventBackgroundColor: 'green',
-                    eventBorderColor: 'yellow',
+                    eventBackgroundColor: '#F25F5C',
+                    eventBorderColor: '#F25F5C'
                 });
                 /* $('#calendar').fullCalendar*/
             })
@@ -95,7 +90,7 @@
                     /*to increase the end dat by one day so it show correctly on the calendar*/
                     maxDate = moment(maxDate).add('days', 1).toDate();
 
-                    data = {
+                    var data = {
                         'booking_id': parseInt(lastBookingID.data) + 1,
                         'start_date': minDate,
                         'end_date': maxDate
