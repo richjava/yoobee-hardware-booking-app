@@ -2,68 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/catalouge/catalouge.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/catalouge/ngCatalouge.Ctrl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/dashboard.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/uploads/files/0ddc9-screen-shot-2016-04-25-at-12.29.33-am.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/uploads/files/pdftest.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/uploads/files/test-2.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/calendar.html" afterPath="$PROJECT_DIR$/app/calendar/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" afterPath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/confirmation.html" afterPath="$PROJECT_DIR$/app/confirmation/confirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" afterPath="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/styles.css" afterPath="$PROJECT_DIR$/app/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/devices/devices.html" afterPath="$PROJECT_DIR$/app/devices/devices.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" afterPath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/styles.sass" afterPath="$PROJECT_DIR$/app/scss/styles.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Dashboard.php" afterPath="$PROJECT_DIR$/application/controllers/Dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard/bookings.php" afterPath="$PROJECT_DIR$/application/views/dashboard/bookings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard/categories.php" afterPath="$PROJECT_DIR$/application/views/dashboard/categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard/devices.php" afterPath="$PROJECT_DIR$/application/views/dashboard/devices.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard/programmes.php" afterPath="$PROJECT_DIR$/application/views/dashboard/programmes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/dashboard/students.php" afterPath="$PROJECT_DIR$/application/views/dashboard/students.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login.php" afterPath="$PROJECT_DIR$/application/views/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/register.php" afterPath="$PROJECT_DIR$/application/views/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/grocery_crud/themes/datatables/css/jquery.dataTables.css" afterPath="$PROJECT_DIR$/assets/grocery_crud/themes/datatables/css/jquery.dataTables.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css" afterPath="$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-material/package.json" afterPath="$PROJECT_DIR$/node_modules/angular-material/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular/package.json" afterPath="$PROJECT_DIR$/node_modules/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-cssnano/package.json" afterPath="$PROJECT_DIR$/node_modules/gulp-cssnano/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/gulp-wiredep/package.json" afterPath="$PROJECT_DIR$/node_modules/gulp-wiredep/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/README.md" afterPath="$PROJECT_DIR$/node_modules/mdi/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/bower.json" afterPath="$PROJECT_DIR$/node_modules/mdi/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/license.txt" afterPath="$PROJECT_DIR$/node_modules/mdi/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/package.json" afterPath="$PROJECT_DIR$/node_modules/mdi/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/preview.html" afterPath="$PROJECT_DIR$/node_modules/mdi/preview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/_core.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/_core.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/_extras.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/_extras.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/_icons.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/_icons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/_path.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/_path.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/_variables.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/_variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/mdi/scss/materialdesignicons.scss" afterPath="$PROJECT_DIR$/node_modules/mdi/scss/materialdesignicons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-date-change.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-date-change.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-datetime.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-datetime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-time-change.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/addon/components/mini-time-change.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/addon/helpers/weekend.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/addon/helpers/weekend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-date-change.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-date-change.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-datetime.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-datetime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-time-change.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/app/components/mini-time-change.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/app/helpers/weekend.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/app/helpers/weekend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/config/ember-try.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/config/ember-try.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/config/environment.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/config/environment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/ember-cli-build.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/ember-cli-build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/index.js" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/package.json" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/ui-calendar/vendor/ui-calendar/ui-calendar.css" afterPath="$PROJECT_DIR$/node_modules/ui-calendar/vendor/ui-calendar/ui-calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" afterPath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
@@ -92,68 +31,7 @@
     <favorites_list name="yoobee_booking_app" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/styles.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.275862">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngConfirmation.Ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="confirmation.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/confirmation/confirmation.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.5172415">
-              <caret line="41" column="119" selection-start-line="41" selection-start-column="119" selection-end-line="41" selection-end-column="119" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="devices.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.413794">
-              <caret line="27" column="50" selection-start-line="18" selection-start-column="40" selection-end-line="27" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.75862">
-              <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59356135">
-              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -206,7 +84,6 @@
         <option value="$PROJECT_DIR$/bower_components/fullcalendar/dist/fullcalendar.css" />
         <option value="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
-        <option value="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
         <option value="$PROJECT_DIR$/assets/grocery_crud/themes/datatables/extras/TableTools/media/css/TableTools.css" />
         <option value="$PROJECT_DIR$/assets/grocery_crud/css/jquery_plugins/chosen/chosen.css" />
         <option value="$PROJECT_DIR$/assets/grocery_crud/themes/datatables/css/jquery.dataTables.css" />
@@ -222,6 +99,7 @@
         <option value="$PROJECT_DIR$/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/app/confirmation/confirmation.html" />
         <option value="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
+        <option value="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
       </list>
     </option>
   </component>
@@ -251,7 +129,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="101" />
     <option name="y" value="48" />
-    <option name="width" value="1873" />
+    <option name="width" value="1307" />
     <option name="height" value="1303" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -309,7 +187,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,29 +201,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoobee-hardware-booking-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,18 +352,6 @@
       <created>1459913455913</created>
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
-    </task>
-    <task id="LOCAL-00002" summary="tasks are set up">
-      <created>1459943061668</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1459943061668</updated>
-    </task>
-    <task id="LOCAL-00003" summary="New changelist">
-      <created>1459995339360</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1459995339360</updated>
     </task>
     <task id="LOCAL-00004" summary="New changelist">
       <created>1460027220613</created>
@@ -787,26 +635,38 @@
       <option name="project" value="LOCAL" />
       <updated>1462146291353</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="New changelist">
+      <created>1462278896784</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1462278896794</updated>
+    </task>
+    <task id="LOCAL-00052" summary="New changelist">
+      <created>1462278937647</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1462278937647</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="48" width="1873" height="1303" extended-state="0" />
+    <frame x="101" y="48" width="1307" height="1303" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18569088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19051383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297609" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22071713" sideWeight="0.42857143" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13602638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13625103" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15498763" sideWeight="0.5714286" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1066,14 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65968585">
-          <caret line="235" column="27" selection-start-line="235" selection-start-column="27" selection-end-line="235" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/grocery_crud/themes/datatables/extras/TableTools/media/css/TableTools.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.4827585">
@@ -1224,50 +1076,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/styles.sass">
+    <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.275862">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.413794">
-          <caret line="27" column="50" selection-start-line="18" selection-start-column="40" selection-end-line="27" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/confirmation/confirmation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.5172415">
-          <caret line="41" column="119" selection-start-line="41" selection-start-column="119" selection-end-line="41" selection-end-column="119" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.75862">
-          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.12036108">
+          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59356135">
+        <state vertical-scroll-proportion="0.5947581">
           <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28528225">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5383065">
+          <caret line="28" column="46" selection-start-line="18" selection-start-column="36" selection-end-line="28" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/confirmation/confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33669356">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39177278">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/styles.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69758064">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
         </state>
       </provider>

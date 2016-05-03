@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: May 03, 2016 at 11:56 AM
+-- Generation Time: May 03, 2016 at 08:55 PM
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -28,7 +28,7 @@ CREATE TABLE `bookings_tb` (
   `status`     TINYINT(1)     DEFAULT '0'
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 6
+  AUTO_INCREMENT = 12
   DEFAULT CHARSET = latin1;
 
 --
@@ -36,10 +36,17 @@ CREATE TABLE `bookings_tb` (
 --
 
 INSERT INTO `bookings_tb` (`booking_id`, `student_id`, `start_date`, `end_date`, `status`) VALUES
-  (2, 6, '2016-05-17 12:00:00', '2016-05-19 12:00:00', 0),
-  (3, 6, '2016-05-16 12:00:00', '2016-05-19 12:00:00', 0),
-  (4, 6, '2016-05-11 12:00:00', '2016-05-13 12:00:00', 0),
-  (5, 6, '2016-05-29 12:00:00', '2016-05-31 12:00:00', 0);
+  (1, NULL, '2016-05-17 12:00:00', '2016-05-19 12:00:00', 0),
+  (2, NULL, '2016-05-10 12:00:00', '2016-05-19 12:00:00', 0),
+  (3, NULL, '2016-05-03 12:00:00', '2016-05-05 12:00:00', 0),
+  (4, NULL, '2016-05-25 12:00:00', '2016-05-27 12:00:00', 0),
+  (5, 6, '2016-05-30 12:00:00', '2016-06-01 12:00:00', 0),
+  (6, 6, '2016-05-31 12:00:00', '2016-06-02 12:00:00', 0),
+  (7, NULL, '2016-05-08 12:00:00', '2016-05-10 12:00:00', 0),
+  (8, NULL, '2016-05-25 12:00:00', '2016-05-27 12:00:00', 0),
+  (9, 6, '2016-05-19 12:00:00', '2016-05-20 12:00:00', 0),
+  (10, NULL, '2016-06-05 12:00:00', '2016-06-08 12:00:00', 0),
+  (11, NULL, '2016-06-09 12:00:00', '2016-06-10 12:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -156,7 +163,7 @@ CREATE TABLE `selected_devices_tb` (
   `device_id`           INT(11) NOT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 10
+  AUTO_INCREMENT = 25
   DEFAULT CHARSET = latin1;
 
 --
@@ -164,15 +171,30 @@ CREATE TABLE `selected_devices_tb` (
 --
 
 INSERT INTO `selected_devices_tb` (`selected_devices_id`, `booking_id`, `device_id`) VALUES
-  (1, 3, 2),
-  (2, 3, 1),
-  (3, 4, 2),
-  (4, 4, 4),
-  (5, 5, 21),
-  (6, 5, 16),
-  (7, 5, 20),
-  (8, 5, 11),
-  (9, 5, 18);
+  (1, 2, 25),
+  (2, 2, 18),
+  (3, 2, 20),
+  (4, 3, 7),
+  (5, 3, 9),
+  (6, 6, 1),
+  (7, 6, 4),
+  (8, 6, 2),
+  (9, 7, 7),
+  (10, 7, 7),
+  (11, 7, 12),
+  (12, 7, 22),
+  (13, 8, 1),
+  (14, 8, 2),
+  (15, 8, 4),
+  (16, 10, 18),
+  (17, 10, 5),
+  (18, 10, 10),
+  (19, 11, 8),
+  (20, 11, 24),
+  (21, 11, 27),
+  (22, 11, 24),
+  (23, 11, 12),
+  (24, 11, 9);
 
 -- --------------------------------------------------------
 
@@ -251,7 +273,7 @@ ADD PRIMARY KEY (`student_id`);
 -- AUTO_INCREMENT for table `bookings_tb`
 --
 ALTER TABLE `bookings_tb`
-MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 6;
+MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 12;
 --
 -- AUTO_INCREMENT for table `categories_tb`
 --
@@ -271,7 +293,7 @@ MODIFY `programme_id` INT(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `selected_devices_tb`
 --
 ALTER TABLE `selected_devices_tb`
-MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 10;
+MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 25;
 --
 -- AUTO_INCREMENT for table `students_tb`
 --
