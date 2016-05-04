@@ -3,7 +3,7 @@
     "use strict";
 
     angular.module("myApp")
-        .controller('ngDeviceSelectionCtrl', function ($scope, $http, lastBookingsIDFactory) {
+        .controller('ngDeviceSelectionCtrl', function ($cookies, $scope, $http, bookingsIDFactory) {
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/categories').then(function (categories) {
                 $scope.categories = categories.data;
@@ -24,15 +24,18 @@
             };
 
             $scope.beginBooking = function (list) {
-                var data;
-                lastBookingsIDFactory.getBookingID().then(function success(lastBookingID) {
+
+                bookingsIDFactory.getBookingID().then(function (bookingID) {
+                    $cookies.put('id', bookingID.data);
+
                     for (var i = 0; i < list.length; i++) {
-                        data = {'booking_id': parseInt(lastBookingID.data) + 1, 'device_id': list[i]};
+                        var data = {'booking_id': bookingID.data, 'device_id': list[i]};
                         $http.post('http://localhost/yoobee-hardware-booking-app/api/bookDevices', data);
                     }
                     /*for (var i=0;i<list.length;i++*/
+
                 })
-                /*}).then(function success(bookingID)*/
+
             }
             /*$scope.beginBooking = function (list)*/
         });

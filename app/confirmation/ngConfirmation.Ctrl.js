@@ -3,9 +3,9 @@
     "use strict";
 
     angular.module("myApp")
-        .controller('ngConfirmationCtrl', function ($scope, $http, lastBookingsIDFactory) {
+        .controller('ngConfirmationCtrl', function ($scope, $http, bookingsIDFactory) {
             $scope.loading = true;
-            lastBookingsIDFactory.getBookingID().then(function success(lastbookingID) {
+            bookingsIDFactory.getBookingID().then(function success(lastbookingID) {
                 var currentBookingID = parseInt(lastbookingID.data) + 1;
                 $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevicesDetails/' + currentBookingID).then(function success(deviceName) {
                     $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingDetails/' + currentBookingID).then(function success(response) {

@@ -10,7 +10,22 @@ class Api extends CI_Controller
         parent:: __construct();
     }
 
-    public function bookdevices()
+
+    public function createNewBooking()
+    {
+        $this->db->select('student_id')->from('students_tb')->where('username', $this->session->userdata('username'));
+        $query = $this->db->get();
+        $student = $query->result_array();
+        $booking = array(
+            'student_id' => $student[0]['student_id'],
+            'status' => 'PENDING'
+        );
+        $this->db->insert('bookings_tb', $booking);
+        echo json_decode($this->db->insert_id());
+    }
+
+
+    public function bookDevices()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->device->insertBookedDevices($data);
@@ -42,9 +57,9 @@ class Api extends CI_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
-    function getAllBookedDevices()
+    function getBookedDevices($id)
     {
-        $data = $this->calendar->getUnavailableDevices();
+        $data = $this->calendar->getUnavailableDevices($id);
         echo json_encode($data);
     }
 

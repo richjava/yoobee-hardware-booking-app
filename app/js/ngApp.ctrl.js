@@ -32,10 +32,10 @@
         })
 
         /*a factory service to return the booking id*/
-        .factory("lastBookingsIDFactory", function ($http) {
+        .factory("bookingsIDFactory", function ($http) {
 
             function getBookingID() {
-                return $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingID');
+                return $http.get('http://localhost/yoobee-hardware-booking-app/api/createNewBooking');
             }
 
             return {
