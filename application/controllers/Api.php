@@ -63,11 +63,14 @@ class Api extends CI_Controller
         echo json_encode($data);
     }
 
-    public function addNewBookedDates()
+    public function addDates()
     {
-        $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
-//        $this->calendar->addBookingDates($data);
-        $this->db->insert('bookings_tb', $data);
+        $input_data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
+        $data['start_date'] = filter_var($input_data->start_date, FILTER_SANITIZE_STRING);
+        $data['end_date'] = filter_var($input_data->end_date, FILTER_SANITIZE_STRING);
+        $data['booking_id'] = filter_var($input_data->booking_id, FILTER_SANITIZE_STRING);
+        $this->db->where('booking_id', $data['booking_id']);
+        $this->db->update('bookings_tb', $data);
     }
 
     /*END -------------- CALENDAR TABLE*/
@@ -122,7 +125,6 @@ class Api extends CI_Controller
         $this->email->clear();
 
         $data = array(
-            'student_id' => $id,
             'status' => 'AWAITING COLLECTION'
         );
         $this->db->where('booking_id', $booking_id);

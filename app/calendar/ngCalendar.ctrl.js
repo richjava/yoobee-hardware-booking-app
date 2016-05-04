@@ -2,12 +2,13 @@
 
     "use strict";
 
-    angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http, bookingsIDFactory) {
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http) {
 
             var devices = [], selected = [];
             var title, start, end = 0;
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
+
 
             for (var i = 0; i < response.data.length; i++) {
 
@@ -19,13 +20,18 @@
                 var formattedend = moment(end).format('dddd DD');
                 var formattedmonth = moment(start).format('MMMM');
 
-                devices.push({
-                    title: title,
-                    start: start,
-                    end: end,
-                    allDay: true,
-                    description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth
-                });
+                if (start != null && end != null) {
+
+                    devices.push({
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: true,
+                        description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth
+                    });
+
+                }
+
             }
             /* for(var i=0 ; i< response.data.length ; i++)*/
 
@@ -86,7 +92,7 @@
 
 
             $scope.registerBookingDates = function () {
-                bookingsIDFactory.getBookingID().then(function success(lastBookingID) {
+
                     var maxDate = new Date(Math.max.apply(null, selected));
                     var minDate = new Date(Math.min.apply(null, selected));
 
@@ -94,13 +100,11 @@
                     maxDate = moment(maxDate).add('days', 1).toDate();
 
                     var data = {
-                        'booking_id': parseInt(lastBookingID.data) + 1,
+                        'booking_id': $cookies.get('id'),
                         'start_date': minDate,
                         'end_date': maxDate
                     };
-                    $http.post('http://localhost/yoobee-hardware-booking-app/api/addNewBookedDates', data);
-                });
-                /*lastBookingsIDFactory.getLastBookingID().then(function success(currentBookingID)*/
+                $http.post('http://localhost/yoobee-hardware-booking-app/api/addDates', data);
 
             }
             /* $scope.registerBookingDates = function()*/
