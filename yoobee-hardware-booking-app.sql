@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 04, 2016 at 08:15 AM
+-- Generation Time: May 05, 2016 at 10:16 PM
 -- Server version: 5.5.41-log
 -- PHP Version: 7.0.0
 
@@ -42,10 +42,10 @@ CREATE TABLE `bookings_tb` (
 --
 
 INSERT INTO `bookings_tb` (`booking_id`, `date_created`, `student_id`, `start_date`, `end_date`, `status`) VALUES
-  (13, '2016-05-03 23:45:37', 6, NULL, NULL, 'PENDING'),
   (14, '2016-05-03 23:46:29', 6, NULL, NULL, 'PENDING'),
   (15, '2016-05-03 23:46:57', 6, NULL, NULL, 'PENDING'),
-  (16, '2016-05-03 23:47:37', 6, NULL, NULL, 'PENDING');
+  (16, '2016-05-03 23:47:37', 6, NULL, NULL, 'PENDING'),
+  (17, '2016-05-04 20:11:52', 6, '2016-05-23 12:00:00', '2016-05-25 12:00:00', 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,8 @@ INSERT INTO `selected_devices_tb` (`selected_devices_id`, `booking_id`, `device_
   (14, 15, 7),
   (15, 15, 9),
   (16, 16, 19),
-  (17, 16, 24);
+  (17, 16, 24),
+  (18, 17, 2);
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,7 @@ CREATE TABLE `students_tb` (
 
 INSERT INTO `students_tb` (`student_id`, `username`, `password`, `fullname`, `address`, `phone`, `email`, `programme_id`)
 VALUES
-  (6, 'beshad', '12345', 'beshad Ghorbani', '34 Rockview Place', '021-2775060', 'admin@xeba.co.nz', 19);
+  (6, 'beshad', '12345', 'arshia Ghorbani', '34 Rockview Place', '021-2775060', 'admin@xeba.co.nz', 19);
 
 --
 -- Indexes for dumped tables
@@ -253,7 +254,7 @@ ADD PRIMARY KEY (`student_id`);
 -- AUTO_INCREMENT for table `bookings_tb`
 --
 ALTER TABLE `bookings_tb`
-MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 17;
+MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 18;
 --
 -- AUTO_INCREMENT for table `categories_tb`
 --
@@ -273,7 +274,7 @@ MODIFY `programme_id` INT(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `selected_devices_tb`
 --
 ALTER TABLE `selected_devices_tb`
-MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 18;
+MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 19;
 --
 -- AUTO_INCREMENT for table `students_tb`
 --

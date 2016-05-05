@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/booking/booking.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/profile/ngprofile.Ctrl.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/settings/ngSetting.Ctrl.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/settings/settings.html" afterPath="$PROJECT_DIR$/app/profile/profile.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/styles.css" afterPath="$PROJECT_DIR$/app/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/styles.sass" afterPath="$PROJECT_DIR$/app/scss/styles.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/footer.php" afterPath="$PROJECT_DIR$/application/views/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header.php" afterPath="$PROJECT_DIR$/application/views/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" afterPath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,79 +31,7 @@
     <favorites_list name="yoobee_booking_app" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="styles.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scss/styles.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.97981155">
-              <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/student.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="device.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/device.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ngBooking.Ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Auth.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -164,7 +82,6 @@
         <option value="$PROJECT_DIR$/app/js/ngApp.ctrl.js" />
         <option value="$PROJECT_DIR$/application/controllers/Auth.php" />
         <option value="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
-        <option value="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
         <option value="$PROJECT_DIR$/app/calendar/calendar.html" />
         <option value="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
         <option value="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
@@ -182,6 +99,7 @@
         <option value="$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js" />
         <option value="$PROJECT_DIR$/app/booking/booking.html" />
         <option value="$PROJECT_DIR$/application/controllers/Api.php" />
+        <option value="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
       </list>
     </option>
   </component>
@@ -625,12 +543,6 @@
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
     </task>
-    <task id="LOCAL-00005" summary="New changelist">
-      <created>1460064733333</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1460064733333</updated>
-    </task>
     <task id="LOCAL-00006" summary="New changelist">
       <created>1460072305797</created>
       <option name="number" value="00006" />
@@ -919,7 +831,13 @@
       <option name="project" value="LOCAL" />
       <updated>1462389155096</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="New changelist">
+      <created>1462486386032</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1462486386034</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -927,7 +845,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18101266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18354431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893652" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22071713" sideWeight="0.42857143" order="7" side_tool="true" content_ui="tabs" />
@@ -1005,13 +923,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.178572">
-          <caret line="95" column="25" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/angular-material/angular-material.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.964883">
@@ -1208,13 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1627328">
-          <caret line="252" column="0" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1323,7 +1227,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.66487217">
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding />
         </state>
@@ -1331,7 +1235,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/device.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.20457605">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding />
         </state>
@@ -1339,7 +1243,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.6393001">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
@@ -1347,7 +1251,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.44357976">
           <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
@@ -1355,17 +1259,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.5114401">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.97981155">
-          <caret line="151" column="26" selection-start-line="151" selection-start-column="26" selection-end-line="151" selection-end-column="26" />
+        <state vertical-scroll-proportion="-16.5">
+          <caret line="153" column="26" selection-start-line="153" selection-start-column="26" selection-end-line="153" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/devicebooking_db (5).sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.02973">
+          <caret line="258" column="0" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
           <folding />
         </state>
       </provider>
