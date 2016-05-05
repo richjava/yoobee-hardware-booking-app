@@ -1,0 +1,47 @@
+<md-content class="md-padding container" layout="row" layout-wrap>
+    <md-card>
+        <md-content class="studentDetailsUpdate">
+
+            <md-content class="md-padding">
+
+                <md-content>
+                    <h3>Profile</h3>
+                    <md-content-header>Update your registration details here:</md-content-header>
+                </md-content>
+
+                <md-content layout="column" layout-padding ng-cloak>
+                            <form>
+
+                                <md-input-container class="md-block">
+                                    <label for="fullname">Username</label>
+                                    <input type="text" id="username" ng-model="username" ng-readonly="true">
+                                </md-input-container>
+
+                                <md-input-container class="md-block">
+                                    <label for="fullname">Full Name</label>
+                                    <input contenteditable type="text" id="fullname" ng-model="fullname">
+                                </md-input-container>
+
+                                <md-input-container class="md-block">
+                                    <label for="address">Address</label>
+                                    <input contenteditable type="text" id="address" ng-model="address">
+                                </md-input-container>
+
+                                <md-input-container class="md-block">
+                                    <label for="phone">Telephone</label>
+                                    <input contenteditable type="text" id="phone" ng-model="phone">
+                                </md-input-container>
+
+                                <md-input-container class="md-block">
+                                    <label for="email">Email</label>
+                                    <input contenteditable type="text" id="email" ng-model="email">
+                                </md-input-container>
+
+                                <md-button class="md-warn" ng-click="updateStudentDetails();">
+                                    Update & Save
+                                </md-button>
+                            </form>
+                        </md-content>
+        </md-content>
+    </md-card>
+</md-content>

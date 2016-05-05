@@ -17,11 +17,9 @@
     <script src="<?= base_url() ?>bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="<?= base_url() ?>app/calendar/ngCalendar.ctrl.js"></script>
     <script src="<?= base_url() ?>app/confirmation/ngConfirmation.ctrl.js"></script>
+    <script src="<?= base_url() ?>app/booking/ngBooking.ctrl.js"></script>
+    <script src="<?= base_url() ?>app/profile/ngProfile.ctrl.js"></script>
     <script src="<?= base_url() ?>app/devices/ngDevices.ctrl.js"></script>
-    <script src="<?= base_url() ?>app/settings/ngSetting.ctrl.js">/
-        script >
-        < script
-        src = "<?= base_url() ?>app/catalouge/ngCatalouge.ctrl.js" ></script>
     <!--<!-- endbower -->
     <!-- endbuild -->
 </body>

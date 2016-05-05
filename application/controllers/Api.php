@@ -135,6 +135,29 @@ class Api extends CI_Controller
     /*END --------------------- EMAIL*/
 
 
-} //class Api extends REST_Controller
+    function updateStudentDetails()
+    {
+        $input_data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
+        $data['fullname'] = filter_var($input_data->fullname, FILTER_SANITIZE_STRING);
+        $data['address'] = filter_var($input_data->address, FILTER_SANITIZE_STRING);
+        $data['phone'] = filter_var($input_data->phone, FILTER_SANITIZE_STRING);
+        $data['email'] = filter_var($input_data->email, FILTER_SANITIZE_STRING);
+        $this->db->where('username', $this->session->userdata('username'));
+        $this->db->update('students_tb', $data);
+    }
+
+    function getAllBookingDetailsForStudent()
+    {
+
+        $this->db->select('student_id')->from('students_tb')->where('username', 'beshad');
+        $id = $this->db->get();
+        $this->db->select()->from('bookings_tb')->where('student_id', $id);
+        $query = $this->db->get();
+        echo json_encode($query->result());
+
+    }
+
+
+} //class Api extends CI_Controller
 
 

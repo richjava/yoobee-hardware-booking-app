@@ -23,9 +23,11 @@
 
 <md-toolbar>
     <div class="md-toolbar-tools toolbar">
-        <md-button ng-click="openSidebar();">
-            <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_menu_white_48px.svg"></md-icon>
-        </md-button>
+        <?php if ($this->session->userdata('username')) { ?>
+            <md-button ng-click="openSidebar();">
+                <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_menu_white_48px.svg"></md-icon>
+            </md-button>
+        <?php } ?>
         <p class="title"> YOOBEE HARDEWARE BOOKING APP</p>
     </div>
 </md-toolbar>
@@ -49,17 +51,6 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/catalouge' ?>">
-                        <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_view_module_black_48px.svg"></md-icon>
-                        Catalouge
-                    </md-button>
-                </div>
-            </md-list-item>
-
-            <md-divider></md-divider>
-
-            <md-list-item class="md-3-line">
-                <div class="md-list-item-text">
                     <md-button ng-href="<?= base_url() . 'home/#/devices' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_event_black_48px.svg"></md-icon>
                         create a new booking
@@ -71,9 +62,9 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/bookings' ?>">
+                    <md-button ng-href="<?= base_url() . 'home/#/booking' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_date_range_black_48px.svg"></md-icon>
-                        History of Bookings
+                        Your Bookings
                     </md-button>
                 </div>
             </md-list-item>
@@ -94,9 +85,9 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/settings' ?>">
+                    <md-button ng-href="<?= base_url() . 'home/#/profile' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_settings_black_48px.svg"></md-icon>
-                        Your Settings
+                        Profile
                     </md-button>
                 </div>
 

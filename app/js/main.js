@@ -41,10 +41,15 @@
                     url: '/success',
                     templateUrl: '../app/components/success.html'
                 })/*.state('success',{*/
-                .state('settings', {
-                    url: '/settings',
-                    templateUrl: '../app/settings/settings.html',
-                    controller: "ngSettingCtrl"
+                .state('profile', {
+                    url: '/profile',
+                    templateUrl: '../app/profile/profile.html',
+                    controller: "ngProfileCtrl"
+                })
+                .state('booking', {
+                    url: '/booking',
+                    templateUrl: '../app/booking/booking.html',
+                    controller: "ngBookingCtrl"
                 })
         })
 

@@ -52,26 +52,23 @@ body {
   }
 }
 
+.sidenav,
 .toolbar {
   background-color: #595959;
   font-family: "Fira Sans Light"; }
 
-.devices {
+.devices,
+.booking,
+.confirmation,
+.studentDetailsUpdate {
   width: 600px;
 }
 
 @media screen and (max-width: 640px) {
-  .devices {
-    width: auto;
-  }
-}
-
-.confirmation {
-  width: 600px;
-}
-
-@media screen and (max-width: 640px) {
-  .confirmation {
+  .devices,
+  .booking,
+  .confirmation,
+  .studentDetailsUpdate {
     width: auto;
   }
 }
