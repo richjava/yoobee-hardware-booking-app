@@ -16,15 +16,44 @@
 
                     <md-list-item class="md-3-line">
                         <div class="md-list-item-text">
-                            <span layout="row" layout-align="end end">
-                                <md-button class="md-accent"> Edit</md-button>
-                                <md-button class="md-accent"> Delete</md-button>
-                            </span>
+                            <table datatable="ng" class="row-border hover">
+                                <thead>
+                                <tr>
+                                    <th> Booking ID</th>
+                                    <th> Created On</th>
+                                    <th> Start Date</th>
+                                    <th> End Date</th>
+                                    <th> Status</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="booking in bookings">
+                                    <td> {{ booking.booking_id }}</td>
+                                    <td> {{ booking.date_created }}</td>
+                                    <td> {{ booking.start_date }}</td>
+                                    <td> {{ booking.end_date }}</td>
+                                    <td> {{ booking.status }}</td>
+                                    <td>
+                                        <md-button class="md-accent">
+                                            <md-icon md-svg-src="../app/icons/ic_mode_edit_black_48px.svg"
+                                                     ng-click="test();"></md-icon>
+                                        </md-button>
+                                    </td>
+                                    <td>
+                                        <md-button class="md-accent">
+                                            <md-icon md-svg-src="../app/icons/ic_delete_black_48px.svg"
+                                                     ng-click="deleteConfirm(booking.booking_id)"></md-icon>
+                                        </md-button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+
                         </div>
                     </md-list-item>
-
-                    <md-divider></md-divider>
-
                 </md-list>
             </md-content>
 

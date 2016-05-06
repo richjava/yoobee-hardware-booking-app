@@ -3,7 +3,7 @@
     "use strict";
 
     angular.module("myApp")
-        .controller('ngConfirmationCtrl', function ($cookies, $scope, $http) {
+        .controller('ngConfirmationCtrl', function ($cookies, $scope, $http, $mdDialog, $location) {
             $scope.loading = true;
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevicesDetails/' + $cookies.get('id')).then(function success(deviceName) {
                 $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookingDetails/' + $cookies.get('id')).then(function success(response) {
@@ -24,7 +24,17 @@
                         });
 
                         $scope.sendEmail = function () {
-                            $http.post('http://localhost/yoobee-hardware-booking-app/api/sendEmail/' + $scope.studentID + '/' + $cookies.get('id'));
+                            $http.post('http://localhost/yoobee-hardware-booking-app/api/sendEmail/' + $scope.studentID + '/' + $cookies.get('id')).then(function success() {
+                                var confirm = $mdDialog.confirm()
+                                    .title('Your booking was successful')
+                                    .textContent('Selected devices are now booked. Please check your inbox for booking details.')
+                                    .ok('Ok')
+                                $mdDialog.show(confirm).then(function () {
+
+                                    $location.path("booking");
+
+                                });
+                            });
                         }
                         /*$scope.sendEmail = function ()*/
 

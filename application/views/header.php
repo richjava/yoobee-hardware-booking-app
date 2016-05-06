@@ -11,15 +11,20 @@
     <?= link_tag("bower_components/v-accordion/dist/v-accordion.css") ?>
     <?= link_tag("bower_components/fullcalendar/dist/fullcalendar.css") ?>
     <?= link_tag("bower_components/bootstrap/dist/css/bootstrap.css") ?>
+    <?= link_tag("bower_components/angular-datatables/dist/css/angular-datatables.css") ?>
+    <?= link_tag("bower_components/datatables/media/css/dataTables.material.css") ?>
     <?= link_tag("bower_components/qtip2/jquery.qtip.css") ?>
     <?= link_tag("app/css/styles.css") ?>
     <!-- endbower -->
     <!-- endbuild -->
 </head>
 <body ng-app="myApp" ng-controller="ngAppCtrl" ng-cloak>
-<script src="<?= base_url() ?>bower_components/angular/angular.js"></script>
-<script src="<?= base_url() ?>bower_components/angular-material/angular-material.js"></script>
 <script src="<?= base_url() ?>bower_components/jquery/dist/jquery.js"></script>
+<script src="<?= base_url() ?>bower_components/datatables.net/js/jquery.dataTables.js"></script>
+<script src="<?= base_url() ?>bower_components/datatables/media/js/dataTables.material.js"></script>
+<script src="<?= base_url() ?>bower_components/angular/angular.js"></script>
+<script src="<?= base_url() ?>bower_components/angular-datatables/dist/angular-datatables.js"></script>
+<script src="<?= base_url() ?>bower_components/angular-material/angular-material.js"></script>
 
 <md-toolbar>
     <div class="md-toolbar-tools toolbar">
@@ -71,7 +76,7 @@
 
             <md-divider></md-divider>
 
-            <md-list-item class="md-3-line">
+            <md-list-item class="md-3-line" ng-if="'<?= $this->session->userdata('role') ?>' == 'admin' ">
                 <div class="md-list-item-text">
                     <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_dashboard_black_48px.svg"></md-icon>
@@ -107,4 +112,4 @@
         </md-list>
     </md-content>
 </md-sidenav>
-<div class="container">
+<div class="container" id="popupContainer">

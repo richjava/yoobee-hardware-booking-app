@@ -15,7 +15,11 @@ class Auth extends CI_Controller
                 $data['error'] = 1;
             } else {
                 $this->session->set_userdata('username', $student['username']);
-                redirect(base_url() . 'home/#/devices');
+                $this->db->select('role')->from('students_tb')->where('username', $student['username']);
+                $query = $this->db->get();
+                $user = $query->result_array();
+                $this->session->set_userdata('role', $user[0]['role']);
+                redirect(base_url() . 'home/#/booking');
             }
         }
         $this->load->view('header');

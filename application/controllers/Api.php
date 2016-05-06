@@ -146,15 +146,21 @@ class Api extends CI_Controller
         $this->db->update('students_tb', $data);
     }
 
-    function getAllBookingDetailsForStudent()
+    function getAllBookingDetails()
     {
-
-        $this->db->select('student_id')->from('students_tb')->where('username', 'beshad');
+        $this->db->select('student_id')->from('students_tb')->where('username', $this->session->userdata('username'));
         $id = $this->db->get();
-        $this->db->select()->from('bookings_tb')->where('student_id', $id);
+        $student = $id->result_array();
+        $this->db->select('booking_id,date_created,start_date,end_date,status')->from('bookings_tb');
+        $this->db->join('students_tb', 'students_tb.student_id = ' . $student[0]['student_id']);
         $query = $this->db->get();
-        echo json_encode($query->result());
+        echo json_encode($query->result_array());
+    }
 
+    function deleteBooking($id)
+    {
+        $this->db->where('booking_id', $id);
+        $this->db->delete('bookings_tb');
     }
 
 

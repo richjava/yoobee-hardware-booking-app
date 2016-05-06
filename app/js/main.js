@@ -12,7 +12,7 @@
     /*to disable aria warnings in the console*/
 
 
-    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ngCookies"])
+    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ngCookies", "datatables", "ngRoute"])
 
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')
@@ -37,10 +37,6 @@
                     templateUrl: '../app/confirmation/confirmation.html',
                     controller: "ngConfirmationCtrl"
                 })/*.state('confirmation',{*/
-                .state('success', {
-                    url: '/success',
-                    templateUrl: '../app/components/success.html'
-                })/*.state('success',{*/
                 .state('profile', {
                     url: '/profile',
                     templateUrl: '../app/profile/profile.html',

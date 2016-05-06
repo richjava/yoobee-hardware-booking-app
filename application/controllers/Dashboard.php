@@ -71,6 +71,7 @@ class Dashboard extends CI_Controller
             $crud->set_relation('programme_id', 'programmes_tb', 'programme_name');
             $crud->display_as('programme_id', 'Programme');
             $crud->set_subject(' Student');
+            $crud->columns('username', 'fullname', 'address', 'phone', 'email', 'programme_id', 'role');
             $output = $crud->render();
             $this->load->view('dashboard/students', $output);
             $this->load->view('footer');
