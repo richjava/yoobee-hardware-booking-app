@@ -23,17 +23,16 @@
                 }
             };
 
-            $scope.beginBooking = function (list) {
+            $scope.addDevices = function (list) {
 
-                $http.get('http://localhost/yoobee-hardware-booking-app/api/createNewBooking').then(function (bookingID) {
-
-                    $cookies.put('id', bookingID.data);
                     for (var i = 0; i < list.length; i++) {
-                        var data = {'booking_id': bookingID.data, 'device_id': list[i]};
-                        $http.post('http://localhost/yoobee-hardware-booking-app/api/bookDevices', data);
+                        var data = {
+                            'booking_id': $cookies.get('id'),
+                            'device_id': list[i]
+                        };
+                        $http.post('http://localhost/yoobee-hardware-booking-app/api/addDevices', data);
                     }
                     $rootScope.$broadcast('selectedDevicesID', list);
-                })
 
             }
             /*$scope.beginBooking = function (list)*/

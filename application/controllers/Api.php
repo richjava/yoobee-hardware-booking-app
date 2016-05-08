@@ -24,7 +24,7 @@ class Api extends CI_Controller
     }
 
 
-    public function bookDevices()
+    public function addDevices()
     {
         $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
         $this->device->insertBookedDevices($data);
@@ -56,11 +56,11 @@ class Api extends CI_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
-    function getBookedDevices()
+    function getBookedDevices($id)
     {
-        $this->db->select('device_name,start_date,end_date')->from('bookings_tb');
-        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id');
-        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
+        $this->db->select('device_name,start_date,end_date')->from('bookings_tb')
+            ->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id')
+            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id AND selected_devices_tb.device_id =' . $id);
         $query = $this->db->get()->result_array();
         echo json_encode($query);
     }

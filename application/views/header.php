@@ -56,7 +56,7 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/devices' ?>">
+                    <md-button ng-href="<?= base_url() . 'home/#/devices' ?>" ng-click="beginBooking();">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_event_black_48px.svg"></md-icon>
                         create a new booking
                     </md-button>

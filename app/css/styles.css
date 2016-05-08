@@ -19,6 +19,7 @@ body {
   align-items: center;
   background-color: #EDF2F4;
   padding-top: 50px;
+  height: auto;
 }
 
 .wrapper {

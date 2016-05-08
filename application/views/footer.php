@@ -1,12 +1,21 @@
     </div>
-    <md-toolbar>
-        <div class="md-toolbar-tools toolbar">
-            &copy; <?php
-            $fromYear = 2016;
-            $thisYear = (int)date('Y');
-            echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : ''); ?> Yoobee School Of Design
-        </div>
-    </md-toolbar>
+    <!--    <md-bottom-sheet class="footer">-->
+
+    <!--    <footer >-->
+    <!--        <div >-->
+    <!---->
+    <!--                <div class="md-toolbar-tools toolbar">-->
+    <!--                    &copy; --><?php
+    //                    $fromYear = 2016;
+    //                    $thisYear = (int)date('Y');
+    //                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : ''); ?><!-- Yoobee School Of Design-->
+    <!--                </div>-->
+    <!---->
+    <!--        </div>-->
+    <!--    </footer>-->
+
+
+    <!--        </md-bottom-sheet>-->
     <!--build:js js/main.min.js -->
     <!-- bower:js -->
     <script src="<?=base_url()?>bower_components/angular-animate/angular-animate.js"></script>

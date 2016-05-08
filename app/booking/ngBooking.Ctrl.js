@@ -48,6 +48,14 @@
             });
         };
 
+        $scope.beginBooking = function () {
+
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/createNewBooking').then(function (bookingID) {
+                $cookies.put('id', bookingID.data);
+            })
+        }
+        /*$scope.beginBooking = function (list)*/
+
     })
     /*.controller("ngDatePickerCtrl", function ($scope,$http)*/
 
