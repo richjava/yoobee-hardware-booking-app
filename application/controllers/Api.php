@@ -10,7 +10,6 @@ class Api extends CI_Controller
         parent:: __construct();
     }
 
-
     public function createNewBooking()
     {
         $this->db->select('student_id')->from('students_tb')->where('username', $this->session->userdata('username'));
@@ -57,10 +56,13 @@ class Api extends CI_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
-    function getBookedDevices($id)
+    function getBookedDevices()
     {
-        $data = $this->calendar->getUnavailableDevices($id);
-        echo json_encode($data);
+        $this->db->select('device_name,start_date,end_date')->from('bookings_tb');
+        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id');
+        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
+        $query = $this->db->get()->result_array();
+        echo json_encode($query);
     }
 
     public function addDates()

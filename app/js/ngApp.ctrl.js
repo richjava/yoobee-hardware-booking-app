@@ -19,28 +19,12 @@
                 $mdSidenav('left').close();
             }
 
+            $scope.master = {};
+
             $scope.reset = function () {
-                $scope.student.username = "";
-                $scope.student.password = "";
-                $scope.student.password_confirm = "";
-                $scope.student.fullname = "";
-                $scope.student.address = "";
-                $scope.student.email = "";
-                $scope.student.phone = "";
-            }
+                $scope.student = angular.copy($scope.master);
+            };
 
-        })
-
-        /*a factory service to return the booking id*/
-        .factory("bookingsIDFactory", function ($http) {
-
-            function getBookingID() {
-                return $http.get('http://localhost/yoobee-hardware-booking-app/api/createNewBooking');
-            }
-
-            return {
-                getBookingID: getBookingID
-            }
         })
     /*angular.module("myApp")*/
 })();

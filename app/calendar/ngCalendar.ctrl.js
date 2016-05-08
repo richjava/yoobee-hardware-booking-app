@@ -7,9 +7,9 @@
             var devices = [], selected = [];
             var title, start, end = 0;
 
-        $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
+        $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices').then(function (response) {
 
-
+            console.log(response.data);
             for (var i = 0; i < response.data.length; i++) {
 
                 title = response.data[i].device_name;

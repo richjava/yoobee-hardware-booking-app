@@ -80,7 +80,7 @@
                 <div class="md-list-item-text">
                     <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_dashboard_black_48px.svg"></md-icon>
-                        Dashboard
+                        Administrator Dashboard
                     </md-button>
                 </div>
 
