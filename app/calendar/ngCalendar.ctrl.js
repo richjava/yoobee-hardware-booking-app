@@ -2,6 +2,7 @@
 
     "use strict";
 
+
     angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http) {
 
             var devices = [], selected = [];
