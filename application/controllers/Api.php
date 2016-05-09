@@ -56,13 +56,31 @@ class Api extends CI_Controller
     /*END ----------------- DEVICES TABLE */
 
     /*START ------------------  CALENDAR TABLE */
+
+    function getDevicesForBooking($id)
+    {
+        $this->db->select('device_id')->from('selected_devices_tb')->where('booking_id', $id);
+        $query = $this->db->get();
+        echo json_encode($query->result());
+    }
+
+
     function getBookedDevices($id)
     {
+//        $this->db->select('device_name,start_date,end_date')->from('bookings_tb')
+//            ->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id')
+//            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id AND selected_devices_tb.device_id =' . $id);
+//        $query = $this->db->get()->result_array();
+//        echo json_encode($query);
+
         $this->db->select('device_name,start_date,end_date')->from('bookings_tb')
-            ->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id')
-            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id AND selected_devices_tb.device_id =' . $id);
+            ->join('selected_devices_tb', 'selected_devices_tb.booking_id =' . $id)
+            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
+//        $this->db->group_by('device_name');
         $query = $this->db->get()->result_array();
         echo json_encode($query);
+
+
     }
 
     public function addDates()
@@ -120,7 +138,7 @@ class Api extends CI_Controller
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         $this->email->from('sales@ebazaar.nz', 'Beshad Ghorbani');
-        $this->email->to($data[0]['email']);
+//        $this->email->to($data[0]['email']);  /*email is disabled for development purposes */
         $this->email->subject('Booking Confirmation');
         $this->email->message('<strong>This is Yoobee Hardware Booking confirmation email</strong>');
         $this->email->send();
