@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: May 08, 2016 at 11:14 PM
+-- Generation Time: May 09, 2016 at 08:27 AM
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -29,17 +29,7 @@ CREATE TABLE `bookings_tb` (
   `status`       VARCHAR(255)       DEFAULT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 35
   DEFAULT CHARSET = latin1;
-
---
--- Dumping data for table `bookings_tb`
---
-
-INSERT INTO `bookings_tb` (`booking_id`, `date_created`, `student_id`, `start_date`, `end_date`, `status`) VALUES
-  (32, '2016-05-08 11:23:04', 6, '2016-05-03 12:00:00', '2016-05-05 12:00:00', 'AWAITING COLLECTION'),
-  (33, '2016-05-08 11:59:00', 6, '2016-05-10 12:00:00', '2016-05-12 12:00:00', 'AWAITING COLLECTION'),
-  (34, '2016-05-08 12:00:49', 6, NULL, NULL, 'PENDING');
 
 -- --------------------------------------------------------
 
@@ -156,18 +146,7 @@ CREATE TABLE `selected_devices_tb` (
   `device_id`           INT(11) NOT NULL
 )
   ENGINE = InnoDB
-  AUTO_INCREMENT = 62
   DEFAULT CHARSET = latin1;
-
---
--- Dumping data for table `selected_devices_tb`
---
-
-INSERT INTO `selected_devices_tb` (`selected_devices_id`, `booking_id`, `device_id`) VALUES
-  (58, 32, 7),
-  (59, 32, 12),
-  (60, 32, 9),
-  (61, 33, 1);
 
 -- --------------------------------------------------------
 
@@ -249,7 +228,7 @@ ADD PRIMARY KEY (`student_id`);
 -- AUTO_INCREMENT for table `bookings_tb`
 --
 ALTER TABLE `bookings_tb`
-MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 35;
+MODIFY `booking_id` INT(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `categories_tb`
 --
@@ -269,7 +248,7 @@ MODIFY `programme_id` INT(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `selected_devices_tb`
 --
 ALTER TABLE `selected_devices_tb`
-MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 62;
+MODIFY `selected_devices_id` INT(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `students_tb`
 --
