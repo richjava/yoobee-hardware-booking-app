@@ -1,6 +1,6 @@
 Hi,
 
-the complete project is on Github
+the complete project is on Github : git@github.com:beshad/yoobee-hardware-booking-app.git
 
 sql file is in the root
 
