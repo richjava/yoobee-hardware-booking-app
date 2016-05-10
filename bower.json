@@ -27,7 +27,13 @@
     "qtip2": "^2.2.1",
     "datatables.net-zf": "^1.10.11",
     "datatables.net-select-zf": "^1.1.2",
-    "angular-cookies": "^1.5.5"
+    "angular-cookies": "^1.5.5",
+    "angular-datatables": "^0.5.4",
+    "angular-route": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "datatables": "^1.10.11",
+    "jquery-ui": "^1.11.4",
   },
   "resolutions": {
     "angular": "1.3.15"
