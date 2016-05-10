@@ -420,15 +420,15 @@ function setHashKey(obj, h) {
             dst[key] = src.cloneNode(true);
           } else if (isElement(src)) {
             dst[key] = src.clone();
-          } else {
+        } else {
             if (!isObject(dst[key])) dst[key] = isArray(src) ? [] : {};
             baseExtend(dst[key], [src], true);
-          }
+        }
         } else {
           dst[key] = src;
-        }
       }
     }
+  }
 
     setHashKey(dst, h);
     return dst;
@@ -1216,7 +1216,7 @@ var csp = function() {
       if (el = window.document.querySelector('[' + prefix.replace(':', '\\:') + 'jq]')) {
         name = el.getAttribute(prefix + 'jq');
         break;
-      }
+    }
     }
 
     return (jq.name_ = name);
@@ -2832,14 +2832,14 @@ function jqLiteAcceptsData(node) {
   function jqLiteHasData(node) {
     for (var key in jqCache[node.ng339]) {
       return true;
-    }
+  }
     return false;
   }
 
   function jqLiteCleanData(nodes) {
     for (var i = 0, ii = nodes.length; i < ii; i++) {
       jqLiteRemoveData(nodes[i]);
-    }
+  }
   }
 
 function jqLiteBuildFragment(html, context) {
@@ -2899,7 +2899,7 @@ function jqLiteParseHTML(html, context) {
 
     if (parent) {
       parent.replaceChild(wrapper, node);
-    }
+  }
 
     wrapper.appendChild(node);
   }
@@ -3476,7 +3476,7 @@ function createEventHandler(element, events) {
     // NB: No relatedTarget if the mouse left/entered the browser window
     if (!related || (related !== target && !jqLiteContains.call(target, related))) {
       handler.call(target, event);
-    }
+  }
   }
 
 //////////////////////////////////////////
@@ -3809,7 +3809,7 @@ HashMap.prototype = {
   var $$HashMapProvider = [function () {
     this.$get = [function () {
       return HashMap;
-    }];
+  }];
   }];
 
 /**
@@ -4997,14 +4997,14 @@ var $animateMinErr = minErr('$animate');
       var elm = element[i];
       if (elm.nodeType === ELEMENT_NODE) {
         return elm;
-      }
     }
+  }
   }
 
   function splitClasses(classes) {
     if (isString(classes)) {
       classes = classes.split(' ');
-    }
+  }
 
     // Use createMap() to prevent class assumptions involving property names in
     // Object.prototype
@@ -5080,7 +5080,7 @@ var $animateMinErr = minErr('$animate');
               if (className) {
                 changed = true;
                 data[className] = value;
-              }
+          }
             });
           }
           return changed;
@@ -5101,15 +5101,15 @@ var $animateMinErr = minErr('$animate');
                   } else {
                     toRemove += (toRemove.length ? ' ' : '') + className;
                   }
-                }
-              });
+            }
+          });
 
               forEach(element, function (elm) {
                 toAdd && jqLiteAddClass(elm, toAdd);
                 toRemove && jqLiteRemoveClass(elm, toRemove);
               });
               postDigestQueue.remove(element);
-            }
+        }
           });
           postDigestElements.length = 0;
         }
@@ -5128,7 +5128,7 @@ var $animateMinErr = minErr('$animate');
 
             if (postDigestElements.length === 1) {
               $rootScope.$$postDigest(handleCSSClassChanges);
-            }
+        }
           }
         }
       }];
@@ -5599,7 +5599,7 @@ var $AnimateProvider = ['$provide', function($provide) {
         });
         return function (callback) {
           passed ? callback() : waitForTick(callback);
-        };
+      };
       };
     }];
   };
@@ -5626,7 +5626,7 @@ var $AnimateProvider = ['$provide', function($provide) {
               if (response === false) {
                 callback(false);
                 return;
-              }
+          }
               index++;
               next();
             });
@@ -5666,7 +5666,7 @@ var $AnimateProvider = ['$provide', function($provide) {
               timeoutTick(fn);
             } else {
               rafTick(fn);
-            }
+        }
           };
           this._state = 0;
         }
@@ -5809,7 +5809,7 @@ var $AnimateProvider = ['$provide', function($provide) {
             applyAnimationContents();
             if (!closed) {
               runner.complete();
-            }
+          }
             closed = true;
           });
           return runner;
@@ -5819,7 +5819,7 @@ var $AnimateProvider = ['$provide', function($provide) {
           if (options.addClass) {
             element.addClass(options.addClass);
             options.addClass = null;
-          }
+        }
           if (options.removeClass) {
             element.removeClass(options.removeClass);
             options.removeClass = null;
@@ -7888,7 +7888,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             // We have hit the TTL limit so reset everything
             onChangesQueue = undefined;
             throw $compileMinErr('infchng', '{0} $onChanges() iterations reached. Aborting!\n', TTL);
-          }
+        }
           // We must run this hook in an apply since the $$postDigest runs outside apply
           $rootScope.$apply(function () {
             for (var i = 0, ii = onChangesQueue.length; i < ii; ++i) {
@@ -7899,7 +7899,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           });
         } finally {
           onChangesTtl++;
-        }
+      }
       }
 
 
@@ -8441,7 +8441,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             boundSlots[slotName] = createBoundTranscludeFn(scope, transcludeFn.$$slots[slotName], previousBoundTranscludeFn);
           } else {
             boundSlots[slotName] = null;
-          }
+        }
         }
 
       return boundTranscludeFn;
@@ -9183,7 +9183,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           if (!value) {
             var dataName = '$' + name + 'Controller';
             value = inheritType ? $element.inheritedData(dataName) : $element.data(dataName);
-          }
+        }
 
           if (!value && !optional) {
             throw $compileMinErr('ctreq',
@@ -9200,7 +9200,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           forEach(require, function (controller, property) {
             value[property] = getControllers(directiveName, controller, $element, elementControllers);
           });
-        }
+      }
 
         return value || null;
       }
@@ -9219,7 +9219,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           var controller = directive.controller;
           if (controller == '@') {
             controller = attrs[directive.name];
-          }
+        }
 
           var controllerInstance = $controller(controller, locals, true, directive.controllerAs);
 
@@ -9229,7 +9229,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           // later, once we have the actual element.
           elementControllers[directive.name] = controllerInstance;
           $element.data('$' + directive.name + 'Controller', controllerInstance.instance);
-        }
+      }
         return elementControllers;
       }
 
@@ -9737,7 +9737,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                   var oldValue = destination[scopeName];
                   recordChanges(scopeName, value, oldValue);
                   destination[scopeName] = value;
-                }
+              }
               });
               attrs.$$observers[attrName].$$scope = scope;
               lastValue = attrs[attrName];
@@ -9770,7 +9770,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
               }
               parentSet = parentGet.assign || function () {
                     // reset the change, or we will throw this exception on every $digest
-                    lastValue = destination[scopeName] = parentGet(scope);
+              lastValue = destination[scopeName] = parentGet(scope);
                     throw $compileMinErr('nonassign',
                         "Expression '{0}' in attribute '{1}' used with directive '{2}' is non-assignable!",
                         attrs[attrName], attrName, directive.name);
@@ -9785,8 +9785,8 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                   } else {
                     // if the parent can be assigned then do so
                     parentSet(scope, parentValue = destination[scopeName]);
-                  }
                 }
+              }
                 return lastValue = parentValue;
               };
               parentValueWatch.$stateful = true;
@@ -9843,7 +9843,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             if (!onChangesQueue) {
               scope.$$postDigest(flushOnChangesQueue);
               onChangesQueue = [];
-            }
+          }
             // If we have not already queued a trigger of onChanges for this controller then do so now
             if (!changes) {
               changes = {};
@@ -9855,7 +9855,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
             }
             // Store this change
             changes[key] = new SimpleChange(previousValue, currentValue);
-          }
+        }
         }
 
         function triggerOnChangesHook() {
@@ -9869,7 +9869,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
           removeWatches: removeWatchCollection.length && function removeWatches() {
             for (var i = 0, ii = removeWatchCollection.length; i < ii; ++i) {
               removeWatchCollection[i]();
-            }
+          }
           }
         };
       }
@@ -9998,7 +9998,7 @@ var $controllerMinErr = minErr('$controller');
     if (isString(controller)) {
       var match = CNTRL_REG.exec(controller);
       if (match) return match[3];
-    }
+  }
   }
 
 
@@ -10262,7 +10262,7 @@ function $ExceptionHandlerProvider() {
         if (domNode) {
           if (!domNode.nodeType && domNode instanceof jqLite) {
             domNode = domNode[0];
-          }
+        }
         } else {
           domNode = $document[0].body;
         }
@@ -10283,13 +10283,13 @@ var JSON_PROTECTION_PREFIX = /^\)\]\}',?\n/;
   var $httpMinErrLegacyFn = function (method) {
     return function () {
       throw $httpMinErr('legacy', 'The method `{0}` on the promise returned from `$http` has been disabled.', method);
-    };
+  };
   };
 
   function serializeValue(v) {
     if (isObject(v)) {
       return isDate(v) ? v.toISOString() : toJson(v);
-    }
+  }
     return v;
   }
 
@@ -10327,7 +10327,7 @@ var JSON_PROTECTION_PREFIX = /^\)\]\}',?\n/;
         });
 
         return parts.join('&');
-      };
+    };
     };
   }
 
@@ -10397,9 +10397,9 @@ var JSON_PROTECTION_PREFIX = /^\)\]\}',?\n/;
             });
           } else {
             parts.push(encodeUriQuery(prefix) + '=' + encodeUriQuery(serializeValue(toSerialize)));
-          }
         }
-      };
+        }
+    };
     };
   }
 
@@ -11656,7 +11656,7 @@ function $HttpProvider() {
     this.$get = function () {
       return function createXhr() {
         return new window.XMLHttpRequest();
-      };
+    };
     };
 }
 
@@ -13699,7 +13699,7 @@ function ensureSafeFunction(obj, fullExpression) {
         throw $parseMinErr('isecaf',
             'Assigning to a constructor is disallowed! Expression: {0}', fullExpression);
     }
-    }
+  }
   }
 
   var OPERATORS = createMap();
@@ -13971,7 +13971,7 @@ Lexer.prototype = {
           body.push(this.expressionStatement());
         if (!this.expect(';')) {
           return {type: AST.Program, body: body};
-        }
+      }
       }
     },
 
@@ -14009,7 +14009,7 @@ Lexer.prototype = {
         if (this.consume(':')) {
           consequent = this.expression();
           return {type: AST.ConditionalExpression, test: test, alternate: alternate, consequent: consequent};
-        }
+      }
       }
       return test;
     },
@@ -14242,7 +14242,7 @@ Lexer.prototype = {
     selfReferential: {
       'this': {type: AST.ThisExpression},
       '$locals': {type: AST.LocalsExpression}
-    }
+  }
   };
 
   function ifDefined(v, d) {
@@ -14308,7 +14308,7 @@ Lexer.prototype = {
         findConstantAndWatchExpressions(ast.object, $filter);
         if (ast.computed) {
           findConstantAndWatchExpressions(ast.property, $filter);
-        }
+    }
         ast.constant = ast.object.constant && (!ast.computed || ast.property.constant);
         ast.toWatch = [ast];
         break;
@@ -14365,7 +14365,7 @@ Lexer.prototype = {
         ast.constant = false;
         ast.toWatch = [];
         break;
-    }
+  }
   }
 
   function getInputs(body) {
@@ -14388,7 +14388,7 @@ Lexer.prototype = {
         right: {type: AST.NGValueParameter},
         operator: '='
       };
-    }
+  }
   }
 
   function isLiteral(ast) {
@@ -14547,7 +14547,7 @@ Lexer.prototype = {
             } else {
               self.return_(right);
             }
-      });
+          });
           break;
         case AST.Literal:
           expression = this.escape(ast.value);
@@ -14597,7 +14597,7 @@ Lexer.prototype = {
             nameId.context = self.stage === 'inputs' ? 's' : this.assign(this.nextId(), this.getHasOwnProperty('l', ast.name) + '?l:s');
             nameId.computed = false;
             nameId.name = ast.name;
-      }
+          }
           ensureSafeMemberName(ast.name);
           self.if_(self.stage === 'inputs' || self.not(self.getHasOwnProperty('l', ast.name)),
               function () {
@@ -14606,14 +14606,14 @@ Lexer.prototype = {
                     self.if_(
                         self.not(self.nonComputedMember('s', ast.name)),
                         self.lazyAssign(self.nonComputedMember('s', ast.name), '{}'));
-                  }
+            }
                   self.assign(intoId, self.nonComputedMember('s', ast.name));
-                });
+          });
               }, intoId && self.lazyAssign(intoId, self.nonComputedMember('l', ast.name))
           );
           if (self.state.expensiveChecks || isPossiblyDangerousMemberName(ast.name)) {
             self.addEnsureSafeObject(intoId);
-          }
+      }
           recursionFn(intoId);
           break;
         case AST.MemberExpression:
@@ -14623,7 +14623,7 @@ Lexer.prototype = {
             self.if_(self.notNull(left), function () {
               if (create && create !== 1) {
                 self.addEnsureSafeAssignContext(left);
-              }
+          }
               if (ast.computed) {
                 right = self.nextId();
                 self.recurse(ast.property, right);
@@ -14633,12 +14633,12 @@ Lexer.prototype = {
                   self.if_(self.not(self.computedMember(left, right)), self.lazyAssign(self.computedMember(left, right), '{}'));
                 }
                 expression = self.ensureSafeObject(self.computedMember(left, right));
-                self.assign(intoId, expression);
+            self.assign(intoId, expression);
                 if (nameId) {
                   nameId.computed = true;
                   nameId.name = right;
                 }
-              } else {
+          } else {
                 ensureSafeMemberName(ast.property.name);
                 if (create && create !== 1) {
                   self.if_(self.not(self.nonComputedMember(left, ast.property.name)), self.lazyAssign(self.nonComputedMember(left, ast.property.name), '{}'));
@@ -14655,7 +14655,7 @@ Lexer.prototype = {
               }
             }, function () {
               self.assign(intoId, 'undefined');
-        });
+            });
             recursionFn(intoId);
           }, !!create);
           break;
@@ -14682,8 +14682,8 @@ Lexer.prototype = {
                 forEach(ast.arguments, function (expr) {
                   self.recurse(expr, self.nextId(), undefined, function (argument) {
                     args.push(self.ensureSafeObject(argument));
-                  });
-                });
+              });
+            });
                 if (left.name) {
                   if (!self.state.expensiveChecks) {
                     self.addEnsureSafeObject(left.context);
@@ -14696,10 +14696,10 @@ Lexer.prototype = {
                 self.assign(intoId, expression);
               }, function () {
                 self.assign(intoId, 'undefined');
-              });
+          });
               recursionFn(intoId);
             });
-      }
+          }
           break;
         case AST.AssignmentExpression:
           right = this.nextId();
@@ -14803,7 +14803,7 @@ Lexer.prototype = {
         if (consequent) {
           body.push('else{');
           consequent();
-          body.push('}');
+        body.push('}');
         }
     }
   },
@@ -14942,7 +14942,7 @@ Lexer.prototype = {
           watch.input = input;
           inputs.push(input);
           watch.watchId = key;
-        });
+      });
       }
       var expressions = [];
       forEach(ast.body, function (expression) {
@@ -15006,7 +15006,7 @@ Lexer.prototype = {
           if (!ast.computed) {
             ensureSafeMemberName(ast.property.name, self.expression);
             right = ast.property.name;
-          }
+      }
           if (ast.computed) right = this.recurse(ast.property);
           return ast.computed ?
               this.computedMember(left, right, context, create, self.expression) :
@@ -15023,7 +15023,7 @@ Lexer.prototype = {
                 var values = [];
                 for (var i = 0; i < args.length; ++i) {
                   values.push(args[i](scope, locals, assign, inputs));
-                }
+          }
                 var value = right.apply(undefined, values, inputs);
                 return context ? {context: undefined, name: undefined, value: value} : value;
               } :
@@ -15034,9 +15034,9 @@ Lexer.prototype = {
                   ensureSafeObject(rhs.context, self.expression);
                   ensureSafeFunction(rhs.value, self.expression);
                   var values = [];
-                  for (var i = 0; i < args.length; ++i) {
-                    values.push(ensureSafeObject(args[i](scope, locals, assign, inputs), self.expression));
-                  }
+            for (var i = 0; i < args.length; ++i) {
+              values.push(ensureSafeObject(args[i](scope, locals, assign, inputs), self.expression));
+            }
                   value = ensureSafeObject(rhs.value.apply(rhs.context, values), self.expression);
                 }
                 return context ? {value: value} : value;
@@ -15045,13 +15045,13 @@ Lexer.prototype = {
           left = this.recurse(ast.left, true, 1);
           right = this.recurse(ast.right);
           return function (scope, locals, assign, inputs) {
-            var lhs = left(scope, locals, assign, inputs);
-            var rhs = right(scope, locals, assign, inputs);
+        var lhs = left(scope, locals, assign, inputs);
+        var rhs = right(scope, locals, assign, inputs);
             ensureSafeObject(lhs.value, self.expression);
             ensureSafeAssignContext(lhs.context);
             lhs.context[lhs.name] = rhs;
             return context ? {value: rhs} : rhs;
-          };
+      };
         case AST.ArrayExpression:
           args = [];
           forEach(ast.elements, function (expr) {
@@ -15063,7 +15063,7 @@ Lexer.prototype = {
               value.push(args[i](scope, locals, assign, inputs));
             }
             return context ? {value: value} : value;
-          };
+      };
         case AST.ObjectExpression:
           args = [];
           forEach(ast.properties, function (property) {
@@ -15080,19 +15080,19 @@ Lexer.prototype = {
               value[args[i].key] = args[i].value(scope, locals, assign, inputs);
             }
             return context ? {value: value} : value;
-          };
+      };
         case AST.ThisExpression:
           return function (scope) {
             return context ? {value: scope} : scope;
-          };
+      };
         case AST.LocalsExpression:
           return function (scope, locals) {
             return context ? {value: locals} : locals;
-          };
+      };
         case AST.NGValueParameter:
           return function (scope, locals, assign) {
             return context ? {value: assign} : assign;
-          };
+      };
       }
     },
 
@@ -15101,9 +15101,9 @@ Lexer.prototype = {
         var arg = argument(scope, locals, assign, inputs);
         if (isDefined(arg)) {
           arg = +arg;
-      } else {
+        } else {
           arg = 0;
-      }
+        }
         return context ? {value: arg} : arg;
       };
     },
@@ -15243,7 +15243,7 @@ Lexer.prototype = {
           return {context: base, name: name, value: value};
         } else {
           return value;
-        }
+      }
       };
     },
     computedMember: function (left, right, context, create, expression) {
@@ -15255,15 +15255,15 @@ Lexer.prototype = {
           rhs = right(scope, locals, assign, inputs);
           rhs = getStringValue(rhs);
           ensureSafeMemberName(rhs, expression);
-          if (create && create !== 1) {
-            ensureSafeAssignContext(lhs);
-            if (lhs && !(lhs[rhs])) {
-              lhs[rhs] = {};
-            }
+        if (create && create !== 1) {
+          ensureSafeAssignContext(lhs);
+          if (lhs && !(lhs[rhs])) {
+            lhs[rhs] = {};
+          }
         }
           value = lhs[rhs];
           ensureSafeObject(value, expression);
-      }
+        }
         if (context) {
           return {context: lhs, name: rhs, value: value};
         } else {
@@ -15278,7 +15278,7 @@ Lexer.prototype = {
           ensureSafeAssignContext(lhs);
           if (lhs && !(lhs[right])) {
             lhs[right] = {};
-          }
+        }
         }
         var value = lhs != null ? lhs[right] : undefined;
         if (expensiveChecks || isPossiblyDangerousMemberName(right)) {
@@ -16058,7 +16058,6 @@ function qFactory(nextTick, exceptionHandler) {
         done = true;
         that.$$resolve(val);
       }
-
       function rejectPromise(val) {
         if (done) return;
         done = true;
@@ -16417,11 +16416,11 @@ function $RootScopeProvider() {
           // There is a memory leak in IE9 if all child scopes are not disconnected
           // completely when a scope is destroyed. So this code will recurse up through
           // all this scopes children
-          //
+        //
           // See issue https://github.com/angular/angular.js/issues/10706
           $scope.$$childHead && cleanUpScope($scope.$$childHead);
           $scope.$$nextSibling && cleanUpScope($scope.$$nextSibling);
-        }
+      }
 
         // The code below works around IE9 and V8's memory leaks
         //
@@ -19398,7 +19397,7 @@ function $WindowProvider() {
         return decodeURIComponent(str);
       } catch (e) {
         return str;
-      }
+    }
     }
 
     return function () {
@@ -19420,9 +19419,9 @@ function $WindowProvider() {
             // follow are for less specific paths.
             if (isUndefined(lastCookies[name])) {
               lastCookies[name] = safeDecodeURIComponent(cookie.substring(index + 1));
-            }
           }
         }
+      }
       }
       return lastCookies;
     };
@@ -20055,7 +20054,7 @@ function numberFilter($locale) {
       digits = digits.splice(0, MAX_DIGITS - 1);
       exponent = numberOfIntegerDigits - 1;
       numberOfIntegerDigits = 1;
-    }
+  }
 
     return {d: digits, e: exponent, i: numberOfIntegerDigits};
   }
@@ -20198,7 +20197,7 @@ function numberFilter($locale) {
 
       if (exponent) {
         formattedText += 'e+' + exponent;
-      }
+    }
     }
     if (number < 0 && !isZero) {
       return pattern.negPre + formattedText + pattern.negSuf;
@@ -27904,9 +27903,9 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
           for (var itemKey in optionValues) {
             if (optionValues.hasOwnProperty(itemKey) && itemKey.charAt(0) !== '$') {
               optionValuesKeys.push(itemKey);
-            }
           }
         }
+      }
         return optionValuesKeys;
       }
 
@@ -27940,7 +27939,7 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
             if (match[4]) {
               var disableWhen = disableWhenFn(scope, locals);
               watchedArray.push(disableWhen);
-            }
+          }
           }
           return watchedArray;
         }),
@@ -27969,7 +27968,7 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
 
             optionItems.push(optionItem);
             selectValueMap[selectValue] = optionItem;
-          }
+        }
 
           return {
             items: optionItems,
@@ -28293,7 +28292,7 @@ var ngNonBindableDirective = ngDirective({ terminal: true, priority: 1000 });
           ctrls[0].registerOption = noop;
         },
         post: ngOptionsPostLink
-      }
+    }
     };
   }];
 
@@ -29933,7 +29932,7 @@ var scriptDirective = ['$templateCache', function($templateCache) {
     // automatically select the new element
     if (optionElement[0].hasAttribute('selected')) {
       optionElement[0].selected = true;
-    }
+  }
   }
 
 /**
@@ -30024,9 +30023,9 @@ var SelectController =
         if (count) {
           if (count === 1) {
             optionsMap.remove(value);
-            if (value === '') {
-              self.emptyOption = undefined;
-            }
+        if (value === '') {
+          self.emptyOption = undefined;
+        }
           } else {
             optionsMap.put(value, count - 1);
           }
@@ -30047,7 +30046,7 @@ var SelectController =
           optionAttrs.$observe('value', function valueAttributeObserveAction(newVal) {
             if (isDefined(oldVal)) {
               self.removeOption(oldVal);
-            }
+        }
             oldVal = newVal;
             self.addOption(newVal, optionElement);
           });
@@ -30903,7 +30902,7 @@ var minlengthDirective = function() {
             "negSuf": "",
             "posPre": "",
             "posSuf": ""
-          },
+      },
           {
             "gSize": 3,
             "lgSize": 3,
@@ -30914,7 +30913,7 @@ var minlengthDirective = function() {
             "negSuf": "",
             "posPre": "\u00a4",
             "posSuf": ""
-          }
+      }
         ]
       },
       "id": "en-us",
