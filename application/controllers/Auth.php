@@ -57,7 +57,7 @@ class Auth extends CI_Controller
                 array(
                     'field' => 'fullname',
                     'label' => 'Fullname',
-                    'rules' => 'trim|required|xss_clean|min_length[3]|alpha'
+                    'rules' => 'trim|required|xss_clean|min_length[3]'
                 ),
                 array(
                     'field' => 'address',
