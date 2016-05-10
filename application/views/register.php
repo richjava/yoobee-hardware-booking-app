@@ -10,9 +10,6 @@
                 <h3 style="color:red;"><b><?=$errors?></b></h3>
             <?php } else { ?>
                 <p class="title">{{ titleRegistration | uppercase}}</p>
-                <p>registrationForm.$pristine =</p> {{registrationForm.$pristine}}
-                <p>registrationForm.$valid =</p> {{registrationForm.$valid}}
-
             <?php } ?>
         </md-card-content>
         <md-card-content>
