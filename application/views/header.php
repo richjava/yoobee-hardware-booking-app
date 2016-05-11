@@ -106,7 +106,7 @@
                     <md-button
                         class="md-secondary"><?= anchor('auth/logout', 'Logout', array('style' => 'text-decoration:none')) ?>
                     </md-button>
-                <? } ?>
+                <?php } ?>
                 </div>
             </md-list-item>
         </md-list>

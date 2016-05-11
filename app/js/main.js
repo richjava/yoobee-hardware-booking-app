@@ -12,7 +12,7 @@
     /*to disable aria warnings in the console*/
 
 
-    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ngCookies", "datatables", "ngRoute"])
+    angular.module("myApp", ["ngMaterial", "vAccordion", "ui.router", "ngCookies", "datatables", "ngRoute", "ui.calendar"])
 
         .config(function ($mdThemingProvider, $stateProvider, accordionConfig) {/*setting angular material theme color*/
             $mdThemingProvider.theme('default')

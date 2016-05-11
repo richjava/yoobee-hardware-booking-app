@@ -4,7 +4,7 @@ the complete project is on Github : git@github.com:beshad/yoobee-hardware-bookin
 
 sql file is in the root
 
-usernname and passord for DB is root and root
+usernname and password for DB is root and root
 
 username and password for admin is beshad and 12345
 username and password for students is arshia and 12345
@@ -27,7 +27,7 @@ angular helpers
 
 5 - the problem is getting the correct data form DB to populate the calendar, i can easily get all teh bookings/devices from DB but that is not
 what i need, i only need the old bookings containing the records which match the devices that user is selecting at the current bookingID.
-at the moment i can filter the data and get them, kind of. to be honest i have not manwged to 100% understand what i am getting back from DB!!!
+at the moment i can filter the data and get them, kind of. to be honest i have not managed to 100% understand what i am getting back from DB!!!
 but i can see it is returning the CORRECT device'S' information, not one by one device. hard to explain but i can show you.
 
 it will be a very smooth fully functional app if i can get this part to work. two way booking process will be easy and swift.

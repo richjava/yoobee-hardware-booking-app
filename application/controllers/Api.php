@@ -67,20 +67,11 @@ class Api extends CI_Controller
 
     function getBookedDevices($id)
     {
-//        $this->db->select('device_name,start_date,end_date')->from('bookings_tb')
-//            ->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id')
-//            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id AND selected_devices_tb.device_id =' . $id);
-//        $query = $this->db->get()->result_array();
-//        echo json_encode($query);
-
-        $this->db->select('device_name,start_date,end_date')->from('bookings_tb')
-            ->join('selected_devices_tb', 'selected_devices_tb.booking_id =' . $id)
-            ->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
-//        $this->db->group_by('device_name');
+        $this->db->select('device_id,start_date,end_date')->from('bookings_tb')->where('selected_devices_tb.booking_id', $id);
+        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id OR selected_devices_tb.booking_id = ');
+//        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
         $query = $this->db->get()->result_array();
         echo json_encode($query);
-
-
     }
 
     public function addDates()
@@ -152,6 +143,7 @@ class Api extends CI_Controller
 
 
     }
+
     /*END --------------------- EMAIL*/
 
 

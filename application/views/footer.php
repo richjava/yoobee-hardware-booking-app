@@ -29,6 +29,7 @@
     <script src="<?= base_url() ?>bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="<?= base_url() ?>bower_components/qtip2/jquery.qtip.js"></script>
     <script src="<?= base_url() ?>bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="<?= base_url() ?>bower_components/angular-ui-calendar/src/calendar.js"></script>
     <script src="<?=base_url()?>app/js/main.js"></script>
     <script src="<?= base_url() ?>app/js/ngApp.ctrl.js"></script>
     <script src="<?= base_url() ?>bower_components/angular-route/angular-route.js"></script>

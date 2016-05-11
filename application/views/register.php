@@ -25,8 +25,9 @@
                             'type'=> 'text',
                             'name' => 'username',
                             'id' => 'username',
-                            'ng-model' => "student.username",
-                            'required' => ""
+//                            'ng-model' => "student.username",
+                            'required' => "",
+                            'value' => set_value('username')
                         );
                         echo form_input($data_form);
                         ?>
@@ -45,8 +46,9 @@
                             'type'=> 'password',
                             'name' => 'password',
                             'id' => 'password',
-                            'ng-model' => "student.password",
-                            'required' => ""
+//                            'ng-model' => "student.password",
+                            'required' => "",
+                            'value' => set_value('password')
                         );
                         echo form_input($data_form);
                         ?>
@@ -65,7 +67,8 @@
                             'type'=> 'password',
                             'name' => 'password_confirm',
                             'id' => 'password_confirm',
-                            'required' => ""
+                            'required' => "",
+                            'value' => set_value('password_confirm')
                         );
                         echo form_input($data_form);
                         ?>
@@ -85,8 +88,9 @@
                             'type'=> 'text',
                             'name' => 'fullname',
                             'id' => 'fullname',
-                            'ng-model' => 'student.fullname',
-                            'required' => ""
+//                            'ng-model' => 'student.fullname',
+                            'required' => "",
+                            'value' => set_value('fullname')
                         );
                         echo form_input($data_form);
                         ?>
@@ -105,8 +109,9 @@
                             'type'=> 'text',
                             'name' => 'address',
                             'id' => 'address',
-                            'ng-model' => 'student.address',
-                            'required' => ""
+//                            'ng-model' => 'student.address',
+                            'required' => "",
+                            'value' => set_value('address')
                         );
                         echo form_input($data_form);
                         ?>
@@ -125,8 +130,9 @@
                             'type'=> 'text',
                             'name' => 'phone',
                             'id' => 'phone',
-                            'ng-model' => 'student.phone',
-                            'required' => ""
+//                            'ng-model' => 'student.phone',
+                            'required' => "",
+                            'value' => set_value('phone')
                         );
                         echo form_input($data_form);
                         ?>
@@ -145,8 +151,9 @@
                             'type'=> 'text',
                             'name' => 'email',
                             'id' => 'email',
-                            'ng-model' => 'student.email',
-                            'required' => ""
+//                            'ng-model' => 'student.email',
+                            'required' => "",
+                            'value' => set_value('email')
                         );
                         echo form_input($data_form);
                         ?>
@@ -159,7 +166,7 @@
 
                     <!--                           <md-content>-->
                     <section layout="row" layout-align="center center">
-                        <md-button class="md-raised" ng-click="reset()">RESET</md-button>
+                        <!--                        <md-button class="md-raised" ng-click="reset()">RESET</md-button>-->
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",

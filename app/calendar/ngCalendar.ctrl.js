@@ -10,12 +10,11 @@
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
 
-            console.log(response.data);
-            for (var i = 0; i < response.data.length; i++) {
+            response.data.forEach(function (device) {
 
-                title = response.data[i].device_name;
-                start = response.data[i].start_date;
-                end = response.data[i].end_date;
+                title = device.device_name;
+                start = device.start_date;
+                end = device.end_date;
 
                 var formattedStart = moment(start).format('dddd DD');
                 var formattedend = moment(end).format('dddd DD');
@@ -33,8 +32,8 @@
 
                 }
 
-            }
-            /* for(var i=0 ; i< response.data.length ; i++)*/
+            })
+            /* response.data.forEach(function(device)*/
 
 
             var addDeviceToBookingArray = function (device, list) {

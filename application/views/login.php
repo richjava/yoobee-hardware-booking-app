@@ -59,7 +59,7 @@
                     </md-input-container>
 
                     <section layout="row" layout-align="center center">
-                        <md-button class="md-raised" ng-click="reset()">RESET</md-button>
+                        <md-button class="md-raised" ng-click="reset()">Clear</md-button>
                         <?php echo form_submit(
                             array(
                                 'id' => "submit",
