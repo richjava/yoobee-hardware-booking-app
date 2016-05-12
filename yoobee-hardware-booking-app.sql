@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 12, 2016 at 09:50 PM
+-- Generation Time: May 12, 2016 at 09:54 PM
 -- Server version: 5.5.41-log
 -- PHP Version: 7.0.0
 
@@ -42,8 +42,7 @@ CREATE TABLE `bookings_tb` (
 --
 
 INSERT INTO `bookings_tb` (`booking_id`, `date_created`, `student_id`, `start_date`, `end_date`, `status`) VALUES
-  (18, ''2016 - 05 - 11 23:09:28'', 8, ''2016 - 05 - 17 12:00:00'', ''2016 - 05 - 19 12:00:00'',
-   ''AWAITING COLLECTION'');
+  (18, '2016-05-11 23:09:28', 8, '2016-05-17 12:00:00', '2016-05-19 12:00:00', 'AWAITING COLLECTION');
 
 -- --------------------------------------------------------
 
@@ -63,11 +62,11 @@ CREATE TABLE `categories_tb` (
 --
 
 INSERT INTO `categories_tb` (`category_id`, `category_name`) VALUES
-  (1, ''Cameras''),
-  (2, ''Flash photography''),
-  (3, '' Optical filters''),
-  (4, ''Photographic shutters''),
-  (5, ''Tripod'');
+  (1, 'Cameras'),
+  (2, 'Flash photography'),
+  (3, ' Optical filters'),
+  (4, 'Photographic shutters'),
+  (5, 'Tripod');
 
 -- --------------------------------------------------------
 
@@ -90,34 +89,27 @@ CREATE TABLE `devices_tb` (
 --
 
 INSERT INTO `devices_tb` (`device_id`, `device_name`, `description`, `category_id`, `image_url`) VALUES
-  (1, ''Nikon Coolpix S97000'',
-   ''The Nikon Coolpix S9700 camera packs a 30x zoom lens INTO a COMPACT body WITH Wi-Fi.AND its images,
-   even AT high ISOs, are impressive.'', 2, ''12441 - 3.png''),
-  (2, ''Sony Cyber - shot DSC - RX10'', ''The Sony Cyber-shot DSC-RX10 IS a bridge - style, LONG - zoom camera that gets just about everything RIGHT, AND its steep asking price reflects its impeccable quality.'', 2, ''ba940 - 1.png''),
-  (5, ''Sony Alpha 6000'', ''The Sony Alpha 6000 focuses instantly AND shoots AT 11.1fps.Its image quality matches its speed, making it our top pick FOR entry- LEVEL mirrorless cameras.'', 3, ''773be - 2.png''),
-  (6, ''Olympus OM - D E - M1'', ''WITH gorgeous images—even IN low light, incredible speed, AND a wealth of high - END features, the Olympus OM-D E-M1 IS the best Micro Four Thirds camera that money can buy.'', 3, ''d9603 - 7.png''),
-  (9, ''Nikon D5300'', ''The Wi-Fi- AND GPS-equipped Nikon D5300 D-SLR IS a modest UPGRADE FROM the previous model, but it\''s just AS worthy'', 4, ''de009 - 6.png''),
-  (10, ''Pentax K - 3'', ''The Pentax K-3 IS the most refined K-mount SLR TO DATE, offering FAST autofocus AND superb image quality.Its video autofocus implementation isn\''t the best, but it still manages TO snag our Editors\'' Choice award.'', 4, ''44b38 - 1.png''),
-  (11, ''Canon EOS 6D'', ''The Canon EOS 6D IS a top-notch FULL -frame camera IN a COMPACT body.WITH a relatively affordable price,
-   enthusiast - friendly
-   features, AND spectacular image quality, it\''s an easy Editors\'' Choice.'', 5, ''c52c2 - 8.png''),
-  (12, ''Canon PowerShot Elph 330 HS '', ''ONE of the best cameras you can buy FOR LESS THAN $250, the svelte, 10x -
-                                                                                                               zoom
-                                                                                                               Canon
-      PowerShot Elph 330 HS takes beautiful pictures AND lets you send them instantaneously WITH integrated Wi-Fi.
-                                                                  '', 5, ''704b6 - 3.png''),
-  (14, ''Olympus Tough TG - 2 iHS'', ''The Olympus Tough TG-2 iHS rugged camera IS a very minor UPGRADE TO the excellent TG-1. '', 1, ''24126 - 9.png''),
-  (15, ''Samsung Galaxy S7 Edge'', ''The gorgeous Galaxy S7 Edge makes the best Android phone that much better.'', 1, ''67c0d - 10.png''),
-  (16, ''Apple iPhone 6s Plus'', ''The iPhone 6S Plus has a few KEY advantages that give it an edge FOR serious iPhone users, but its big body still may NOT fit FOR a lot of people.'', 2, ''99063 - 5.png''),
-  (17, ''Samsung Galaxy Note 5'', ''Samsung\''s Galaxy Note 5 IS excellent overall, AND the only phone TO buy IF you
-                                                                                        want TO WRITE BY hand.However,
-   you\''ll pay a huge premium FOR a modest UPGRADE FROM LAST YEAR \''s model, AND LESS pricey competitors will satisfy
-   many.'', 3, ''d75e1 - 9.png''),
-  (18, ''LG V10'', ''Packed TO the brim WITH features,
-   the V10 IS LG\''s best smartphone yet.But IF you don\''t need two front cameras AND DUAL displays,
-   look elsewhere FOR something LESS expensive.'', 4, ''109b2 - 3.png''),
-  (25, ''Samsung Galaxy S7 Edge'', ''The gorgeous Galaxy S7 Edge makes the best Android phone that much better.'', 5,
-   ''e6ef5 - 3.png'');
+  (1, 'Nikon Coolpix S97000',
+   'The Nikon Coolpix S9700 camera packs a 30x zoom lens into a compact body with Wi-Fi. And its images, even at high ISOs, are impressive.',
+   2, '12441-3.png'),
+  (2, 'Sony Cyber-shot DSC-RX10', 'The Sony Cyber-shot DSC-RX10 is a bridge-style, long-zoom camera that gets just about everything right, and its steep asking price reflects its impeccable quality.', 2, 'ba940-1.png'),
+  (5, 'Sony Alpha 6000', 'The Sony Alpha 6000 focuses instantly and shoots at 11.1fps. Its image quality matches its speed, making it our top pick for entry-level mirrorless cameras.', 3, '773be-2.png'),
+  (6, 'Olympus OM-D E-M1', 'With gorgeous images—even in low light, incredible speed, and a wealth of high-end features, the Olympus OM-D E-M1 is the best Micro Four Thirds camera that money can buy.', 3, 'd9603-7.png'),
+  (9, 'Nikon D5300', 'The Wi-Fi- and GPS-equipped Nikon D5300 D-SLR is a modest upgrade from the previous model, but it\'s just as worthy', 4, 'de009-6.png'),
+  (10, 'Pentax K-3', 'The Pentax K-3 is the most refined K-mount SLR to date, offering fast autofocus and superb image quality. Its video autofocus implementation isn\'t the best, but it still manages to snag our Editors\' Choice award.', 4, '44b38-1.png'),
+  (11, 'Canon EOS 6D', 'The Canon EOS 6D is a top-notch full-frame camera in a compact body. With a relatively affordable price, enthusiast-friendly features, and spectacular image quality, it\'s an easy Editors\' Choice.', 5, 'c52c2-8.png'),
+  (12, 'Canon PowerShot Elph 330 HS ', 'One of the best cameras you can buy for less than $250, the svelte, 10x-zoom Canon PowerShot Elph 330 HS takes beautiful pictures and lets you send them instantaneously with integrated Wi-Fi.', 5, '704b6-3.png'),
+  (14, 'Olympus Tough TG-2 iHS', 'The Olympus Tough TG-2 iHS rugged camera is a very minor upgrade to the excellent TG-1. ', 1, '24126-9.png'),
+  (15, 'Samsung Galaxy S7 Edge', 'The gorgeous Galaxy S7 Edge makes the best Android phone that much better.', 1, '67c0d-10.png'),
+  (16, 'Apple iPhone 6s Plus', 'The iPhone 6S Plus has a few key advantages that give it an edge for serious iPhone users, but its big body still may not fit for a lot of people.', 2, '99063-5.png'),
+  (17, 'Samsung Galaxy Note 5',
+   'Samsung\'s Galaxy Note 5 is excellent overall, and the only phone to buy if you want to write by hand. However, you\'ll pay a huge premium for a modest upgrade from last year\'s model, and less pricey competitors will satisfy many.',
+   3, 'd75e1-9.png'),
+  (18, 'LG V10',
+   'Packed to the brim with features, the V10 is LG\'s best smartphone yet. But if you don\'t need two front cameras and dual displays, look elsewhere for something less expensive.',
+   4, '109b2-3.png'),
+  (25, 'Samsung Galaxy S7 Edge', 'The gorgeous Galaxy S7 Edge makes the best Android phone that much better.', 5,
+   'e6ef5-3.png');
 
 -- --------------------------------------------------------
 
@@ -168,7 +160,7 @@ CREATE TABLE `students_tb` (
   `phone`        VARCHAR(255) NOT NULL,
   `email`        VARCHAR(255) NOT NULL,
   `programme_id` INT(11)               DEFAULT NULL,
-  `role`         VARCHAR(11)  NOT NULL DEFAULT ''student''
+  `role`         VARCHAR(11)  NOT NULL DEFAULT 'student'
 )
   ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
@@ -179,8 +171,8 @@ CREATE TABLE `students_tb` (
 
 INSERT INTO `students_tb` (`student_id`, `username`, `password`, `fullname`, `address`, `phone`, `email`, `programme_id`, `role`)
 VALUES
-  (8, ''beshad'', ''8cb2237d0679ca88db6464eac60da96345513964'', ''beshad ghorbani'', ''34 rockview place,
-      mount pleasant, Christchurch 8081'', ''021-2775060'', ''admin@xeba.co.nz'', NULL, ''admin'');
+  (8, 'beshad', '8cb2237d0679ca88db6464eac60da96345513964', 'beshad ghorbani',
+   '34 rockview place, mount pleasant, Christchurch 8081', '021-2775060', 'admin@xeba.co.nz', NULL, 'admin');
 
 --
 -- Indexes for dumped tables
