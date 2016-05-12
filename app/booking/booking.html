@@ -1,62 +1,49 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
-    <md-card class="booking">
-        <md-card-content class="md-padding">
+    <md-card>
+        <!--<md-card-content class="md-padding">-->
 
-            <md-content layout="column" layout-padding ng-cloak>
-                <md-list>
+        <md-card-title class="md-padding" layout="row" layout-align="space-between center">
+            <h3>Bookings</h3>
+            <md-button ng-href="http://localhost/yoobee-hardware-booking-app/home/#/devices"
+                       class='md-button md-raised md-warn' ng-click="beginBooking();"> New Booking
+            </md-button>
+        </md-card-title>
 
-                    <span layout="row" layout-align="space-between center">
-                        <h3>Bookings</h3>
-                        <md-button ng-href="http://localhost/yoobee-hardware-booking-app/home/#/devices"
-                                   class='md-button md-raised md-warn' ng-click="beginBooking();"> New Booking
+        <md-card-content>
+            <table datatable="ng" class="row-border hover">
+                <thead>
+                <tr>
+                    <th> Booking ID</th>
+                    <th> Created On</th>
+                    <th> Start Date</th>
+                    <th> End Date</th>
+                    <th> Status</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="booking in bookings">
+                    <td> {{ booking.booking_id }}</td>
+                    <td> {{ booking.date_created }}</td>
+                    <td> {{ booking.start_date }}</td>
+                    <td> {{ booking.end_date }}</td>
+                    <td> {{ booking.status }}</td>
+                    <td>
+                        <md-button class="md-accent">
+                            <md-icon md-svg-src="../app/icons/ic_mode_edit_black_48px.svg"
+                                     ng-click="test();"></md-icon>
                         </md-button>
-                    </span>
-
-                    <md-divider></md-divider>
-
-                    <md-list-item class="md-3-line">
-                        <div class="md-list-item-text">
-                            <table datatable="ng" class="row-border hover">
-                                <thead>
-                                <tr>
-                                    <th> Booking ID</th>
-                                    <th> Created On</th>
-                                    <th> Start Date</th>
-                                    <th> End Date</th>
-                                    <th> Status</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr ng-repeat="booking in bookings">
-                                    <td> {{ booking.booking_id }}</td>
-                                    <td> {{ booking.date_created }}</td>
-                                    <td> {{ booking.start_date }}</td>
-                                    <td> {{ booking.end_date }}</td>
-                                    <td> {{ booking.status }}</td>
-                                    <td>
-                                        <md-button class="md-accent">
-                                            <md-icon md-svg-src="../app/icons/ic_mode_edit_black_48px.svg"
-                                                     ng-click="test();"></md-icon>
-                                        </md-button>
-                                    </td>
-                                    <td>
-                                        <md-button class="md-accent">
-                                            <md-icon md-svg-src="../app/icons/ic_delete_black_48px.svg"
-                                                     ng-click="deleteConfirm(booking.booking_id)"></md-icon>
-                                        </md-button>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-
-                        </div>
-                    </md-list-item>
-                </md-list>
-            </md-content>
-
+                    </td>
+                    <td>
+                        <md-button class="md-accent">
+                            <md-icon md-svg-src="../app/icons/ic_delete_black_48px.svg"
+                                     ng-click="deleteConfirm(booking.booking_id)"></md-icon>
+                        </md-button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </md-card-content>
     </md-card>
 </md-content>

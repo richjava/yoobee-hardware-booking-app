@@ -29,7 +29,7 @@
         $scope.deleteConfirm = function (id) {
             var confirm = $mdDialog.confirm()
                 .title('Are you sure you want to delete this booking?')
-                .textContent('This booking will be permanently deleted from database and can not be resotred.')
+                .textContent('This booking will be permanently deleted and can not be undone.')
                 .targetEvent(id)
                 .ok('Delete')
                 .cancel('Cancel');

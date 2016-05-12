@@ -77,3 +77,7 @@ body {
 ul li a {
   color: #4C5C68;
 }
+
+.studentForm {
+  width: 400px;
+}

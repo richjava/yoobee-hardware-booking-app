@@ -9,7 +9,7 @@
     function login($username,$password){
         $where = array (
             'username' => $username,
-            'password' => $password
+            'password' => sha1($password)
         );
         $this->db->select()->from('students_tb')->where($where);
         $query=$this->db->get();

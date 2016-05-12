@@ -2,7 +2,7 @@
 
     "user strict";
 
-    angular.module("myApp").controller("ngProfileCtrl", function ($scope, $http) {
+    angular.module("myApp").controller("ngProfileCtrl", function ($scope, $http, $location) {
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getStudentDetails').then(function success(student) {
 
@@ -25,6 +25,8 @@
             };
 
             $http.put('http://localhost/yoobee-hardware-booking-app/api/updateStudentDetails', data).then(function success() {
+
+                $location.path("booking");
 
             });
         }

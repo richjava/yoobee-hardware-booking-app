@@ -82,7 +82,7 @@ class Auth extends CI_Controller
             } else {
                 $data = array(
                     'username' => $_POST['username'],
-                    'password' => $_POST['password'],
+                    'password' => sha1($_POST['password']),
                     'fullname' => $_POST['fullname'],
                     'address' => $_POST['address'],
                     'phone' => $_POST['phone'],
