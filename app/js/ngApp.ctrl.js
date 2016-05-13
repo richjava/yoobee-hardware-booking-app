@@ -33,6 +33,8 @@
             }
             /*$scope.beginBooking = function (list)*/
 
+            $cookies.put('isNewBooking', true);
+
         })
     /*angular.module("myApp")*/
 })();

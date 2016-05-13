@@ -50,7 +50,7 @@
 
         $scope.editConfirm = function (id) {
             $cookies.put('id', id);
-            $cookies.put('isNewBooking', false);
+            $cookies.put('isExistingBooking', true);
             $location.path("devices");
         };
         /*$scope.editConfirm = function(id)*/

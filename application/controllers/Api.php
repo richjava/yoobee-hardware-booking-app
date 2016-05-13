@@ -184,12 +184,18 @@ class Api extends CI_Controller
 
     function editBooking($id)
     {
-
         $this->db->select('device_id')->from('selected_devices_tb')->where('booking_id', $id);
         $query = $this->db->get()->result_array();
         echo json_encode($query);
-
     }
+
+    function editDates($id)
+    {
+        $this->db->select('start_date,end_date')->from('bookings_tb')->where('booking_id', $id);
+        $query = $this->db->get()->result_array();
+        echo json_encode($query);
+    }
+
 
 
     function deleteBooking($id)

@@ -30,7 +30,7 @@
                                     .textContent('Selected devices are now booked. Please check your inbox for booking details.')
                                     .ok('Ok')
                                 $mdDialog.show(confirm).then(function () {
-
+                                    $cookies.put('isExistingBooking', false);
                                     $location.path("booking");
 
                                 });
