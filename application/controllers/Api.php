@@ -26,8 +26,23 @@ class Api extends CI_Controller
 
     public function addDevices()
     {
-        $data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
-        $this->device->insertBookedDevices($data);
+
+        $input_data = json_decode(trim(file_get_contents('php://input')));/*Convert Object to array*/
+        $booking['booking_id'] = filter_var($input_data[0]->booking_id, FILTER_SANITIZE_STRING);
+        $this->db->select('booking_id')->from('selected_devices_tb')->where('booking_id', $booking['booking_id']);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            $this->db->where('booking_id', $booking['booking_id']);
+            $this->db->delete('selected_devices_tb');
+            foreach ($input_data as $data) {
+                $this->db->insert('selected_devices_tb', $data);
+            }
+        } else {
+            foreach ($input_data as $data) {
+                $this->db->insert('selected_devices_tb', $data);
+            }
+        }
+
     }
 
     function getBookingID()
@@ -68,7 +83,7 @@ class Api extends CI_Controller
     function getBookedDevices($id)
     {
         $this->db->select('device_name,start_date,end_date')->from('bookings_tb');
-        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id AND selected_devices_tb.booking_id = ' . $id);
+        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id');
         $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
         $query = $this->db->get()->result_array();
         echo json_encode($query);
@@ -129,19 +144,17 @@ class Api extends CI_Controller
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         $this->email->from('sales@ebazaar.nz', 'Beshad Ghorbani');
-//        $this->email->to($data[0]['email']);  /*email is disabled for development purposes */
+        $this->email->to($data[0]['email']);
         $this->email->subject('Booking Confirmation');
         $this->email->message('<strong>This is Yoobee Hardware Booking confirmation email</strong>');
         $this->email->send();
         $this->email->clear();
 
         $data = array(
-            'status' => 'AWAITING COLLECTION'
+            'status' => 'Awaiting Collection'
         );
         $this->db->where('booking_id', $booking_id);
         $this->db->update('bookings_tb', $data);
-
-
     }
 
     /*END --------------------- EMAIL*/
@@ -168,6 +181,16 @@ class Api extends CI_Controller
         $query = $this->db->get();
         echo json_encode($query->result_array());
     }
+
+    function editBooking($id)
+    {
+
+        $this->db->select('device_id')->from('selected_devices_tb')->where('booking_id', $id);
+        $query = $this->db->get()->result_array();
+        echo json_encode($query);
+
+    }
+
 
     function deleteBooking($id)
     {

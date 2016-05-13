@@ -11,9 +11,9 @@
                         <v-accordion>
                             <v-pane ng-repeat="device in devices">
                                 <v-pane-header ng-show="device.category_id == category.category_id">
-                                    <md-checkbox class="md-warn"
-                                                 ng-click="toggle(device.device_id,selected)"></md-checkbox>
-                                    {{ device.device_name }}
+                                    <md-checkbox class="md-warn" ng-checked="exists(device.device_id, selected)"
+                                                 ng-click="toggle(device.device_id , selected)"></md-checkbox>
+                                    {{ device.device_id }}
                                 </v-pane-header>
                                 <v-pane-content>
                                     <md-list>
@@ -29,14 +29,14 @@
                                     </md-list>
                                 </v-pane-content>
                             </v-pane>
-                        </v-accordion>
+                            </v-accordselected
                     </v-pane-content>
                 </v-pane>
             </v-accordion>
         </md-card-content>
         <md-card-content>
             <div layout="row" layout-align="end end">
-                <md-button class="md-icon-button md-primary" ui-sref="calendar">
+                <md-button class="md-icon-button md-primary" ui-sref="calendar" ng-disabled="isAnyDeviceSelected">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
                              ng-click="addDevices(selected);"></md-icon>
                 </md-button>

@@ -19,6 +19,7 @@ class Dashboard extends CI_Controller
             $crud->set_subject(' Booking');
             $crud->columns('booking_id', 'student_id', 'start_date', 'end_date', 'status');
             $crud->display_as('student_id', 'Fullname');
+            $crud->field_type('status', 'dropdown', array("pending" => "Pending", "awaiting collection" => "Awaiting Collection", "collected" => "Collected", "returned" => "Returned"));
             $output = $crud->render();
             $this->load->view('dashboard/bookings', $output);
             $this->load->view('footer');
@@ -72,6 +73,7 @@ class Dashboard extends CI_Controller
             $crud->display_as('programme_id', 'Programme');
             $crud->set_subject(' Student');
             $crud->columns('username', 'fullname', 'address', 'phone', 'email', 'programme_id', 'role');
+            $crud->field_type('role', 'dropdown', array("student" => "Student", "admin" => "Admin"));
             $output = $crud->render();
             $this->load->view('dashboard/students', $output);
             $this->load->view('footer');

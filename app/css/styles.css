@@ -4,8 +4,7 @@
 
 body {
   background-color: #EDF2F4;
-  height: auto;
-}
+  height: auto; }
 
 .container {
   display: -webkit-flex;
@@ -19,8 +18,12 @@ body {
   align-items: center;
   background-color: #EDF2F4;
   padding-top: 50px;
-  height: auto;
-}
+  height: auto; }
+
+.studentBookingContainer {
+  background-color: #EDF2F4;
+  padding-top: 50px;
+  height: auto; }
 
 .wrapper {
   display: -webkit-flex;
@@ -39,21 +42,15 @@ body {
 
 .registrationForm {
   width: 500px; }
-
-@media screen and (max-width: 480px) {
-  .registrationForm {
-    width: 300px;
-  }
-}
+  @media screen and (max-width: 480px) {
+    .registrationForm {
+      width: 300px; } }
 
 .title {
   padding-top: 10px; }
-
-@media screen and (max-width: 480px) {
-  .title {
-    font-size: 0.8em;
-  }
-}
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 0.8em; } }
 
 .sidenav,
 .toolbar {
@@ -63,21 +60,15 @@ body {
 .devices,
 .confirmation,
 .studentDetailsUpdate {
-  width: 800px;
-}
-
-@media screen and (max-width: 640px) {
-  .devices,
-  .confirmation,
-  .studentDetailsUpdate {
-    width: auto;
-  }
-}
+  width: 800px; }
+  @media screen and (max-width: 640px) {
+    .devices,
+    .confirmation,
+    .studentDetailsUpdate {
+      width: auto; } }
 
 ul li a {
-  color: #4C5C68;
-}
+  color: #4C5C68; }
 
 .studentForm {
-  width: 400px;
-}
+  width: 400px; }

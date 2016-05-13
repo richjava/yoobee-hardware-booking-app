@@ -7,7 +7,7 @@
         </md-card-title>
         <md-card-content>
             <?php if($errors) {?>
-                <h3 style="color:red;"><b><?=$errors?></b></h3>
+                <h5 style="color:red;"><?= $errors ?></h5>
             <?php } else { ?>
                 <p class="title">{{ titleRegistration | uppercase}}</p>
             <?php } ?>

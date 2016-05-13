@@ -77,6 +77,7 @@ class Auth extends CI_Controller
             );
 
             $this->form_validation->set_rules($config);
+            $this->form_validation->set_message('is_unique', 'Username already exists');
             if ($this->form_validation->run() == FALSE) {
                 $data['errors'] = validation_errors();
             } else {

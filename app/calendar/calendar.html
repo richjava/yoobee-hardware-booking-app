@@ -10,7 +10,7 @@
                 <md-button class="md-icon-button md-primary" ui-sref="devices">
                     <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg"></md-icon>
                 </md-button>
-                <md-button class="md-icon-button md-primary" ui-sref="confirmation">
+                <md-button class="md-icon-button md-primary" ui-sref="confirmation" ng-disabled="isAnyDateSelected">
                     <md-icon md-svg-src="../app/icons/ic_arrow_forward_black_48px.svg"
                              ng-click="registerBookingDates();"></md-icon>
                 </md-button>

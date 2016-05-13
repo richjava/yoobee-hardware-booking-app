@@ -2,7 +2,7 @@
 
     "use strict";
 
-    angular.module("myApp").controller("ngBookingCtrl", function ($cookies, $scope, $http, $mdDialog, $state) {
+    angular.module("myApp").controller("ngBookingCtrl", function ($cookies, $scope, $http, $mdDialog, $state, $rootScope, $location) {
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookingDetails').then(function success(bookings) {
 
@@ -47,6 +47,13 @@
                 });
             });
         };
+
+        $scope.editConfirm = function (id) {
+            $cookies.put('id', id);
+            $cookies.put('isNewBooking', false);
+            $location.path("devices");
+        };
+        /*$scope.editConfirm = function(id)*/
 
         $scope.beginBooking = function () {
 

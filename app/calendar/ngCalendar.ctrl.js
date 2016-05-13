@@ -5,8 +5,10 @@
 
     angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http) {
 
-            var devices = [], selected = [];
-            var title, start, end = 0;
+        var devices = [], selected = [];
+        var title, start, end = 0;
+
+        $scope.isAnyDateSelected = true;
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
 
@@ -93,8 +95,15 @@
 
             $scope.registerBookingDates = function () {
 
-                    var maxDate = new Date(Math.max.apply(null, selected));
-                    var minDate = new Date(Math.min.apply(null, selected));
+                var maxDate = new Date(Math.max.apply(null, selected));
+                var minDate = new Date(Math.min.apply(null, selected));
+
+                var today = moment();
+                var tomorrow = today.add('days', 1);
+                var currentDate = moment(tomorrow).format();
+
+                if ((selected.length > 0) && (moment(maxDate).isAfter(currentDate)) && (moment(minDate).isAfter(currentDate))) {
+                    $scope.isAnyDateSelected = false;
 
                     /*to increase the end dat by one day so it show correctly on the calendar*/
                     maxDate = moment(maxDate).add('days', 1).toDate();
@@ -104,8 +113,8 @@
                         'start_date': minDate,
                         'end_date': maxDate
                     };
-                $http.post('http://localhost/yoobee-hardware-booking-app/api/addDates', data);
-
+                    $http.post('http://localhost/yoobee-hardware-booking-app/api/addDates', data);
+                }
             }
             /* $scope.registerBookingDates = function()*/
 

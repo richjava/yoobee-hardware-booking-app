@@ -42,7 +42,7 @@
 <md-sidenav class="md-sidenav-left md-whiteframe-z2 sidenav" md-component-id="left">
     <md-toolbar class="md-toolbar-tools toolbar">
         <h1 flex>Menu</h1>
-        <md-button ng-click="closeSidebar();">
+        <md-button ng-click="closeSidebar();closeSidebar();">
             <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_close_white_48px.svg"></md-icon>
         </md-button>
     </md-toolbar>
@@ -56,7 +56,7 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/devices' ?>" ng-click="beginBooking();">
+                    <md-button ng-href="<?= base_url() . 'home/#/devices' ?>" ng-click="beginBooking();closeSidebar();">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_event_black_48px.svg"></md-icon>
                         create a new booking
                     </md-button>
@@ -67,7 +67,7 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/booking' ?>">
+                    <md-button ng-href="<?= base_url() . 'home/#/booking' ?>" ng-click="closeSidebar();">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_date_range_black_48px.svg"></md-icon>
                         Your Bookings
                     </md-button>
@@ -78,7 +78,7 @@
 
             <md-list-item class="md-3-line" ng-if="'<?= $this->session->userdata('role') ?>' == 'admin' ">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>">
+                    <md-button ng-href="<?= base_url() . 'dashboard/bookings' ?>" ng-click="closeSidebar();">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_dashboard_black_48px.svg"></md-icon>
                         Administrator Dashboard
                     </md-button>
@@ -90,7 +90,7 @@
 
             <md-list-item class="md-3-line">
                 <div class="md-list-item-text">
-                    <md-button ng-href="<?= base_url() . 'home/#/profile' ?>">
+                    <md-button ng-href="<?= base_url() . 'home/#/profile' ?>" ng-click="closeSidebar();">
                         <md-icon md-svg-src="<?= base_url() ?>app/icons/ic_settings_black_48px.svg"></md-icon>
                         Profile
                     </md-button>
