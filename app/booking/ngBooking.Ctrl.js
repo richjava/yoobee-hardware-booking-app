@@ -11,17 +11,6 @@
         })
         /*$http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookingDetailsForStudent').*/
 
-        $scope.deleteBooking = function (id) {
-
-            $http.delete('http://localhost/yoobee-hardware-booking-app/api/deleteBooking/' + id).then(function success(deleted) {
-
-                $scope.deletedBooking = deleted.data;
-                //$scope.refresh();
-
-            })
-
-        }
-
         $scope.reloadPage = function () { /*reloads the page after deletation */
             $state.reload();
         }
@@ -59,6 +48,7 @@
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/createNewBooking').then(function (bookingID) {
                 $cookies.put('id', bookingID.data);
+                $cookies.put('isExistingBooking', false);
             })
         }
         /*$scope.beginBooking = function (list)*/

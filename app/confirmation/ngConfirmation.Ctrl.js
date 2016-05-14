@@ -24,13 +24,13 @@
                         });
 
                         $scope.sendEmail = function () {
+                            $cookies.put('isExistingBooking', false);
                             $http.post('http://localhost/yoobee-hardware-booking-app/api/sendEmail/' + $scope.studentID + '/' + $cookies.get('id')).then(function success() {
                                 var confirm = $mdDialog.confirm()
                                     .title('Your booking was successful')
                                     .textContent('Selected devices are now booked. Please check your inbox for booking details.')
                                     .ok('Ok')
                                 $mdDialog.show(confirm).then(function () {
-                                    $cookies.put('isExistingBooking', false);
                                     $location.path("booking");
 
                                 });

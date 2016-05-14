@@ -144,7 +144,7 @@ class Api extends CI_Controller
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         $this->email->from('sales@ebazaar.nz', 'Beshad Ghorbani');
-        $this->email->to($data[0]['email']);
+//        $this->email->to($data[0]['email']); /*email is disabled for development*/
         $this->email->subject('Booking Confirmation');
         $this->email->message('<strong>This is Yoobee Hardware Booking confirmation email</strong>');
         $this->email->send();

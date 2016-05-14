@@ -5,10 +5,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js" afterPath="$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" afterPath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/confirmation.html" afterPath="$PROJECT_DIR$/app/confirmation/confirmation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" afterPath="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" afterPath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/ngApp.ctrl.js" afterPath="$PROJECT_DIR$/app/js/ngApp.ctrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
@@ -41,8 +39,8 @@
       <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.275862">
-              <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="143" column="37" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -52,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/app/devices/ngDevices.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -61,11 +59,10 @@
       <file leaf-file-name="ngCalendar.ctrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4958384">
-              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+            <state vertical-scroll-proportion="-0.6183115">
+              <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
               <folding>
-                <marker date="1463142563000" expanded="true" signature="3776:3822" placeholder="..." />
-                <marker date="1463142563000" expanded="true" signature="6977:7023" placeholder="..." />
+                <marker date="1463219934000" expanded="true" signature="4419:4465" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -75,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+              <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -94,7 +91,7 @@
       <file leaf-file-name="devices.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.655172">
+            <state vertical-scroll-proportion="-10.344828">
               <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#md-card-content#0;n#md-card#0;n#md-content#0;n#!!top" expanded="false" />
@@ -103,11 +100,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.413794">
+              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ngBooking.Ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -175,13 +182,13 @@
         <option value="$PROJECT_DIR$/app/booking/booking.html" />
         <option value="$PROJECT_DIR$/application/models/device.php" />
         <option value="$PROJECT_DIR$/app/devices/devices.html" />
-        <option value="$PROJECT_DIR$/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/app/confirmation/confirmation.html" />
         <option value="$PROJECT_DIR$/app/js/ngApp.ctrl.js" />
+        <option value="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
+        <option value="$PROJECT_DIR$/application/controllers/Api.php" />
         <option value="$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js" />
         <option value="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
         <option value="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
-        <option value="$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js" />
       </list>
     </option>
   </component>
@@ -554,7 +561,10 @@
       <recent name="C:\MAMP\htdocs\yoobee-hardware-booking-app\app\student" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.home.php">
+  <component name="RunManager" selected="Node.js.ngCalendar.ctrl.js">
+    <configuration default="false" name="ngCalendar.ctrl.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="$USER_HOME$/node-4.2.3/bin/node" path-to-js-file="ngCalendar.ctrl.js" working-dir="$PROJECT_DIR$/app/calendar">
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:8887/yoobee-hardware-booking-app/application/views/home.php">
       <method />
     </configuration>
@@ -604,9 +614,15 @@
     <configuration default="false" name="home.php" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost/yoobee-hardware-booking-app/index.php">
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.home.php" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.ngCalendar.ctrl.js" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.ngCalendar.ctrl.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -618,12 +634,6 @@
       <created>1459913455913</created>
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
-    </task>
-    <task id="LOCAL-00022" summary="New changelist">
-      <created>1460597795700</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1460597795700</updated>
     </task>
     <task id="LOCAL-00023" summary="New changelist">
       <created>1460783364895</created>
@@ -913,7 +923,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463133620031</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="New changelist">
+      <created>1463142657625</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1463142657625</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1263,14 +1279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2894144">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/core/CodeIgniter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.94840294">
@@ -1330,24 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.655172">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-          <folding>
-            <element signature="n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#md-card-content#0;n#md-card#0;n#md-content#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.275862">
-          <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/confirmation/confirmation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0837438">
@@ -1364,18 +1354,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js">
+    <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="52" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+        <state vertical-scroll-proportion="-8.413794">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
+    <entry file="file://$PROJECT_DIR$/app/devices/devices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state vertical-scroll-proportion="-10.344828">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
+            <element signature="n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#v-pane-content#0;n#v-pane#0;n#v-accordion#0;n#md-card-content#0;n#md-card#0;n#md-content#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="143" column="37" selection-start-line="143" selection-start-column="37" selection-end-line="143" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1383,18 +1383,33 @@
     <entry file="file://$PROJECT_DIR$/app/devices/ngDevices.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/booking/ngBooking.Ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/confirmation/ngConfirmation.Ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4958384">
-          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        <state vertical-scroll-proportion="-0.6183115">
+          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
           <folding>
-            <marker date="1463142563000" expanded="true" signature="3776:3822" placeholder="..." />
-            <marker date="1463142563000" expanded="true" signature="6977:7023" placeholder="..." />
+            <marker date="1463219934000" expanded="true" signature="4419:4465" placeholder="..." />
           </folding>
         </state>
       </provider>

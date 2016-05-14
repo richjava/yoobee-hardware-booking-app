@@ -4,7 +4,6 @@
 
     angular.module("myApp").controller('ngDeviceSelectionCtrl', function ($cookies, $scope, $http) {
 
-
             $http.get('http://localhost/yoobee-hardware-booking-app/api/categories').then(function (categories) {
                 $scope.categories = categories.data;
                 $http.get('http://localhost/yoobee-hardware-booking-app/api/devices').then(function (devices) {
