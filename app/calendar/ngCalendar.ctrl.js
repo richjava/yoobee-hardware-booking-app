@@ -8,36 +8,8 @@
         var devices = [], selectedDevices = [], selected = [],
             title, start, end = 0,
             existingBookingEnd, existingBookingStart = 0,
-            evnts, flag;
+            evnts = [], flag;
 
-        $scope.isAnyDateSelected = true;
-
-        if ($cookies.get('isExistingBooking')) {
-            $http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd) {
-
-                rspnd.data.forEach(function (existingDevice) {
-
-                    existingBookingStart = existingDevice.start_date;
-                    existingBookingEnd = existingDevice.end_date;
-
-                    selectedDevices.push({
-                        title: "Your Device(s) currently Booked For These Days",
-                        start: existingBookingStart,
-                        end: existingBookingEnd,
-                        allDay: true
-                    });
-
-                })
-                /* rspnd.data.forEach(function(device)*/
-                flag = true;
-                getBookedDevices(flag);
-            });
-            /*$http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd)*/
-        } else {
-            flag = false;
-            getBookedDevices(flag);
-        }
-        ;
 
         var getBookedDevices = function (flag) {
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
@@ -64,6 +36,32 @@
             /*$http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response)*/
         }
         /*var getBookedDevices = function()*/
+        $scope.isAnyDateSelected = true;
+
+        if ($cookies.get('isExistingBooking')) {
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd) {
+
+                rspnd.data.forEach(function (existingDevice) {
+                    existingBookingStart = existingDevice.start_date;
+                    existingBookingEnd = existingDevice.end_date;
+                    selectedDevices.push({
+                        title: "Your Device(s) currently Booked For These Days",
+                        start: existingBookingStart,
+                        end: existingBookingEnd,
+                        allDay: true
+                    });
+                })
+                /* rspnd.data.forEach(function(device)*/
+                flag = true;
+                getBookedDevices(flag);
+            });
+            ///*$http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd)*/
+        } else {
+            console.log("hello");
+            flag = false;
+            getBookedDevices(flag);
+        }
+
 
         var calendar = function (flag) {
 
@@ -73,7 +71,7 @@
                         events: devices,
                         color: '#F25F5C'
 
-                    },
+                },
                     {
                         events: selectedDevices,
                         color: '#70C1B3',
@@ -161,7 +159,7 @@
                     'end_date': maxDate
                 };
                 $http.post('http://localhost/yoobee-hardware-booking-app/api/addDates', data);
-            }
+        }
         }
         /* $scope.registerBookingDates = function()*/
 

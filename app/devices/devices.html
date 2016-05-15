@@ -13,7 +13,7 @@
                                 <v-pane-header ng-show="device.category_id == category.category_id">
                                     <md-checkbox class="md-warn" ng-checked="exists(device.device_id, selected)"
                                                  ng-click="toggle(device.device_id , selected)"></md-checkbox>
-                                    {{ device.device_id }}
+                                    {{ device.device_name }}
                                 </v-pane-header>
                                 <v-pane-content>
                                     <md-list>
