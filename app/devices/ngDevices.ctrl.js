@@ -2,7 +2,7 @@
 
     "use strict";
 
-    angular.module("myApp").controller('ngDeviceSelectionCtrl', function ($cookies, $scope, $http) {
+    angular.module("myApp").controller('ngDeviceSelectionCtrl', function ($cookies, $scope, $http, $mdToast) {
 
             $http.get('http://localhost/yoobee-hardware-booking-app/api/categories').then(function (categories) {
                 $scope.categories = categories.data;
@@ -40,6 +40,15 @@
             return list.indexOf(device) > -1;
         };
 
+        $scope.showToast = function () {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("You must select at least one device to countinue with booking!")
+                    .position('bottom right')
+                    .hideDelay(3000)
+            );
+        };
+
             $scope.addDevices = function (list) {
                 var data = [];
                 if (list.length > 0) {
@@ -52,6 +61,8 @@
 
                     }
                     $http.post('http://localhost/yoobee-hardware-booking-app/api/addDevices', data);
+                } else {
+                    $scope.showToast();
                 }
 
             }

@@ -1,11 +1,11 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card class="confirmation">
-        <div flex>
+        <md-content>
             <md-toolbar layout="row" class="md-hue-3">
                 <div class="md-toolbar-tools">
-                    <span flex style="color:black"> <md-icon
-                            md-svg-src="../app/icons/ic_confirmation_number_black_48px.svg" class="name"></md-icon>Confirmation Details For Booking number <b>{{
-                        bookingID }}</b></span>
+                <span flex style="color:black"> <md-icon
+                        md-svg-src="../app/icons/ic_confirmation_number_black_48px.svg" class="name"></md-icon>Confirmation Details For Booking number <b>{{
+                    bookingID }}</b></span>
                 </div>
             </md-toolbar>
 
@@ -18,29 +18,33 @@
                 </md-card-content>
             </md-card-content>
 
-            <md-list flex ng-show="page">
-                <md-list-item>
-                    <div class="md-list-item-text" layout="column">
+            <md-content>
+                <md-list flex ng-show="page">
+                    <md-list-item>
+                        <div class="md-list-item-text" layout="column">
 
-                        <md-card-header>
-                            <h4>
-                                <md-icon md-svg-src="../app/icons/ic_camera_alt_black_48px.svg" class="name"></md-icon>
-                                Booked Devices:
-                            </h4>
-                        </md-card-header>
+                            <md-card-header>
+                                <h4>
+                                    <md-icon md-svg-src="../app/icons/ic_camera_alt_black_48px.svg"
+                                             class="name"></md-icon>
+                                    Booked Devices:
+                                </h4>
+                            </md-card-header>
 
-                        <md-list>
                             <md-list-item ng-repeat="deviceName in devicesName">
                                 <div>
-                                    <img ng-src="../assets/uploads/devices/{{ deviceName.image_url}}" class="md-avatar"
+                                    <img ng-src="../assets/uploads/devices/{{ deviceName.image_url}}"
+                                         class="md-avatar"
                                          style="height: 60px; width:60px"/>
                                 </div>
                                 <div class="md-list-item-text" layout="column">
                                     <h5> {{ deviceName.device_name}} </h5>
                                 </div>
-                                <md-divider></md-divider>
                             </md-list-item>
 
+                            <md-list-item>
+                                <md-divider></md-divider>
+                            </md-list-item>
 
                             <md-card-header>
                                 <h4>
@@ -50,10 +54,11 @@
                                 </h4>
                             </md-card-header>
 
-                            <md-list-item class="md-3-line">
+                            <md-list-item>
                                 <div class="md-list-item-text">
-                                    <h3> The above device(s) are booked for you from <b>{{ startDate }}</b> until <b>{{
-                                        endDate}}</b>.</h3>
+                                    <h4> The above device(s) are booked for you from <b>{{ startDate }}</b> until
+                                        <b>{{
+                                            endDate}}</b>.</h4>
                                 </div>
                                 <md-divider></md-divider>
                             </md-list-item>
@@ -62,7 +67,8 @@
 
                             <md-card-header>
                                 <h4>
-                                    <md-icon md-svg-src="../app/icons/ic_details_black_48px.svg" class="name"></md-icon>
+                                    <md-icon md-svg-src="../app/icons/ic_details_black_48px.svg"
+                                             class="name"></md-icon>
                                     Student Details:
                                 </h4>
                             </md-card-header>
@@ -82,20 +88,18 @@
                                     <p><b>Programme ID:</b> {{ programmeID }}</p>
                                 </div>
                             </md-list-item>
+                </md-list>
+            </md-content>
+        </md-content>
 
-                        </md-list>
-
-
-                    </div>
-                </md-list-item>
-                <md-divider></md-divider>
+        <md-divider></md-divider>
                 <md-card-content>
-            <span layout="row" layout-align="space-between none">
-                <md-button class="md-icon-button md-primary" ui-sref="calendar">
-                    <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg"></md-icon>
-                </md-button>
-                 <md-button class="md-primary" ng-click="sendEmail();"> Confirm & Finish</md-button>
-            </span>
+                        <span layout="row" layout-align="space-between">
+                                <md-button class="md-icon-button md-primary" ui-sref="calendar">
+                                    <md-icon md-svg-src="../app/icons/ic_arrow_back_black_48px.svg"></md-icon>
+                                </md-button>
+                                <md-button class="md-primary" ng-click="sendEmail();"> Confirm & Finish</md-button>
+                        </span>
                 </md-card-content>
     </md-card>
 </md-content>

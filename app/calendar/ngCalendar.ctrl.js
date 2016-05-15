@@ -21,7 +21,7 @@
                     {
                         events: selectedDevices,
                         color: '#70C1B3',
-                        textColor: 'white'
+                        textColor: 'white',
                     }
                 ]
             } else {
@@ -80,7 +80,7 @@
         $scope.showToast = function () {
             $mdToast.show(
                 $mdToast.simple()
-                    .textContent("You can't book dates in the past!")
+                    .textContent("You can't book a day in past!")
                     .position('bottom right')
                     .hideDelay(3000)
             );
@@ -146,6 +146,15 @@
             list.splice(index, 1);
         };
 
+        $scope.calendarToast = function () {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("You must select at least one day to countinue with booking!")
+                    .position('bottom right')
+                    .hideDelay(3000)
+            );
+        };
+
 
         $scope.registerBookingDates = function () {
 
@@ -168,7 +177,9 @@
                     'end_date': maxDate
                 };
                 $http.post('http://localhost/yoobee-hardware-booking-app/api/addDates', data);
-        }
+            } else {
+                $scope.calendarToast();
+            }
         }
         /* $scope.registerBookingDates = function()*/
 
