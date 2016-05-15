@@ -11,7 +11,7 @@
                 })
             })
 
-        if ($cookies.get('isExistingBooking')) {
+        if ($cookies.get('isExistingBooking') === 'true') {
             $http.get('http://localhost/yoobee-hardware-booking-app/api/editBooking/' + $cookies.get('id')).then(function success(response) {
                 var bookedDevices = [];
                 response.data.forEach(function (item) {

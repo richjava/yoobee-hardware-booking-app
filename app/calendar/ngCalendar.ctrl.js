@@ -10,68 +10,14 @@
             existingBookingEnd, existingBookingStart = 0,
             evnts = [], flag;
 
-
-        var getBookedDevices = function (flag) {
-            $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
-                response.data.forEach(function (device) {
-                    title = device.device_name;
-                    start = device.start_date;
-                    end = device.end_date;
-                    var formattedStart = moment(start).format('dddd DD');
-                    var formattedend = moment(end).format('dddd DD');
-                    var formattedmonth = moment(start).format('MMMM');
-                    if (start && end) {
-                        devices.push({
-                            title: title,
-                            start: start,
-                            end: end,
-                            allDay: true,
-                            description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth,
-                        });
-                    }
-                });
-                /* response.data.forEach(function (device)*/
-                calendar(flag);
-            });
-            /*$http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response)*/
-        }
-        /*var getBookedDevices = function()*/
-        $scope.isAnyDateSelected = true;
-
-        if ($cookies.get('isExistingBooking')) {
-            $http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd) {
-
-                rspnd.data.forEach(function (existingDevice) {
-                    existingBookingStart = existingDevice.start_date;
-                    existingBookingEnd = existingDevice.end_date;
-                    selectedDevices.push({
-                        title: "Your Device(s) currently Booked For These Days",
-                        start: existingBookingStart,
-                        end: existingBookingEnd,
-                        allDay: true
-                    });
-                })
-                /* rspnd.data.forEach(function(device)*/
-                flag = true;
-                getBookedDevices(flag);
-            });
-            ///*$http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd)*/
-        } else {
-            console.log("hello");
-            flag = false;
-            getBookedDevices(flag);
-        }
-
-
-        var calendar = function (flag) {
-
+        var calendar = function () {
             if (flag) {
                 evnts = [
                     {
                         events: devices,
                         color: '#F25F5C'
 
-                },
+                    },
                     {
                         events: selectedDevices,
                         color: '#70C1B3',
@@ -126,6 +72,59 @@
             /* $('#calendar').fullCalendar*/
         };
         /*var calendar = function()*/
+
+        var getBookedDevices = function () {
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
+                response.data.forEach(function (device) {
+                    title = device.device_name;
+                    start = device.start_date;
+                    end = device.end_date;
+                    var formattedStart = moment(start).format('dddd DD');
+                    var formattedend = moment(end).format('dddd DD');
+                    var formattedmonth = moment(start).format('MMMM');
+                    if (start && end) {
+                        devices.push({
+                            title: title,
+                            start: start,
+                            end: end,
+                            allDay: true,
+                            description: title + ' is not available from ' + formattedStart + ' until 9am ' + formattedend + ' of ' + formattedmonth,
+                        });
+                    }
+                });
+                /* response.data.forEach(function (device)*/
+                calendar();
+            });
+            /*$http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response)*/
+        }
+        /*var getBookedDevices = function()*/
+        $scope.isAnyDateSelected = true;
+        if ($cookies.get('isExistingBooking') === 'true') {
+            $http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd) {
+
+                rspnd.data.forEach(function (existingDevice) {
+                    existingBookingStart = existingDevice.start_date;
+                    existingBookingEnd = existingDevice.end_date;
+                    selectedDevices.push({
+                        title: "Your Device(s) currently Booked For These Days",
+                        start: existingBookingStart,
+                        end: existingBookingEnd,
+                        allDay: true
+                    });
+                })
+                /* rspnd.data.forEach(function(device)*/
+                flag = true;
+                console.log(flag);
+                getBookedDevices();
+            });
+            ///*$http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd)*/
+        } else {
+            flag = false;
+            getBookedDevices();
+        }
+
+
+
 
 
         var addDeviceToBookingArray = function (device, list) {
