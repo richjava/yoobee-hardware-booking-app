@@ -3,10 +3,11 @@
     "use strict";
 
     angular.module("myApp").controller("ngBookingCtrl", function ($cookies, $scope, $http, $mdDialog, $state, $rootScope, $location) {
-
+        $scope.isDataLoaded = false;
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookingDetails').then(function success(bookings) {
 
             $scope.bookings = bookings.data;
+            $scope.isDataLoaded = true;
 
         })
         /*$http.get('http://localhost/yoobee-hardware-booking-app/api/getAllBookingDetailsForStudent').*/

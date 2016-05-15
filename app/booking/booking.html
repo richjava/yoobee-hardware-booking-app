@@ -1,18 +1,26 @@
-<md-content class="md-padding studentBookingContainer" layout="row" layout-wrap>
+<md-content ng-show="isDataLoaded" class="md-padding studentBookingContainer" layout="row" layout-wrap>
     <md-card>
-        <md-content class="md-padding">
+        <md-content class="md-padding" flex>
 
-            <md-card-title class="md-padding" layout="row" layout-align="space-between center">
 
-                <h3>Bookings</h3>
-                <md-button ng-href="http://localhost/yoobee-hardware-booking-app/home/#/devices"
-                           class='md-button md-raised md-warn' ng-click="beginBooking();"> New Booking
-                </md-button>
+            <md-card-title class="md-padding" layout-align="space-between center">
+
+                <md-content>
+                    <h3>Bookings</h3>
+                </md-content>
+                <md-content>
+                    <md-button ng-href="http://localhost/yoobee-hardware-booking-app/home/#/devices"
+                               class='md-button md-raised md-warn' ng-click="beginBooking();"> New Booking
+                    </md-button>
+                </md-content>
+
 
             </md-card-title>
 
             <md-card-content>
-                <div layout="row" layout-padding>
+
+                <md-content layout="row" layout-padding>
+
                     <table datatable="ng" class="row-border hover">
                         <thead>
                         <tr>
@@ -33,22 +41,23 @@
                             <td> {{ booking.end_date }}</td>
                             <td> {{ booking.status }}</td>
                             <td>
-                                <md-button class="md-accent">
-                                    <md-icon md-svg-src="../app/icons/ic_mode_edit_black_48px.svg"
+                                <md-button>
+                                    <md-icon md-svg-src="../app/icons/ic_mode_edit_black_24px.svg"
                                              ng-click="editConfirm(booking.booking_id)">
                                     </md-icon>
                                 </md-button>
                             </td>
                             <td>
-                                <md-button class="md-accent">
-                                    <md-icon md-svg-src="../app/icons/ic_delete_black_48px.svg"
+                                <md-button>
+                                    <md-icon md-svg-src="../app/icons/ic_delete_black_24px.svg"
                                              ng-click="deleteConfirm(booking.booking_id)"></md-icon>
                                 </md-button>
                             </td>
                         </tr>
                         </tbody>
                     </table>
-                </div>
+                </md-content>
+
             </md-card-content>
         </md-content>
     </md-card>
