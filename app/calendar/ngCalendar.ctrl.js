@@ -3,7 +3,7 @@
     "use strict";
 
 
-    angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http) {
+    angular.module("myApp").controller("ngDatePickerCtrl", function ($cookies, $scope, $http, $mdToast, $document) {
 
         var devices = [], selectedDevices = [], selected = [],
             title, start, end = 0,
@@ -47,16 +47,19 @@
                 contentHeight: 'auto',
                 weekends: false,
                 dayClick: function (start) {
-
-                    $('#calendar').fullCalendar('renderEvent', {
-                        id: start,
-                        title: 'Device(s) Booked For This Day',
-                        start: start,
-                        color: '#70C1B3',
-                        textColor: 'white'
-                    }, true);
-                    addDeviceToBookingArray(start, selected);
-
+                    var today = moment();
+                    if (moment(start).isAfter(today)) {
+                        $('#calendar').fullCalendar('renderEvent', {
+                            id: start,
+                            title: 'Device(s) Booked For This Day',
+                            start: start,
+                            color: '#70C1B3',
+                            textColor: 'white'
+                        }, true);
+                        addDeviceToBookingArray(start, selected);
+                    } else {
+                        $scope.showToast();
+                    }
                 },
                 eventRender: function (event, element) {
                     element.prepend('<span class="close" style="cursor: pointer; color:white;margin-right: 5px">&#10005;</span>');
@@ -72,6 +75,17 @@
             /* $('#calendar').fullCalendar*/
         };
         /*var calendar = function()*/
+
+
+        $scope.showToast = function () {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("You can't book dates in the past!")
+                    .position('bottom right')
+                    .hideDelay(3000)
+            );
+        };
+
 
         var getBookedDevices = function () {
             $http.get('http://localhost/yoobee-hardware-booking-app/api/getBookedDevices/' + $cookies.get('id')).then(function (response) {
@@ -114,7 +128,6 @@
                 })
                 /* rspnd.data.forEach(function(device)*/
                 flag = true;
-                console.log(flag);
                 getBookedDevices();
             });
             ///*$http.get('http://localhost/yoobee-hardware-booking-app/api/editDates/' + $cookies.get('id')).then(function success(rspnd)*/
@@ -122,9 +135,6 @@
             flag = false;
             getBookedDevices();
         }
-
-
-
 
 
         var addDeviceToBookingArray = function (device, list) {

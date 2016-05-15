@@ -19,8 +19,10 @@
                 })
                 $scope.selected = bookedDevices;
             });
+            $scope.isAnyDeviceSelected = true;
         } else {
             $scope.selected = [];
+            $scope.isAnyDeviceSelected = true;
         }
 
         $scope.toggle = function (device, list) {

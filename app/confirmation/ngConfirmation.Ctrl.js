@@ -17,8 +17,8 @@
                             $scope.programmeID = student.data[0].programme_id;
                             $scope.bookingID = $cookies.get('id');
                             $scope.devicesName = deviceName.data;
-                            $scope.startDate = response.data[0].start_date;
-                            $scope.endDate = response.data[0].end_date;
+                            $scope.startDate = moment(response.data[0].start_date).format('dddd DD/MM/YYYY');
+                            $scope.endDate = moment(response.data[0].end_date).format('dddd DD/MM/YYYY');
                             $scope.loading = false;
                             $scope.page = true;
                         });

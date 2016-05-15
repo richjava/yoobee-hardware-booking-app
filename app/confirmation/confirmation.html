@@ -3,7 +3,9 @@
         <div flex>
             <md-toolbar layout="row" class="md-hue-3">
                 <div class="md-toolbar-tools">
-                    <span flex>Confirmation Details For Booking #{{ bookingID }}</span>
+                    <span flex style="color:black"> <md-icon
+                            md-svg-src="../app/icons/ic_confirmation_number_black_48px.svg" class="name"></md-icon>Confirmation Details For Booking number <b>{{
+                        bookingID }}</b></span>
                 </div>
             </md-toolbar>
 
@@ -20,7 +22,12 @@
                 <md-list-item>
                     <div class="md-list-item-text" layout="column">
 
-                        <md-card-header><h4>Booked Devices:</h4></md-card-header>
+                        <md-card-header>
+                            <h4>
+                                <md-icon md-svg-src="../app/icons/ic_camera_alt_black_48px.svg" class="name"></md-icon>
+                                Booked Devices:
+                            </h4>
+                        </md-card-header>
 
                         <md-list>
                             <md-list-item ng-repeat="deviceName in devicesName">
@@ -29,38 +36,50 @@
                                          style="height: 60px; width:60px"/>
                                 </div>
                                 <div class="md-list-item-text" layout="column">
-                                    <p> {{ deviceName.device_name}} </p>
+                                    <h5> {{ deviceName.device_name}} </h5>
                                 </div>
+                                <md-divider></md-divider>
+                            </md-list-item>
+
+
+                            <md-card-header>
+                                <h4>
+                                    <md-icon md-svg-src="../app/icons/ic_date_range_black_48px.svg"
+                                             class="name"></md-icon>
+                                    Dates:
+                                </h4>
+                            </md-card-header>
+
+                            <md-list-item class="md-3-line">
+                                <div class="md-list-item-text">
+                                    <h3> The above device(s) are booked for you from <b>{{ startDate }}</b> until <b>{{
+                                        endDate}}</b>.</h3>
+                                </div>
+                                <md-divider></md-divider>
                             </md-list-item>
 
                             <md-divider></md-divider>
 
-                            <md-card-header><h4>Booking Dates:</h4></md-card-header>
+                            <md-card-header>
+                                <h4>
+                                    <md-icon md-svg-src="../app/icons/ic_details_black_48px.svg" class="name"></md-icon>
+                                    Student Details:
+                                </h4>
+                            </md-card-header>
 
                             <md-list-item class="md-3-line">
                                 <div class="md-list-item-text">
-                                    <p> The above devices are booked for you from: <h4>{{ startDate }}</h4> until <h4>{{
-                                    endDate}}</h4>.</p>
-                                </div>
-                            </md-list-item>
+                                    <p><b>Username:</b> {{ username }}</p>
 
-                            <md-divider></md-divider>
+                                    <p><b>Full Name:</b> {{ fullname }}</p>
 
-                            <md-card-header><h4>Student Details:</h4></md-card-header>
+                                    <p><b>Address:</b> {{ address }}</p>
 
-                            <md-list-item class="md-3-line">
-                                <div class="md-list-item-text">
-                                    <p> Username: {{ username }}</p>
+                                    <p><b>Contact phone number:</b> {{ phone }}</p>
 
-                                    <p>Full Name: {{ fullname }}</p>
+                                    <p><b>Student email:</b> {{ email }}</p>
 
-                                    <p>Address: {{ address }}</p>
-
-                                    <p>Contact phone number: {{ phone }}</p>
-
-                                    <p>Student email: {{ email }}</p>
-
-                                    <p>Programme ID: {{ programmeID }}</p>
+                                    <p><b>Programme ID:</b> {{ programmeID }}</p>
                                 </div>
                             </md-list-item>
 
