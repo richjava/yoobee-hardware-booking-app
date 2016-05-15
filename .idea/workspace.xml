@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" afterPath="$PROJECT_DIR$/app/calendar/ngCalendar.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/confirmation.html" afterPath="$PROJECT_DIR$/app/confirmation/confirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/styles.css" afterPath="$PROJECT_DIR$/app/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" afterPath="$PROJECT_DIR$/app/devices/ngDevices.ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" afterPath="$PROJECT_DIR$/yoobee-hardware-booking-app.sql" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.40425533">
-              <caret line="183" column="25" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
+              <caret line="207" column="25" selection-start-line="207" selection-start-column="25" selection-end-line="207" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -105,7 +100,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="186" column="63" selection-start-line="186" selection-start-column="63" selection-end-line="186" selection-end-column="63" />
               <folding>
-                <marker date="1463283690000" expanded="true" signature="2189:2235" placeholder="..." />
+                <marker date="1463283889000" expanded="true" signature="2185:2231" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -682,12 +677,6 @@
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
     </task>
-    <task id="LOCAL-00027" summary="New changelist">
-      <created>1460965429225</created>
-      <option name="number" value="00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1460965429225</updated>
-    </task>
     <task id="LOCAL-00028" summary="New changelist">
       <created>1461060534314</created>
       <option name="number" value="00028" />
@@ -976,7 +965,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463278128624</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="New changelist">
+      <created>1463283892398</created>
+      <option name="number" value="00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1463283892398</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1454,7 +1449,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="186" column="63" selection-start-line="186" selection-start-column="63" selection-end-line="186" selection-end-column="63" />
           <folding>
-            <marker date="1463283690000" expanded="true" signature="2189:2235" placeholder="..." />
+            <marker date="1463283889000" expanded="true" signature="2185:2231" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1462,7 +1457,7 @@
     <entry file="file://$PROJECT_DIR$/yoobee-hardware-booking-app.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40425533">
-          <caret line="183" column="25" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
+          <caret line="207" column="25" selection-start-line="207" selection-start-column="25" selection-end-line="207" selection-end-column="25" />
           <folding />
         </state>
       </provider>
