@@ -1,18 +1,18 @@
-    </div>
+</main>
     <!--    <md-bottom-sheet class="footer">-->
 
-    <!--    <footer >-->
-    <!--        <div >-->
-    <!---->
-    <!--                <div class="md-toolbar-tools toolbar">-->
-    <!--                    &copy; --><?php
-    //                    $fromYear = 2016;
-    //                    $thisYear = (int)date('Y');
-    //                    echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : ''); ?><!-- Yoobee School Of Design-->
-    <!--                </div>-->
-    <!---->
-    <!--        </div>-->
-    <!--    </footer>-->
+<footer>
+
+
+    <div class="md-toolbar-tools toolbar" style="color:whitesmoke;font-size: 0.9em">
+        &copy; <?php
+        $fromYear = 2016;
+        $thisYear = (int)date('Y');
+        echo $fromYear . (($fromYear != $thisYear) ? '-' . $thisYear : ''); ?> Yoobee School Of Design
+    </div>
+
+
+</footer>
 
 
     <!--        </md-bottom-sheet>-->
