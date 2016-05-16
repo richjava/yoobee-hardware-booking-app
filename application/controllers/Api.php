@@ -82,10 +82,9 @@ class Api extends CI_Controller
 
     function getBookedDevices($id)
     {
-        $this->db->select('device_name,start_date,end_date')->from('bookings_tb');
-        $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id');
+        $this->db->select('device_name,start_date,end_date')->from('selected_devices_tb');
+        $this->db->join('bookings_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id AND bookings_tb.booking_id = ' . $id);
         $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
-
         $query = $this->db->get()->result_array();
         echo json_encode($query);
     }

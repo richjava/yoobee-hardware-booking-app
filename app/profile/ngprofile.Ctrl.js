@@ -2,7 +2,7 @@
 
     "user strict";
 
-    angular.module("myApp").controller("ngProfileCtrl", function ($scope, $http, $location) {
+    angular.module("myApp").controller("ngProfileCtrl", function ($scope, $http, $location, $mdToast) {
 
         $http.get('http://localhost/yoobee-hardware-booking-app/api/getStudentDetails').then(function success(student) {
 
@@ -16,7 +16,7 @@
         });
 
         $scope.updateStudentDetails = function () {
-
+            $scope.profileToast();
             var data = {
                 'fullname': $scope.fullname,
                 'address': $scope.address,
@@ -30,6 +30,15 @@
 
             });
         }
+
+        $scope.profileToast = function () {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("Your details have been updated")
+                    .position('bottom right')
+                    .hideDelay(3000)
+            );
+        };
 
 
     })
