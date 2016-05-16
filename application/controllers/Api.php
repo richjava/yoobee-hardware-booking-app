@@ -86,7 +86,6 @@ class Api extends CI_Controller
         $this->db->join('selected_devices_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id');
         $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
 
-
         $query = $this->db->get()->result_array();
         echo json_encode($query);
     }
