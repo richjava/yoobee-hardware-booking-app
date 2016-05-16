@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/profile/ngprofile.Ctrl.js" afterPath="$PROJECT_DIR$/app/profile/ngprofile.Ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -644,12 +642,6 @@
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
     </task>
-    <task id="LOCAL-00034" summary="New changelist">
-      <created>1461187899839</created>
-      <option name="number" value="00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1461187899839</updated>
-    </task>
     <task id="LOCAL-00035" summary="New changelist">
       <created>1461187953648</created>
       <option name="number" value="00035" />
@@ -938,7 +930,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463386687585</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="New changelist">
+      <created>1463387685159</created>
+      <option name="number" value="00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1463387685159</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="ToolWindowManager">
