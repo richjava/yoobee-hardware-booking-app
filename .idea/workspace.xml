@@ -4,10 +4,6 @@
     <list default="true" id="7fc5ca78-93bb-48d2-a4f6-49f7478e8cfd" name="Default" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/booking/booking.html" afterPath="$PROJECT_DIR$/app/booking/booking.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/calendar/calendar.html" afterPath="$PROJECT_DIR$/app/calendar/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/confirmation/confirmation.html" afterPath="$PROJECT_DIR$/app/confirmation/confirmation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/devices/devices.html" afterPath="$PROJECT_DIR$/app/devices/devices.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Api.php" afterPath="$PROJECT_DIR$/application/controllers/Api.php" />
     </list>
     <ignored path="yoobee_booking_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,21 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2513089">
+            <state vertical-scroll-proportion="-8.275862">
               <caret line="82" column="29" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="booking.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="booking.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.241379">
-              <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.31413612">
+              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -631,12 +627,6 @@
       <option name="number" value="Default" />
       <updated>1459913455913</updated>
     </task>
-    <task id="LOCAL-00030" summary="New changelist">
-      <created>1461061306666</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1461061306666</updated>
-    </task>
     <task id="LOCAL-00031" summary="New changelist">
       <created>1461118490662</created>
       <option name="number" value="00031" />
@@ -925,7 +915,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463374466513</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="New changelist">
+      <created>1463380635560</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1463380635560</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1369,18 +1365,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.241379">
-          <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
+        <state vertical-scroll-proportion="-8.275862">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
+    <entry file="file://$PROJECT_DIR$/app/booking/booking.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2513089">
-          <caret line="82" column="29" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.31413612">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding />
         </state>
       </provider>
