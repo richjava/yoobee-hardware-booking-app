@@ -5,7 +5,7 @@
 
                 <md-toolbar layout="column" layout-align="start center">
 
-                    <h3 class="header">Update your registration details</h3>
+                    <h3 class="header">UPDATE YOUR DETAILS</h3>
 
                 </md-toolbar>
 
@@ -14,32 +14,40 @@
 
                         <md-input-container class="md-block">
                             <label for="fullname">Username</label>
+                            <md-icon md-svg-src="../app/icons/ic_person_outline_black_24px.svg"></md-icon>
                             <input type="text" id="username" ng-model="username" ng-readonly="true">
                         </md-input-container>
 
                         <md-input-container class="md-block">
                             <label for="fullname">Full Name</label>
+                            <md-icon md-svg-src="../app/icons/ic_person_black_24px.svg"></md-icon>
                             <input contenteditable type="text" id="fullname" ng-model="fullname">
                         </md-input-container>
 
                         <md-input-container class="md-block">
                             <label for="address">Address</label>
+                            <md-icon md-svg-src="../app/icons/ic_location_city_black_24px.svg"></md-icon>
                             <input contenteditable type="text" id="address" ng-model="address">
                         </md-input-container>
 
                         <md-input-container class="md-block">
                             <label for="phone">Telephone</label>
+                            <md-icon md-svg-src="../app/icons/ic_phone_black_24px.svg"></md-icon>
                             <input contenteditable type="text" id="phone" ng-model="phone">
                         </md-input-container>
 
                         <md-input-container class="md-block">
                             <label for="email">Email</label>
+                            <md-icon md-svg-src="../app/icons/ic_email_black_24px.svg"></md-icon>
                             <input contenteditable type="text" id="email" ng-model="email">
                         </md-input-container>
 
-                        <md-button class="md-warn" ng-click="updateStudentDetails();">
-                            Update & Save
-                        </md-button>
+                        <md-content class="md-padding" layout="row" layout-align="end center">
+                            <md-button class="md-warn" ng-click="updateStudentDetails();">
+                                Update & Save
+                            </md-button>
+                        </md-content>
+
                     </form>
                 </md-content>
 
