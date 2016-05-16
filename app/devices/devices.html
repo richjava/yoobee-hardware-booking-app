@@ -1,6 +1,10 @@
 <md-content class="md-padding container" layout="row" layout-wrap>
     <md-card>
-        <md-card-header><h2>Devices</h2></md-card-header>
+
+        <md-content class="md-padding" flex>
+            <md-toolbar class="md-padding"><h2>Devices</h2></md-toolbar>
+        </md-content>
+
         <md-card-content class="devices">
             <v-accordion class="vAccordion--default" multiple control="accordion">
                 <v-pane id="{{ category.id }}" ng-repeat="category in categories" expanded="pane.isExpanded">
