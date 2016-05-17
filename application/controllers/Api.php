@@ -82,11 +82,12 @@ class Api extends CI_Controller
 
     function getBookedDevices($id)
     {
-        $this->db->select('device_name,start_date,end_date')->from('selected_devices_tb');
-        $this->db->join('bookings_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id AND selected_devices_tb.booking_id !=' . $id);
-        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
-        $query = $this->db->get()->result_array();
-        echo json_encode($query);
+//        $this->db->select('device_name,start_date,end_date')->from('selected_devices_tb');
+//        $this->db->join('bookings_tb', 'selected_devices_tb.booking_id = bookings_tb.booking_id AND selected_devices_tb.booking_id !=' . $id);
+//        $this->db->join('devices_tb', 'selected_devices_tb.device_id = devices_tb.device_id');
+        $query = $this->db->query('SELECT d.device_id, d.device_name, b.start_date, b.end_date FROM bookings_tb b, devices_tb d, selected_devices_tb sd WHERE sd.device_id IN (SELECT d.device_id FROM bookings_tb b, devices_tb d, selected_devices_tb sd WHERE b.booking_id = sd.booking_id AND d.device_id = sd.device_id AND b.booking_id= "' . $id . '") AND b.booking_id = sd.booking_id AND d.device_id = sd.device_id AND b.booking_id != "' . $id . '";');
+//        $result = $this->db->get()->result_array();
+        echo json_encode($query->result_array());
     }
 
     public function addDates()
